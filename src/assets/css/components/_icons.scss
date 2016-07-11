@@ -1,0 +1,251 @@
+// icons
+.icon {
+	display: inline-block;
+	overflow:hidden;
+	white-space: nowrap;
+	text-indent:101%;
+	vertical-align: top;
+	&.page-logo {
+		@include sprite($logo);
+		@include respond-to(s-phones) {
+			@include sprite($logo-phone);
+		}
+	}
+	&.btn-toggle-menu {
+		@include sprite($btn-toggle);		
+	}
+	&.icon-phone {
+		@include sprite($icon-phone-xs);
+		@include respond-to(s-desktops) {
+			@include sprite($icon-phone);
+		}
+	}
+	&.app-store {
+		@include sprite($icon-app-store);
+	}
+	&.google-play {
+		@include sprite($google-play);
+	}
+	&.icon-restaurant {
+		@include sprite($icon-restaurant);
+		@include respond-to(phones) {
+			@include sprite($icon-restaurant-xs);
+		}
+	}
+	&.icon-hospitality {
+		@include sprite($icon-hospitality);
+		@include respond-to(phones) {
+			@include sprite($icon-hospitality-xs);
+		}
+	}
+	&.icon-healthcare {
+		@include sprite($icon-healthcare);
+		@include respond-to(phones) {
+			@include sprite($icon-healthcare-xs);
+		}
+	}
+	&.icon-retail {
+		@include sprite($icon-retail);
+		@include respond-to(phones) {
+			@include sprite($icon-retail-xs);
+		}
+	}
+	&.icon-government {
+		@include sprite($icon-government);
+		@include respond-to(phones) {
+			@include sprite($icon-government-xs);
+		}
+	}
+	&.icon-education {
+		@include sprite($icon-education);
+		@include respond-to(phones) {
+			@include sprite($icon-education-xs);
+		}
+	}
+	&.icon-services{
+		@include sprite($icon-services);
+		@include respond-to(phones) {
+			@include sprite($icon-services-xs);
+		}
+	}
+	&.icon-devices {
+		@include respond-to(phones) {
+			@include sprite($icon-devices-s-desk);
+		}
+		@include respond-to(s-phones) {
+			@include sprite($icon-devices-s);
+		}
+		@include respond-to(tablets) {
+			@include sprite($icon-devices);
+		}
+		@include respond-to(s-desktops) {
+			@include sprite($icon-devices-s-desk);
+		}
+		@include respond-to('1305px') {
+			@include sprite($icon-devices);
+		}
+	}
+	&.icon-plus {		
+		@include sprite($icon-plus-ipad);
+		&:hover {
+			@include sprite($icon-plus-ipad-hover);
+		}
+		@include respond-to(tablets) {
+			@include sprite($icon-plus);
+			&:hover {
+				@include sprite($icon-plus-hover);
+			}
+		}
+		@include respond-to(s-desktops) {
+			@include sprite($icon-plus-ipad);
+			&:hover {
+				@include sprite($icon-plus-ipad-hover);
+			}
+		}
+		@include respond-to('1305px') {
+			@include sprite($icon-plus);
+			&:hover {
+				@include sprite($icon-plus-hover);
+			}
+		}
+	}
+	&.icon-bamboo {
+		@include sprite($icon-bamboo);
+	}
+	&.icon-bamboo-colored {
+		@include sprite($icon-bamboo-hover);
+	}
+	&.icon-quickbooks {
+		@include sprite($icon-quickbooks);
+	}
+	&.icon-quickbooks-colored {
+		@include sprite($icon-quickbooks-hover);
+	}
+	&.icon-gusto {
+		@include sprite($icon-gusto);
+	}
+	&.icon-gusto-colored {
+		@include sprite($icon-gusto-hover);
+	}
+	&.icon-synchr {
+		@include sprite($icon-synchr);
+	}
+	&.icon-synchr-colored {
+		@include sprite($icon-synchr-hover);
+	}
+	&.icon-traxpayroll {
+		@include sprite($icon-traxpayroll);
+	}
+	&.icon-traxpayroll-colored {
+		@include sprite($icon-traxpayroll-hover);
+	}
+	&.icon-epson {
+		@include sprite($icon-epson);
+	}
+	&.icon-epson-colored {
+		@include sprite($icon-epson-hover);
+	}
+	&.icon-kounta {
+		@include sprite($icon-kounta);
+	}
+	&.icon-xero {
+		@include sprite($icon-xero);
+	}
+	&.icon-xero-colored {
+		@include sprite($icon-xero-colored);
+	}
+	&.icon-myob {
+		@include sprite($icon-myob);
+	}
+	&.icon-myob-colored {
+		@include sprite($icon-myob-colored);
+	}
+	&.icon-kounta-colored {
+		@include sprite($icon-kounta-hover);
+	}
+	&.icon-lightspeed {
+		@include sprite($icon-lightspeed);
+	}
+	&.icon-lightspeed-colored {
+		@include sprite($icon-lightspeed-hover);
+	}
+	&.icon-schedule {
+		@include respond-to(phones) {
+			@include sprite($icon-schedule-xs);
+		}
+		@include respond-to(tablets) {
+			@include sprite($icon-schedule-xs);
+		}
+		@include respond-to(s-desktops) {
+			@include sprite($icon-schedule);
+		}
+	}
+	&.icon-users{
+		@include sprite($icon-users);
+	}
+	&.icon-comment {
+		@include sprite($icon-comment);
+	}
+	&.icon-time {
+		@include respond-to(phones) {
+			@include sprite($icon-time-xs);
+		}
+		@include respond-to(tablets) {
+			@include sprite($icon-time-xs);
+		}
+		@include respond-to(s-desktops) {
+			@include sprite($icon-time);
+		}
+	}
+	&.icon-puzzle {
+		@include sprite($icon-puzzle);
+	}
+	&.icon-pie {
+		@include sprite($icon-pie);
+	}
+	&.icon-heart {
+		@include sprite($icon-heart);
+	}
+	&.icon-fixed {
+		@include sprite($icon-fixed);
+		z-index: 19;
+		@include respond-to(phones) {
+			display: none;
+		}
+	}
+	&.icon-pricing-alert {
+		@include sprite($icon-pricing-alert);
+	}
+	&.icon-pricing-sms {
+		@include sprite($icon-pricing-sms );
+	}
+	&.icon-pricing-call {
+		@include sprite($icon-pricing-call);
+	}
+	&.icon-check {
+		&.blue {
+			@include sprite($icon-check-blue);
+		}
+		&.green {
+			@include sprite($icon-check-green);
+		}
+		&.yellow {
+			@include sprite($icon-check-yellow);
+		}
+	}
+	&.icon-star {
+		@include sprite($icon-star);
+	}
+	&.icon-1 {
+		@include sprite($icon-1);
+	}
+	&.icon-2 {
+		@include sprite($icon-2);
+	}
+	&.icon-3 {
+		@include sprite($icon-3);
+	}
+	&.icon-iphone {
+		@include sprite($smartphone);
+	}
+}

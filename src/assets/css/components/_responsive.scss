@@ -1,0 +1,18 @@
+@include respond-to(tablets) {
+	.text-right-sm {
+		text-align: right;
+	}
+}
+@include respond-to(phones) {
+	.push-bottom-xs {
+		margin-bottom: 10px;
+	}
+}
+@include respond-to(s-phones) {
+	.col-sxs-12 {
+		width: 100% !important;
+	}
+	.push-bottom-sxs {
+		margin-bottom: 10px;
+	}
+}

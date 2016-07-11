@@ -1,0 +1,136 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: $f-alt-family;
+	opacity:0.99;
+}
+h1 {
+	@include font-size(50px, 60px);
+	color: $c-blue;
+	
+}
+h2, h3 {
+	@include font-size(40px);
+	color: $c-dark-blue;	
+}
+h4, h5 {
+	@include font-size(24px, 30px);
+	
+}
+h6 {
+	@include font-size(18px, 24px);
+}
+p {
+	margin: 0 0 15px;
+}
+.ttl-section {
+	@include respond-to(phones) {
+		@include font-size(25px);
+	}
+	@include respond-to(tablets) {
+		@include font-size(30px);
+	}
+	@include respond-to(s-desktops) {
+		@include font-size(40px);
+	}
+	.home-section & {
+		margin-bottom: 17px;
+		@include respond-to(s-desktops) {
+			margin-bottom: 30px;
+		}
+	}
+	.home-section-reasons & {
+		@include respond-to(m-phones) {
+			margin-bottom: 25px;
+		}
+		@include respond-to(s-phones) {
+			margin-bottom: 25px;
+		}
+		@include respond-to(s-desktops) {
+			 @include font-size(36px);
+			 margin-bottom: 40px;
+		}
+		@include respond-to(desktops) {
+			margin-bottom: 48px;
+		}
+	}
+	.home-store-section & {		
+		@include respond-to(s-desktops) {
+			@include font-size(31px);
+		}
+		@include respond-to(s-phones) {
+			@include font-size(20px);
+		}
+		margin-bottom: 23px;
+	}
+	.home-section-test & {
+		@include respond-to(tablets) {
+			@include font-size(27px);
+		}
+		@include respond-to(s-desktops) {
+			@include font-size(36px);
+		}
+		@include respond-to(desktops) {
+			@include font-size(40px);
+		}
+		@include respond-to(tablets) {
+			margin-bottom: 50px;
+		}		
+	}
+	.home-section-integration & {
+		@include respond-to(s-desktops) {
+			@include font-size(35px);
+		}		
+		@include respond-to(desktops) {
+			padding: 0 85px 45px;
+		}
+	}
+	.home-section-features & {
+		@include respond-to(s-desktops) {
+			@include font-size(50px);
+			margin-bottom: 18px;
+		}
+	}
+	.pricing-options-sections & {
+		@include respond-to(s-desktops) {
+			@include font-size(35px);
+			margin-bottom: 85px;
+		}
+	}
+	.home-section-services & {
+		color: #fff;
+		margin-bottom: 45px;
+	}
+	.trial-form & {
+		color: #fff;
+		@include respond-to(s-desktops) {
+			@include font-size(40px);
+			margin-bottom: 35px;
+		}
+	}
+	.power-section & {
+		color: #fff;
+		@include respond-to(s-desktops) {
+			@include font-size(40px);
+			margin-bottom: 65px;
+		}
+	}
+	.schedule-splash-top & {
+		color: #fff;
+		@include font-size(36px);
+		margin-bottom: 40px;
+	}
+	.schedule-splash-content & {
+		@include font-size(40px);
+		color: #fff;
+		margin-bottom: 20px;
+	}
+}
+.subtitle-senDesk {
+	@include font-size(28px);
+	color: $c-dark-blue;
+	strong {
+		color: #5090bb;
+	}
+	@include respond-to(desktops) {
+		margin-bottom: 45px;
+	}
+}

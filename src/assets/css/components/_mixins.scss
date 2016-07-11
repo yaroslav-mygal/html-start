@@ -1,0 +1,78 @@
+@mixin clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+@mixin clear-list {
+	padding: 0;
+	margin: 0;
+	li {
+		list-style: none;
+	}
+}
+
+@mixin border-radius($a){
+	border-radius: $a;
+}
+@mixin bg-cover() {
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin inline-block {
+	display: inline-block;
+	vertical-align: top;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size, $lineHeight: null) {
+  font-size: $size;
+  font-size: calculateRem($size);
+  @if ($lineHeight) {
+  	line-height: $lineHeight/$size;
+  }
+  @else {
+  	line-height: 1.2;
+  }  
+}
+
+@mixin respond-to($media) {
+  
+  @if $media == s-phones {
+    @media only screen and (max-width: $screen-s-min) { @content; }
+  }
+  @else if $media == m-phones {
+    @media only screen and (min-width: 480px) and (max-width: $screen-sm-min) { @content; }
+  }
+	@else if $media == phones {
+		@media only screen and (max-width: $screen-sm-min) { @content; }
+	}
+	@else if $media == tablets {
+		@media only screen and (min-width: 768px) { @content; }
+	}
+	@else if $media == s-desktops {
+		@media only screen and (min-width: $screen-md-min) { @content; }
+	}
+	@else if $media == desktops {
+		@media only screen and (min-width: $screen-lg-min) { @content; }
+	}
+	@else {
+		@media only screen and (min-width: $media) { @content; }
+	}
+}

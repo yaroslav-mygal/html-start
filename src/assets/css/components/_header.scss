@@ -1,0 +1,95 @@
+.page-header {
+	background-color: #f6f6f6;
+	padding: 8px 87px 6px 60px;
+	@include respond-to(phones) {
+		padding: 8px 40px 8px 15px;
+	}
+	@include respond-to(tablets) {
+		padding: 8px 50px 8px 30px;
+	}
+	@include respond-to(s-desktops) {
+		padding: 8px 87px 6px 60px;
+	}
+	position: relative;
+	z-index: 20;
+	a {
+		color: #58585a;
+	}
+	.btn-toggle-menu {
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		margin-top: -12px;
+		@include respond-to(s-desktops) {
+			right: 33px;
+		}
+	}
+	.header-right {
+		@include respond-to(tablets) {
+			text-align: right;
+		}
+	}
+	.main-nav {
+		
+		@include inline-block;
+		@include respond-to(tablets) {
+			padding: 10px 6px 0 0;
+		}
+		@include respond-to(s-desktops) {
+			padding: 14px 26px 0 0;
+		}
+		ul {
+			@include inline-block;
+			li {
+				position: relative;
+				padding: 0 10px 0 27px;
+				@include inline-block;
+				text-transform: uppercase;
+				&:before{
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 50%;
+					margin-top: -5px;
+					width: 10px;
+					height: 10px;
+					background-color: #5190bb;
+					@include border-radius(50%);
+				}
+				&:first-child {
+					padding-left: 0;
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+	}	
+	.drop-nav {
+		background-color: #f6f6f6;
+		padding: 10px 6px 25px 27px;
+		margin-top: 3px;
+		width: 270px;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		display: none;
+		@include respond-to(phones) {
+			padding: 0;
+		}
+		ul {
+			li {
+				text-transform: uppercase;
+				border-bottom: 1px solid #e8e9ec;
+				a {
+					display: block;
+					padding: 10px 7px;
+					color: #58585a;
+					@include respond-to(phones) {
+						padding: 10px 15px;
+					}
+				}
+			}
+		}
+	}
+}
