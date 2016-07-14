@@ -168,6 +168,9 @@
   text-align: center;
   cursor: pointer;
   overflow: hidden;
+  .inner-content & {
+    border-color: #f6f6f6;
+  }
   &.hvr-sweep-to-top {
     &:before {
       background: #fff;
@@ -207,10 +210,6 @@
   }
   .icon-colored-wrap {
     height: 0;
-  }
-  .icon-gray {
-    // visibility: hidden;
-    // opacity: 0;
   }
   &:hover {
     .icon-gray {
@@ -478,9 +477,9 @@
   }
 }
 .zen-product {
-  box-shadow: 0 0 7px rgba(227, 227, 227, 1);
-  padding: 32px 25px 10px;
-  @include font-size(16px);
+  box-shadow: 0 0 7px #dcdbdb;
+  padding: 32px 25px 23px;
+  @include font-size(16px, 25px);
   color: $c-dark-blue;
   text-align: center;
   h5 {
@@ -489,6 +488,7 @@
     font-family: $f-alt-family;
     min-height: 50px;
     height: 50px;
+    margin-bottom: 19px;
     &>span {
       display: block;
       height: auto;
@@ -499,6 +499,9 @@
     &.v-outer {
       .v-inner {
         height: 50px;
+        @include respond-to(desktops) {
+          padding: 0 20px;
+        }
       }
     }
   }
@@ -506,11 +509,14 @@
     margin: 0;
   }
   .icon-holder {
-    margin-bottom: 30px;
+    margin-bottom: 34px;
     text-align: center;
   }
   .zen-products-wrap & {
     margin: 0 7px;
+    @include respond-to(phones) {
+      margin: 0 0 25px;
+    }
   }
 }
 .flow-form {
@@ -518,9 +524,14 @@
   right: 0;
   top: 363px;
   width: 240px;
+  color: #fff;
   background: rgba(47, 64, 80, 0.8);
   padding: 20px;
   @include font-size(14px);
+  z-index: 18;
+  &.fixed {
+    position: fixed;
+  }
   h6 {
     text-transform: uppercase;
     @include font-size(15px);
@@ -548,14 +559,14 @@
 .power-area {
   position: relative;
   min-height: 610px;
-  padding: 44px 0 0;
+  padding: 77px 0 0;
   @include font-size(14px);
   h6 {
     color: #4fabe9;
     text-transform: uppercase;
     @include font-size(18px);
     font-family: $f-base-font;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     sup {
       @include font-size(14px);
     }
@@ -563,13 +574,14 @@
   .power-row {
     overflow: hidden;
     position: relative;
+    min-height: 128px;
     &:before {
       content: '';
       background: url('../images/layout/power-row.png') repeat-x;
       height: 1px;
       position: absolute;
-      left: 325px;
-      right: 325px;
+      left: 345px;
+      right: 345px;
       top: 12px;
     }
   }
@@ -581,7 +593,7 @@
     z-index: 15;
   }
   .power-block {
-    width: 320px;
+    width: 340px;
     position: relative;
     .icon-holder {
       width: 25px;
@@ -594,6 +606,7 @@
     &.left-block {      
       padding-right: 40px;
       float: left;
+      text-align: right;
       .icon-holder {
         right: 0;
       }
@@ -622,6 +635,9 @@
       sup {
         @include font-size(12px);
       }
+      &:hover {
+        text-decoration: none;
+      }
       &.active {
         background-color: #5090bb;
         color: #fff;
@@ -635,7 +651,7 @@
         border: 0;
       }
       a {
-        padding: 25px 20px 25px 40px;
+        padding: 34px 20px 34px 40px;
         &.active {
           &:before {
             content: '';
@@ -666,4 +682,79 @@
 .tab-macbook {
   @include sprite($tab-laptop);
   padding: 29px 90px 0 90px;
+}
+.menu-industries {
+  font-family: $f-q-family;
+  padding-top: 20px;
+  @include respond-to(desktops) {
+    padding-top: 41px;
+  }
+  ul {
+    @include clear-list;
+    li {
+      margin-bottom: 12px;
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 0 10px 85px;
+        @include respond-to(tablets) {
+          padding-left: 70px;
+        }
+        @include respond-to(s-desktops) {
+          padding-left: 85px;
+        }
+        line-height: 23px;
+        color: #000;
+        text-transform: uppercase;
+        .icon-holder {
+          position: absolute;
+          left: 0;
+          top: 0;
+          text-align: center;
+          width: 70px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+        &.active,
+        &:hover {
+          color: #5090bb;
+        }
+      }
+    }
+  }
+}
+.industry-box {
+  padding: 8px;
+  .industry-box-holder {
+    padding: 20px;
+    min-height: 265px;
+    color: #878787;
+    background: rgba(255, 255, 255, 0.9);
+    @include font-size(14px, 20px);
+    text-align: center;
+    figure {
+      text-align: center;
+      min-height: 85px;
+      margin-bottom: 20px;
+      .v-outer,
+      .v-inner {
+        height: 85px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+    h6 {
+      color: #000;
+      @include font-size(16px);
+      font-weight: 600;
+    }
+    p {
+      margin: 0;
+    }
+  }
 }

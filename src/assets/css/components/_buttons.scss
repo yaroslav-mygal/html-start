@@ -102,5 +102,18 @@
 		height: 34px;
 		@include font-size(16px);
 		line-height: 30px;
+		@include border-radius(2px);
+	}
+	.support-area-splash & {
+		@include respond-to(phones) {
+			@include font-size(18px, 56px);
+		}
+		@include respond-to(tablets) {
+			@include font-size(17px, 55px);
+		}
+		@include respond-to(s-desktops) {
+			@include font-size(20px, 55px);
+		}
+		
 	}
 }

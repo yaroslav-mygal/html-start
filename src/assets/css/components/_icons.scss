@@ -148,6 +148,27 @@
 	&.icon-kounta {
 		@include sprite($icon-kounta);
 	}
+	&.icon-kounta-colored {
+		@include sprite($icon-kounta-colored);
+	}
+	&.icon-zendesk {
+		@include sprite($icon-zendesk);
+	}
+	&.icon-zendesk-colored {
+		@include sprite($icon-zendesk);
+	}
+	&.icon-adp {
+		@include sprite($icon-adp);
+	}
+	&.icon-adp-colored {
+		@include sprite($icon-adp-colored);
+	}
+	&.icon-onelogin {
+		@include sprite($icon-onelogin);	
+	}
+	&.icon-onelogin-colored {
+		@include sprite($icon-onelogin-colored);	
+	}
 	&.icon-xero {
 		@include sprite($icon-xero);
 	}
@@ -247,5 +268,47 @@
 	}
 	&.icon-iphone {
 		@include sprite($smartphone);
+	}
+	&.icon-ind-restaurants {
+		@include sprite($icon-ind-restaurants);
+		a:hover &, a.active & {
+			@include sprite($icon-ind-restaurants-blue);
+		}
+	}
+	&.icon-ind-hospitality {
+		@include sprite($icon-ind-hospitality);
+		a:hover &, a.active & {
+			@include sprite($icon-ind-hospitality-blue);
+		}
+	}
+	&.icon-ind-healthcare {
+		@include sprite($icon-ind-healthcare);
+		a:hover &, a.active & {
+			@include sprite($icon-ind-healthcare-blue);
+		}
+	}
+	&.icon-ind-retail {
+		@include sprite($icon-ind-retail);
+		a:hover &, a.active & {
+			@include sprite($icon-ind-retail-blue);
+		}
+	}
+	&.icon-ind-government {
+		@include sprite($icon-ind-government);
+		a:hover &, a.active & {
+			@include sprite($icon-ind-government-blue);
+		}
+	}
+	&.icon-ind-education {
+		@include sprite($icon-ind-education);
+		a:hover &, a.active & {
+			@include sprite($icon-ind-education-blue);
+		}
+	}
+	&.icon-ind-services {
+		@include sprite($icon-ind-services);
+		a:hover &, a.active & {
+			@include sprite($icon-ind-services-blue);
+		}
 	}
 }

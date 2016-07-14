@@ -43,8 +43,48 @@ if(!Modernizr.touch) {
       }
     }
 })
+ 
+ var owlMacbook = $("#owl-tab-macbook");
+ owlMacbook.owlCarousel({
+    items:1,
+    dots: false,
+    autoplay: false
+    ,animateOut: 'fadeOut'
+  });
 
- $('.tabs-container').tabs();
+
+
+ //var owlTabMacbook = $("#owl-tab-macbook").data('owlCarousel');
+
+ $('#tabs-app-container').easytabs({
+  tabs: 'ul.tabs > li',
+  updateHash: false,
+  animationSpeed: 'fast'
+ }).bind('easytabs:before', function(evt, tab, panel, data) {
+    var selector = panel.selector;
+    var selectorString = selector.substr(1);
+    var pos = $('div[data-id='+selectorString+']').parent().index();
+    owlMacbook.trigger('to.owl.carousel', [pos, 300]);
+  });
+
+ 
+
+
+ $('.tabs-container').easytabs({
+  tabs: 'ul.tabs > li',
+  updateHash: false
+ });
+
+ $('#tabs-industries').easytabs({
+  tabs: 'ul.tabs > li',
+  updateHash: false
+ }).bind('easytabs:after', function() {
+    $.fn.matchHeight._update();    
+  });
+
+ $('#tab-container').easytabs({
+  tabs: 'ul.tabs > li'
+ });
 
  var _cahngeBgAnimation = 600;
  $('.trigger-link-service').hover(

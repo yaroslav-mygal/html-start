@@ -8,6 +8,7 @@ body {
   background-color: $bg-body;
   color: $c-text;
   font-family: $f-base-font;
+  font-size: 16px;
 }
 
 a {
@@ -276,9 +277,15 @@ a {
     &>div:nth-child(2n){
       @include respond-to(m-phones) {
         border-left: 1px solid #fff;
+        .inner-content & {
+          border-color: #f6f6f6;
+        }
       }
       @include respond-to(tablets) {
         border-left: 1px solid #fff;
+        .inner-content & {
+          border-color: #f6f6f6;
+        }
       }
       @include respond-to(s-desktops) {
         border: 0;
@@ -673,7 +680,7 @@ a {
 }
 .support-area-splash {
   color: #fff;
-  padding: 45px 0;
+  padding: 36px 0 48px;
   border-bottom: 1px solid #152f48;
   background: url('../images/layout/bg-support-area.jpg') no-repeat 50% 0;
   @include bg-cover();
@@ -686,7 +693,7 @@ a {
     color: #fff;
     font-family: $f-alt-family;
     @include font-size(35px);
-    margin-bottom: 18px;
+    margin-bottom: 26px;
   }
   .search-divider {
     text-transform: uppercase;
@@ -700,6 +707,25 @@ a {
 }
 .inner-content {
   padding: 50px 0;
+  position: relative;
+  @include respond-to(s-phones) {
+    padding: 20px 0;
+  }
+  h1 {
+    color: #2f4050;
+    @include font-size(35px);
+  }
+  h2, h3 {
+    @include font-size(30px);
+  }
+  h4, h5 {
+    color: #2f4050;
+  }
+  h5 {
+    font-weight: normal;
+    @include font-size(20px);
+    font-family: $f-base-font;
+  }
 }
 .trial-form {
   background-color: #5090bb;
@@ -711,7 +737,7 @@ a {
     padding: 50px 0;
   }
   @include respond-to(s-desktops) {
-    padding: 105px 0;
+    padding: 57px 0 80px;
   }
   .form-wrap {
     @include respond-to(s-desktops) {
@@ -722,19 +748,11 @@ a {
 .power-section {
   background: #2f4050 url('../images/layout/bg-power-section.jpg') no-repeat;
   @include bg-cover();
-  padding: 70px 0;
+  padding: 68px 0;
   position: relative;
   color: #fff;
   @include respond-to(s-desktops) {
-    padding: 80px 0 110px;
-  }
-}
-.schedule-tab-content {
-  .tab-holder {
-    display: none;
-    &.active {
-      display: block;
-    }
+    padding: 80px 0 127px;
   }
 }
 .schedule-splash {
@@ -746,7 +764,7 @@ a {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
-    padding: 35px 0 25px;
+    padding: 34px 0 28px;
     position: relative;
     .btns-wrap {
       @include respond-to(s-desktops) {
@@ -786,8 +804,15 @@ a {
   .schedule-splash-content {
     text-align: right;
     @include respond-to(s-desktops) {
-      padding: 200px 0 20px;
       height: 634px;
+      .v-outer>.v-inner {
+        height: 634px;
+      }
+      .text {
+        max-width: 640px;
+        float: right;
+        @include font-size(16px, 30px);
+      }    
     }
     @include font-size(16px);
     font-weight: 600;
@@ -827,4 +852,134 @@ a {
   .tab-macbook {
     float: right;
   }
+}
+.industries-content {
+  max-width: 1180px;
+  color: #fff;
+  @include respond-to(tablets) {
+    min-height: 430px;
+  }
+  @include respond-to(desktops) {
+    min-height: 550px;
+  }
+  .text-content {
+    @include font-size(16px, 25px);
+    overflow: hidden;
+    padding: 0 0 25px 8px;
+    h2 {      
+      color: #fff;
+      @include respond-to(tablets) {
+        @include font-size(30px);
+        margin-bottom: 15px;
+      }
+      @include respond-to(s-desktops) {
+        @include font-size(38px);
+        margin-bottom: 22px;
+      }
+    }
+  }
+}
+.main-industries {
+  overflow: hidden;
+  position: relative;
+  .left-column-wrap {     
+    background-color: #fff;
+    @include respond-to(phones) {
+      padding: 20px;
+    }
+    @include respond-to(tablets) {
+      float: left;   
+      width: 27%;
+      padding-top: 18px;
+    }
+    @include respond-to(s-desktops) {
+      width: 25%;
+    }
+    @include respond-to(desktops) {
+      padding-top: 35px;
+      width: 25%;
+    }
+  }
+  .right-column-wrap {       
+    background-color: #4f4f4f;
+    @include respond-to(phones) {
+      padding: 20px;
+    }
+    @include respond-to(tablets) {
+      float: left; 
+      width: 73%;    
+    }
+    @include respond-to(s-desktops) {
+      width: 75%;
+    }
+    @include respond-to(desktops) {
+      width: 75%;
+    }
+    .tab-content {
+      @include respond-to(tablets) {
+        padding: 10px 20px;        
+      }
+      @include respond-to(s-desktops) {
+        
+      }
+      @include respond-to(desktops) {
+        padding: 30px 25px 15px;
+      }
+      @include respond-to('1400px') {
+        padding: 30px 75px 15px;
+      }
+    }
+    #tab-restaurants {
+      background: url('../images/industries-tabs/restaurants.jpg') no-repeat;
+    }
+    #tab-hospitality {
+      background: url('../images/industries-tabs/hospitality.jpg') no-repeat;
+    }
+    #tab-healthcare {
+      background: url('../images/industries-tabs/healthcare.jpg') no-repeat;
+    }
+    #tab-retail {
+      background: url('../images/industries-tabs/retail.jpg') no-repeat;
+    }
+    #tab-government {
+      background: url('../images/industries-tabs/government.jpg') no-repeat;
+    }
+    #tab-education {
+      background: url('../images/industries-tabs/education.jpg') no-repeat;
+    }
+    #tab-services {
+      background: url('../images/industries-tabs/services.jpg') no-repeat;
+    }
+  }
+  @include respond-to(desktops) {
+    .container {
+      width: 1450px;
+    }
+  }
+  .col-industries {
+    @include respond-to(tablets) {
+      float: right;
+      max-width: 282px;
+      min-width: 207px;
+    }
+    h4 {      
+      text-transform: uppercase;
+      color: #2f4050;
+      margin: 0;
+      @include respond-to(tablets) {
+        @include font-size(20px);
+        text-align: center;
+      }
+      @include respond-to(s-desktops) {
+        text-align: left;
+        @include font-size(25px);
+      }
+    }
+  }
+  .flow-form {
+    top: 220px;
+  }
+}
+.page-content {
+  margin-bottom: 40px;
 }

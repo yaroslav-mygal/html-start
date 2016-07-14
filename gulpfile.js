@@ -28,7 +28,7 @@ gulp.task("bower", function(){
         'src/bower_components/fancybox/source/jquery.fancybox.pack.js',
         'src/bower_components/paraxify/paraxify.min.js',
         'src/bower_components/owl.carousel/dist/owl.carousel.min.js',
-        'src/bower_components/tabs/tabs.js'
+        'src/bower_components/easytabs/lib/jquery.easytabs.min.js'
         ])
     .pipe(gulp.dest('dist/assets/js/libs'));
 
