@@ -28,13 +28,14 @@ gulp.task("bower", function(){
         'src/bower_components/fancybox/source/jquery.fancybox.pack.js',
         'src/bower_components/paraxify/paraxify.min.js',
         'src/bower_components/owl.carousel/dist/owl.carousel.min.js',
+        'src/bower_components/sticky-kit/jquery.sticky-kit.min.js',
         'src/bower_components/easytabs/lib/jquery.easytabs.min.js'
         ])
     .pipe(gulp.dest('dist/assets/js/libs'));
 
 });
 
-gulp.task('sass', function(){
+gulp.task('sass', function() {
 	return gulp.src('src/assets/css/*.scss')
 				 .pipe(sourcemaps.init())
 				 .pipe(sass().on('error', sass.logError))
@@ -102,12 +103,6 @@ gulp.task('clean', function(cb) {
 		.pipe(clean());
 });
 
-gulp.task('dist-sass', function(){
-	return gulp.src('src/assets/css/*.scss')
-					.pipe(uglifycss())
-				 .pipe(sass().on('error', sass.logError))
-				 .pipe(gulp.dest('dist/assets/css'));
-})
 gulp.task('dist-sass', function(){
 	return gulp.src('src/assets/css/*.scss')
 				 .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))

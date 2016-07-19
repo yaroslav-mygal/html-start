@@ -20,6 +20,11 @@ h6 {
 p {
 	margin: 0 0 15px;
 }
+.ttl-news {
+	color: #fff;
+	color: #515151;
+	@include font-size(60px);
+}
 .ttl-section {
 	@include respond-to(phones) {
 		@include font-size(25px);

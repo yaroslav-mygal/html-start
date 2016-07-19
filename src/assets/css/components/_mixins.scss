@@ -52,6 +52,13 @@
   }  
 }
 
+@mixin verticalTransform() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
 @mixin respond-to($media) {
   
   @if $media == s-phones {

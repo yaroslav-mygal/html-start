@@ -7,6 +7,8 @@ if(!Modernizr.touch) {
  });
 }
 
+$(".stick-column").stick_in_parent();
+
  $('#slick-slider').owlCarousel({
     loop:true,
     items:1,
@@ -48,8 +50,8 @@ if(!Modernizr.touch) {
  owlMacbook.owlCarousel({
     items:1,
     dots: false,
-    autoplay: false
-    ,animateOut: 'fadeOut'
+    autoplay: false,
+    animateOut: 'fadeOut'
   });
 
 
@@ -78,9 +80,10 @@ if(!Modernizr.touch) {
  $('#tabs-industries').easytabs({
   tabs: 'ul.tabs > li',
   updateHash: false
- }).bind('easytabs:after', function() {
-    $.fn.matchHeight._update();    
-  });
+ });
+ // .bind('easytabs:after', function() {
+ //    $.fn.matchHeight._update();    
+ //  });
 
  $('#tab-container').easytabs({
   tabs: 'ul.tabs > li'

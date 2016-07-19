@@ -1,6 +1,11 @@
 .page-header {
-	background-color: #f6f6f6;
+	background: rgba(246, 246, 246, 0.9);
 	padding: 8px 87px 6px 60px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 20;
 	@include respond-to(phones) {
 		padding: 8px 40px 8px 15px;
 	}
@@ -9,9 +14,7 @@
 	}
 	@include respond-to(s-desktops) {
 		padding: 8px 87px 6px 60px;
-	}
-	position: relative;
-	z-index: 20;
+	}	
 	a {
 		color: #58585a;
 	}

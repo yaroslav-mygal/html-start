@@ -311,4 +311,13 @@
 			@include sprite($icon-ind-services-blue);
 		}
 	}
+	&.icon-more {
+		@include sprite($icon-more);
+	}
+	&.icon-news {
+		@include sprite($icon-news);
+	}
+	&.arrow-more {
+		@include sprite($arrow-more);
+	}
 }

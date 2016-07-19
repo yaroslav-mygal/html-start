@@ -10,13 +10,22 @@ body {
   font-family: $f-base-font;
   font-size: 16px;
 }
-
 a {
   color: $c-link;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
+}
+#page {
+  position: relative;
+  padding-top: 59px;
+  @include respond-to(s-phones) {
+    padding-top: 44px;
+  }
+  @include respond-to(s-desktops) {
+    padding-top: 67px;
+  }  
 }
 .home-section {
   padding: 60px 0;
@@ -857,7 +866,7 @@ a {
   max-width: 1180px;
   color: #fff;
   @include respond-to(tablets) {
-    min-height: 430px;
+    min-height: 436px;
   }
   @include respond-to(desktops) {
     min-height: 550px;
@@ -882,45 +891,67 @@ a {
 .main-industries {
   overflow: hidden;
   position: relative;
-  .left-column-wrap {     
+  #tabs-industries {
+     @include respond-to(tablets) {
+      padding-left: 250px;
+    }
+    @include respond-to(s-desktops) {
+      padding-left: 280px;
+    }
+  } 
+  .left-column-wrap {   
     background-color: #fff;
     @include respond-to(phones) {
       padding: 20px;
     }
     @include respond-to(tablets) {
-      float: left;   
-      width: 27%;
+      position: fixed;
       padding-top: 18px;
+      left: 0;
+      width: 250px;
     }
     @include respond-to(s-desktops) {
-      width: 25%;
+      width: 280px;
     }
     @include respond-to(desktops) {
-      padding-top: 35px;
-      width: 25%;
+      padding-top: 35px;      
+    }
+  }
+  .col-industries {
+    @include respond-to(tablets) {
+      padding: 0 0 0 30px;
+    }
+    // @include respond-to(s-desktops) {
+    //   padding: 0 15px 0 0;
+    // }
+    // @include respond-to(desktops) {
+    //   min-width: 230px;
+    //   padding: 0 10px 0 0;
+    // }
+    // @include respond-to('1500px') {
+    //   // min-width: 245px;
+    // }
+    h4 {      
+      text-transform: uppercase;
+      color: #2f4050;
+      margin: 0;
+      @include respond-to(tablets) {
+        @include font-size(20px);
+      }
+      @include respond-to(s-desktops) {
+        text-align: left;
+        @include font-size(25px);
+      }
     }
   }
   .right-column-wrap {       
     background-color: #4f4f4f;
     @include respond-to(phones) {
       padding: 20px;
-    }
-    @include respond-to(tablets) {
-      float: left; 
-      width: 73%;    
-    }
-    @include respond-to(s-desktops) {
-      width: 75%;
-    }
-    @include respond-to(desktops) {
-      width: 75%;
-    }
+    }    
     .tab-content {
       @include respond-to(tablets) {
         padding: 10px 20px;        
-      }
-      @include respond-to(s-desktops) {
-        
       }
       @include respond-to(desktops) {
         padding: 30px 25px 15px;
@@ -931,55 +962,87 @@ a {
     }
     #tab-restaurants {
       background: url('../images/industries-tabs/restaurants.jpg') no-repeat;
+      background-size: 100% auto;
+      background-attachment: fixed;
     }
     #tab-hospitality {
       background: url('../images/industries-tabs/hospitality.jpg') no-repeat;
+      background-size: 100% auto;
+      background-attachment: fixed;
     }
     #tab-healthcare {
       background: url('../images/industries-tabs/healthcare.jpg') no-repeat;
+      background-size: 100% auto;
+      background-attachment: fixed;
     }
     #tab-retail {
       background: url('../images/industries-tabs/retail.jpg') no-repeat;
+      background-size: 100% auto;
+      background-attachment: fixed;
     }
     #tab-government {
       background: url('../images/industries-tabs/government.jpg') no-repeat;
+      background-size: 100% auto;
+      background-attachment: fixed;
     }
     #tab-education {
       background: url('../images/industries-tabs/education.jpg') no-repeat;
+      background-size: 100% auto;
+      background-attachment: fixed;
     }
     #tab-services {
       background: url('../images/industries-tabs/services.jpg') no-repeat;
+      background-size: 100% auto;
+      background-attachment: fixed;
     }
   }
   @include respond-to(desktops) {
     .container {
       width: 1450px;
     }
-  }
-  .col-industries {
-    @include respond-to(tablets) {
-      float: right;
-      max-width: 282px;
-      min-width: 207px;
-    }
-    h4 {      
-      text-transform: uppercase;
-      color: #2f4050;
-      margin: 0;
-      @include respond-to(tablets) {
-        @include font-size(20px);
-        text-align: center;
-      }
-      @include respond-to(s-desktops) {
-        text-align: left;
-        @include font-size(25px);
-      }
-    }
-  }
+  }  
   .flow-form {
     top: 220px;
   }
 }
 .page-content {
   margin-bottom: 40px;
+}
+.blog-area {
+  border-top: 3px solid #5090bb;
+  .blog-aside {
+    background-color: #eee;
+    padding: 64px 18px 30px;
+    .blog-advert {
+      padding: 0 25px;
+      .blog-ad {
+        position: relative;
+        margin-bottom: 22px;
+        .ad-promo {
+          position: absolute;
+          top: 10px;
+          left: 60px;
+        }
+      }
+    }
+    .blog-widget {
+      @include font-size(20px);
+      .ttl-widget {
+        font-weight: normal;
+        @include font-size(22px);
+        color: #515151;
+        font-family: $f-q-family;
+        text-transform: uppercase;
+      }
+      a {
+        color: #515151;
+      }
+    }
+    .posts-list {
+      margin-bottom: 20px;
+    }
+    .rss-wrap {
+      padding: 0 0 40px 17px;
+    }
+  }
 }

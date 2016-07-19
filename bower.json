@@ -29,5 +29,7 @@
     "jquery.stellar": "stellar.js#^0.6.2",
     "easytabs": "^3.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sticky-kit": "^1.1.2"
+  }
 }
