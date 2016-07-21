@@ -572,10 +572,21 @@
       @include font-size(14px);
     }
   }
+  .owl-slider-holder {
+    padding: 74px 0 0;
+    margin: 0 auto;
+    width: 263px;
+  }
   .power-row {
-    overflow: hidden;
     position: relative;
     min-height: 128px;
+    &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
     &:before {
       content: '';
       background: url('../images/layout/power-row.png') repeat-x;
@@ -596,6 +607,27 @@
   .power-block {
     width: 340px;
     position: relative;
+    .scale-image {
+      display: block;
+      &:hover {
+        text-decoration: none;
+      }
+      p {
+        color: #fff;
+      }
+    }
+    &:hover {
+      .icon-holder {
+        .scale-icon {
+          visibility: visible;
+          width: 109px;
+          height: 109px;
+          left: 50%;
+          top: 50%;
+          margin: -54.5px 0 0 -54.5px;
+        }
+      }
+    }
     .icon-holder {
       width: 25px;
       height: 25px;
@@ -603,6 +635,18 @@
       @include border-radius(50%);
       position: absolute;
       top: 0;
+      .scale-icon {
+        position: absolute;
+        width: 27px;
+        height: 27px;
+        border: 2px solid transparent;
+        @include border-radius(50%);
+        visibility: hidden;
+        transition: all .6s ease-in-out;
+        left: -3px;
+        top: -3px;
+        // transform: scale(1);
+      }
     }
     &.left-block {      
       padding-right: 40px;
@@ -762,17 +806,26 @@
 .new-type-block {
   padding: 0 4px;
   position: relative;
+  .icon-more {
+    position: absolute;
+    right: 12px;
+    @include verticalTransform();
+  }
   .text {
     position: absolute;
     color: #fff;
+    padding: 6px 50px 6px 15px;
     background: rgba(80, 144, 187, 0.8);
-    @include font-size(23px);
+    @include font-size(16px);
     font-weight: bold;
-    left: 8px;
-    right: 8px;
+    left: 4px;
+    right: 4px;
     bottom: 68px;
     text-transform: uppercase;
-    font-family: $f-alt-family
+    font-family: $f-alt-family;
+    @include respond-to(phones) {
+      bottom: 30px;
+    }
   }
 }
 .ad-promo {
@@ -783,17 +836,26 @@
   width: 264px;
   position: relative;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+  @include respond-to(phones) {
+    padding: 15px 65px 15px 15px;
+  }
   &:hover {
     text-decoration: none;
   }
-  strong {
-    @include font-size(25px);
+  strong {   
     font-family: $f-alt-family;
     display: block;
+    @include font-size(20px);
+    @include respond-to(desktops) {
+      @include font-size(25px);
+    }
   }
   span {
     display: block;
-    @include font-size(20px);
+    @include font-size(16px);
+    @include respond-to(desktops) {
+      @include font-size(20px);
+    }
   }
   .arrow-more {
     right: 15px;
@@ -802,18 +864,18 @@
 }
 .posts-list {
   @include clear-list;
-  @include font-size(20px);
+  @include font-size(15px);
   font-family: $f-q-family;
   li {
     border-bottom: 1px solid #fff;
-    padding: 12px 5px 10px 50px;
+    padding: 12px 5px 10px 30px;
     position: relative;
     &:before {
       content: '';
       position: absolute;
-      left: 25px;
-      top: 17px;
-      @include sprite($bullet);
+      left: 10px;
+      top: 14px;
+      @include triangle(10px 10px, #cdcdcd, right);
     }
     a {
       color: #515151;
@@ -825,8 +887,8 @@
   position: relative;
   text-decoration: underline;
   color: #515151;
-  padding: 17px 0 0 63px;
-  @include font-size(18px);
+  padding: 7px 0 0 40px;
+  @include font-size(14px);
   min-height: 50px;
   &:hover {
     text-decoration: none;
@@ -837,5 +899,175 @@
     left: 0;
     top: 0;    
     @include sprite($icon-rss);
+  }
+}
+.post {
+  color: #3c3c3c;
+  border-bottom: 2px solid #cacaca;
+  padding: 30px 0 25px;
+  font-family: $f-q-family;
+  b {
+    font-weight: bold;
+  }
+  &.single-post {
+    border: 0;
+    padding-top: 0;
+  }
+  .title-post {
+    color: #515151;
+    @include font-size(22px);
+    a {
+      color: #515151;
+    }
+  }
+  .post-info {
+    margin-bottom: 25px;
+    padding: 3px;
+    @include font-size(14px);
+    p {
+      margin-bottom: 5px;
+    }
+    .wrap {
+      overflow: hidden;
+      padding-top: 10px;
+    }
+    .avtor {
+      float: left;
+      margin-right: 15px;
+      border: 2px solid #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    }
+  }
+  .post-entry {
+    overflow: hidden;
+    @include respond-to(tablets) {
+      padding-right: 10px;
+    }
+    @include respond-to(s-desktops) {
+      padding-right: 15px;
+    }
+    @include respond-to(desktops) {
+      padding-right: 35px;
+    }    
+  }
+  .post-thumbnail {
+    @include respond-to(phones) {
+      margin: 0 0 20px;
+    }
+  }
+  .post-text {
+    @include font-size(17px, 25px);
+  }
+}
+.blog-head {
+  padding: 24px 0;
+  .ttl-holder {
+    @include respond-to(phones) {
+      text-align: center;
+    }
+  }
+  .new-top-promo {
+    @include respond-to(s-phones) {
+      margin: 0 auto;
+      max-width: 270px;
+      .col-xs-4 {
+        width: 100%;
+        margin: 0 0 10px;
+      }
+    }
+  }
+}
+.menu-posts {
+  @include clear-list;
+  font-family: $f-q-family;
+  @include font-size(17px);
+  @include respond-to(tablets) {
+    float: right;
+  }
+  li {
+    position: relative;
+    padding: 0 7px 0 16px;
+    @include respond-to(tablets) {
+      float: left;
+    }
+    &:first-child {
+      padding-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+    @include respond-to(s-phones) {
+      &:first-child {
+        padding-left: 16px;
+        &:before {
+          display: block;
+        }
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      background-color: #5090bb;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+    a {
+      color: #515151;
+    }
+  }
+}
+.pagination {
+  @include clear-list;
+  .pagination-holder & {
+    padding: 25px 0 5px;
+    overflow: hidden;
+    float: right;
+  }
+  li {
+    float: left;
+    margin-left: 5px;
+    &.page {
+      .pagination-item {
+        border: 3px solid #fff;
+        font-weight: bold;
+        border-radius: 50%;
+        @include font-size(19px, 32px);
+        font-family: $f-alt-family;
+        text-align: center;
+        display: block;
+        color: #515151;
+        box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+        min-width: 40px;
+        height: 40px;
+        &:hover {
+          text-decoration: none;
+          background-color: #5090bb;
+          color: #fff;
+        }
+      }
+      &.current-page {
+        .pagination-item {
+          background-color: #5090bb;
+          color: #fff;
+        }
+      }
+    }
+    &.previous, &.next {      
+      display: inline-block;
+      padding: 7px 3px 0;
+      .pagination-item {
+        color: #515151;
+        &:hover {
+          text-decoration: none;
+          color: #5190bb;
+        }
+      }
+    }
   }
 }

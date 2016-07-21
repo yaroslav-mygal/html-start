@@ -320,4 +320,7 @@
 	&.arrow-more {
 		@include sprite($arrow-more);
 	}
+	&.blank-avatara {
+		@include sprite($blank-avatara);
+	}
 }

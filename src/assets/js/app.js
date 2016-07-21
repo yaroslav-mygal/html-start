@@ -47,6 +47,7 @@ $(".stick-column").stick_in_parent();
 })
  
  var owlMacbook = $("#owl-tab-macbook");
+
  owlMacbook.owlCarousel({
     items:1,
     dots: false,
@@ -54,9 +55,19 @@ $(".stick-column").stick_in_parent();
     animateOut: 'fadeOut'
   });
 
+ var powerMobileSlider = $("#powerMobileSlider");
 
+  powerMobileSlider.owlCarousel({
+      items:1,
+      dots: false,
+      autoplay: false,
+      animateOut: 'fadeOut'
+    });
 
- //var owlTabMacbook = $("#owl-tab-macbook").data('owlCarousel');
+  $('.scale-image').on('mouseover', function(){
+    var slide = $(this).attr('data-slide');
+    powerMobileSlider.trigger('to.owl.carousel', [slide, 300]);
+  })
 
  $('#tabs-app-container').easytabs({
   tabs: 'ul.tabs > li',
@@ -81,9 +92,6 @@ $(".stick-column").stick_in_parent();
   tabs: 'ul.tabs > li',
   updateHash: false
  });
- // .bind('easytabs:after', function() {
- //    $.fn.matchHeight._update();    
- //  });
 
  $('#tab-container').easytabs({
   tabs: 'ul.tabs > li'

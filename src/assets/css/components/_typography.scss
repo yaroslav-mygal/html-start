@@ -21,9 +21,17 @@ p {
 	margin: 0 0 15px;
 }
 .ttl-news {
-	color: #fff;
 	color: #515151;
-	@include font-size(60px);
+	@include font-size(35px, 80px);
+	@include respond-to(phones) {
+		display: inline-block;
+		vertical-align: top;
+	}
+	@include respond-to(tablets) {
+		.blog-head & {
+			margin: 40px 0 0;
+		}
+	}	
 }
 .ttl-section {
 	@include respond-to(phones) {
@@ -120,7 +128,7 @@ p {
 	.schedule-splash-top & {
 		color: #fff;
 		@include font-size(36px);
-		margin-bottom: 48px;
+		margin-bottom: 30px;
 	}
 	.schedule-splash-content & {
 		@include font-size(40px);

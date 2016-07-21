@@ -738,7 +738,7 @@ a {
 }
 .trial-form {
   background-color: #5090bb;
-  border-top: 1px solid #fff;
+  border-top: 20px solid #0f243b;
   @include respond-to(phones) {
     padding: 40px 0;
   }
@@ -751,7 +751,10 @@ a {
   .form-wrap {
     @include respond-to(s-desktops) {
       padding: 0 50px;
-    }    
+    }
+    @include respond-to(desktops) {
+      padding: 0 130px;
+    }
   }
 }
 .power-section {
@@ -768,6 +771,7 @@ a {
   background: #2f4050 url('../images/layout/bg-schedule-splash-content.jpg') no-repeat;
   position: relative;
   @include bg-cover();
+  background-attachment: fixed;
   color: #fff;
   .schedule-splash-top {
     width: 100%;
@@ -813,9 +817,8 @@ a {
   .schedule-splash-content {
     text-align: right;
     @include respond-to(s-desktops) {
-      height: 634px;
       .v-outer>.v-inner {
-        height: 634px;
+        height: 530px;
       }
       .text {
         max-width: 640px;
@@ -843,7 +846,7 @@ a {
   }
 }
 .schedule-control-area {
-  padding: 84px 0 105px;
+  padding: 80px 0 35px;
   @include respond-to(desktops) {
     .container {
       width: 1380px;
@@ -852,6 +855,7 @@ a {
   .schedule-text {
     float: left;
     width: 365px;
+    padding-top: 60px;
   }
   .special-tabs {
     float: left;
@@ -860,6 +864,7 @@ a {
   }
   .tab-macbook {
     float: right;
+    margin-top: 30px;
   }
 }
 .industries-content {
@@ -1012,16 +1017,34 @@ a {
   border-top: 3px solid #5090bb;
   .blog-aside {
     background-color: #eee;
-    padding: 64px 18px 30px;
+    padding: 20px;
+    @include respond-to(s-desktops) {
+      padding: 30px 10px 10px;
+    }
+    @include respond-to(desktops) {
+      padding: 64px 18px 30px;
+    }
     .blog-advert {
-      padding: 0 25px;
+      padding: 0 5px;
+      @include respond-to(phones) {
+        padding: 0;
+      }
       .blog-ad {
         position: relative;
         margin-bottom: 22px;
         .ad-promo {
-          position: absolute;
-          top: 10px;
-          left: 60px;
+          @include respond-to(phones) {
+            margin-bottom: 15px;
+          }
+          @include respond-to(s-desktops) {
+            margin: 0 0 25px;
+            width: auto;
+          }
+          @include respond-to(desktops) {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+          }          
         }
       }
     }
@@ -1043,6 +1066,48 @@ a {
     }
     .rss-wrap {
       padding: 0 0 40px 17px;
+      @include respond-to(phones) {
+        padding: 0 0 10px;
+      }
     }
   }
+}
+.posts-holder {
+  @include respond-to(s-desktops) {
+    padding-right: 30px;
+  }
+  @include respond-to(desktops) {
+    padding-right: 70px;
+  }
+  color: #3c3c3c;
+  .post:first-child {
+    padding-top: 0;
+  }
+}
+.posts-header {
+  color: #515151;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 15px 0 6px;
+  margin-bottom: 15px;
+  @include respond-to(s-desktops) {
+    padding: 30px 10px 6px 0;
+    margin-bottom: 35px;
+  }
+  .menu-posts {
+    padding-top: 4px;
+    @include respond-to(m-phones) {
+      overflow: hidden;
+      li {
+        float: left;
+      }
+    }
+  }
+  h4 {
+    @include font-size(23px);
+    margin: 0;
+  }
+}
+img.aligncenter {
+  display: block;
+  margin: 0 auto;
 }
