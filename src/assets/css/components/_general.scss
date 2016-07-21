@@ -74,8 +74,7 @@ a {
     @include respond-to(s-desktops) {
       // background: url('../images/layout/bg-home-store-section-ipad-landscape.jpg') no-repeat 50%;
       background: url('../images/layout/bg-home-store-section-ipad-landscape-tall.jpg') no-repeat 50%;
-      @include bg-cover();    
-      background-attachment: fixed;
+      @include bg-cover();
       color: #2f4050;
       .ttl-section {
         color: #2f4050;
@@ -84,8 +83,7 @@ a {
     @include respond-to(desktops) {
       // background: url('../images/layout/bg-home-store-section.jpg') no-repeat 50%;
       background: url('../images/layout/bg-home-store-section-tall.jpg') no-repeat 50%;
-      @include bg-cover();    
-      background-attachment: fixed;
+      @include bg-cover();
     }   
   }
   &.home-section-test {
@@ -771,7 +769,6 @@ a {
   background: #2f4050 url('../images/layout/bg-schedule-splash-content.jpg') no-repeat;
   position: relative;
   @include bg-cover();
-  background-attachment: fixed;
   color: #fff;
   .schedule-splash-top {
     width: 100%;

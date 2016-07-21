@@ -4608,7 +4608,6 @@ a {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background-attachment: fixed;
         color: #2f4050; }
         .home-section.home-store-section .ttl-section {
           color: #2f4050; } }
@@ -4618,8 +4617,7 @@ a {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover;
-        background-attachment: fixed; } }
+        background-size: cover; } }
   .home-section.home-section-test {
     padding: 40px 0;
     background-color: #5090bb;
@@ -5294,7 +5292,6 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
   color: #fff; }
   .schedule-splash .schedule-splash-top {
     width: 100%;
