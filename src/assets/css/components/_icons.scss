@@ -7,8 +7,14 @@
 	vertical-align: top;
 	&.page-logo {
 		@include sprite($logo);
+		.lang-au & {
+			@include sprite($logo-australian);
+		}
 		@include respond-to(s-phones) {
 			@include sprite($logo-phone);
+			.lang-au & {
+				@include sprite($logo-australian-phone);
+			}
 		}
 	}
 	&.btn-toggle-menu {

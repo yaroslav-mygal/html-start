@@ -4749,7 +4749,7 @@ a {
       left: 0;
       top: 0;
       background-image: url(../images/sprite/sprite.png);
-      background-position: -1017px -803px;
+      background-position: -988px -803px;
       width: 25px;
       height: 25px; }
       .home-section-reasons .list-option li:before {
@@ -5606,12 +5606,22 @@ img.aligncenter {
     background-position: -873px -681px;
     width: 185px;
     height: 44px; }
+    .lang-au .icon.page-logo {
+      background-image: url(../images/sprite/sprite.png);
+      background-position: -871px -915px;
+      width: 137px;
+      height: 55px; }
     @media only screen and (max-width: 479px) {
       .icon.page-logo {
         background-image: url(../images/sprite/sprite.png);
         background-position: -672px -881px;
         width: 120px;
-        height: 29px; } }
+        height: 29px; }
+        .lang-au .icon.page-logo {
+          background-image: url(../images/sprite/sprite.png);
+          background-position: -1006px -1107px;
+          width: 110px;
+          height: 44px; } }
   .icon.btn-toggle-menu {
     background-image: url(../images/sprite/sprite.png);
     background-position: -1982px -757px;
@@ -5625,17 +5635,17 @@ img.aligncenter {
     @media only screen and (min-width: 992px) {
       .icon.icon-phone {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1257px -1094px;
+        background-position: -1269px -1107px;
         width: 42px;
         height: 42px; } }
   .icon.app-store {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1038px -1010px;
+    background-position: -1038px -1023px;
     width: 143px;
     height: 43px; }
   .icon.google-play {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1185px -1010px;
+    background-position: -1185px -1023px;
     width: 123px;
     height: 43px; }
   .icon.icon-restaurant {
@@ -5646,7 +5656,7 @@ img.aligncenter {
     @media only screen and (max-width: 767px) {
       .icon.icon-restaurant {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1330px -961px;
+        background-position: -1330px -974px;
         width: 58px;
         height: 36px; } }
   .icon.icon-hospitality {
@@ -5657,18 +5667,18 @@ img.aligncenter {
     @media only screen and (max-width: 767px) {
       .icon.icon-hospitality {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1516px -1010px;
+        background-position: -1516px -1023px;
         width: 47px;
         height: 36px; } }
   .icon.icon-healthcare {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1108px -1094px;
+    background-position: -1120px -1107px;
     width: 51px;
     height: 44px; }
     @media only screen and (max-width: 767px) {
       .icon.icon-healthcare {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1527px -1094px;
+        background-position: -1539px -1107px;
         width: 43px;
         height: 37px; } }
   .icon.icon-retail {
@@ -5679,7 +5689,7 @@ img.aligncenter {
     @media only screen and (max-width: 767px) {
       .icon.icon-retail {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1992px -1143px;
+        background-position: -1576px -1156px;
         width: 36px;
         height: 38px; } }
   .icon.icon-government {
@@ -5690,7 +5700,7 @@ img.aligncenter {
     @media only screen and (max-width: 767px) {
       .icon.icon-government {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1699px -1143px;
+        background-position: -1283px -1156px;
         width: 37px;
         height: 41px; } }
   .icon.icon-education {
@@ -5701,18 +5711,18 @@ img.aligncenter {
     @media only screen and (max-width: 767px) {
       .icon.icon-education {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1450px -961px;
+        background-position: -1947px -562px;
         width: 54px;
         height: 35px; } }
   .icon.icon-services {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1564px -1143px;
+    background-position: -988px -1248px;
     width: 47px;
     height: 46px; }
     @media only screen and (max-width: 767px) {
       .icon.icon-services {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1513px -1143px;
+        background-position: -937px -1248px;
         width: 47px;
         height: 46px; } }
   @media only screen and (max-width: 767px) {
@@ -5747,45 +5757,45 @@ img.aligncenter {
       height: 329px; } }
   .icon.icon-plus {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1969px -793px;
+    background-position: -716px -1248px;
     width: 51px;
     height: 50px; }
     .icon.icon-plus:hover {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -1292px -1143px;
+      background-position: -1969px -793px;
       width: 51px;
       height: 50px; }
     @media only screen and (min-width: 768px) {
       .icon.icon-plus {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1229px -1143px;
+        background-position: -653px -1248px;
         width: 59px;
         height: 59px; }
         .icon.icon-plus:hover {
           background-image: url(../images/sprite/sprite.png);
-          background-position: -1166px -1143px;
+          background-position: -590px -1248px;
           width: 59px;
           height: 59px; } }
     @media only screen and (min-width: 992px) {
       .icon.icon-plus {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1969px -793px;
+        background-position: -716px -1248px;
         width: 51px;
         height: 50px; }
         .icon.icon-plus:hover {
           background-image: url(../images/sprite/sprite.png);
-          background-position: -1292px -1143px;
+          background-position: -1969px -793px;
           width: 51px;
           height: 50px; } }
     @media only screen and (min-width: 1305px) {
       .icon.icon-plus {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1229px -1143px;
+        background-position: -653px -1248px;
         width: 59px;
         height: 59px; }
         .icon.icon-plus:hover {
           background-image: url(../images/sprite/sprite.png);
-          background-position: -1166px -1143px;
+          background-position: -590px -1248px;
           width: 59px;
           height: 59px; } }
   .icon.icon-bamboo {
@@ -5805,7 +5815,7 @@ img.aligncenter {
     height: 51px; }
   .icon.icon-quickbooks-colored {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1394px -915px;
+    background-position: -1535px -915px;
     width: 166px;
     height: 38px; }
   .icon.icon-gusto {
@@ -5820,7 +5830,7 @@ img.aligncenter {
     height: 45px; }
   .icon.icon-synchr {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1808px -611px;
+    background-position: -1808px -684px;
     width: 201px;
     height: 69px; }
   .icon.icon-synchr-colored {
@@ -5835,7 +5845,7 @@ img.aligncenter {
     height: 53px; }
   .icon.icon-traxpayroll-colored {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1220px -915px;
+    background-position: -1361px -915px;
     width: 170px;
     height: 40px; }
   .icon.icon-epson {
@@ -5845,7 +5855,7 @@ img.aligncenter {
     height: 47px; }
   .icon.icon-epson-colored {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1719px -915px;
+    background-position: -1860px -915px;
     width: 130px;
     height: 31px; }
   .icon.icon-kounta {
@@ -5855,7 +5865,7 @@ img.aligncenter {
     height: 49px; }
   .icon.icon-kounta-colored {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1564px -915px;
+    background-position: -1705px -915px;
     width: 151px;
     height: 38px; }
   .icon.icon-zendesk {
@@ -5875,7 +5885,7 @@ img.aligncenter {
     height: 69px; }
   .icon.icon-adp-colored {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1006px -1094px;
+    background-position: -1097px -1156px;
     width: 98px;
     height: 45px; }
   .icon.icon-onelogin {
@@ -5885,7 +5895,7 @@ img.aligncenter {
     height: 57px; }
   .icon.icon-onelogin-colored {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -871px -961px;
+    background-position: -871px -974px;
     width: 156px;
     height: 45px; }
   .icon.icon-xero {
@@ -5895,22 +5905,22 @@ img.aligncenter {
     height: 114px; }
   .icon.icon-xero-colored {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1347px -1143px;
+    background-position: -771px -1248px;
     width: 50px;
     height: 50px; }
   .icon.icon-myob {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1808px -684px;
+    background-position: -1808px -611px;
     width: 201px;
     height: 69px; }
   .icon.icon-myob-colored {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -871px -1094px;
+    background-position: -871px -1107px;
     width: 131px;
     height: 45px; }
   .icon.icon-kounta-colored {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1031px -961px;
+    background-position: -1031px -974px;
     width: 165px;
     height: 41px; }
   .icon.icon-lightspeed {
@@ -5976,12 +5986,12 @@ img.aligncenter {
     height: 66px; }
   .icon.icon-pie {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1019px -1143px;
+    background-position: -1019px -1156px;
     width: 74px;
     height: 61px; }
   .icon.icon-heart {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1455px -1143px;
+    background-position: -879px -1248px;
     width: 54px;
     height: 46px; }
   .icon.icon-fixed {
@@ -5995,42 +6005,42 @@ img.aligncenter {
         display: none; } }
   .icon.icon-pricing-alert {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1957px -345px;
+    background-position: -1947px -478px;
     width: 80px;
     height: 80px; }
   .icon.icon-pricing-sms {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -871px -1010px;
+    background-position: -871px -1023px;
     width: 79px;
     height: 80px; }
   .icon.icon-pricing-call {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -954px -1010px;
+    background-position: -954px -1023px;
     width: 80px;
     height: 79px; }
   .icon.icon-check.blue {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -988px -803px;
+    background-position: -1062px -681px;
     width: 25px;
     height: 25px; }
   .icon.icon-check.green {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -2013px -721px;
+    background-position: -959px -803px;
     width: 25px;
     height: 25px; }
   .icon.icon-check.yellow {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -959px -803px;
+    background-position: -2013px -721px;
     width: 25px;
     height: 25px; }
   .icon.icon-star {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1210px -1094px;
+    background-position: -1175px -1107px;
     width: 43px;
     height: 43px; }
   .icon.icon-1 {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -736px -575px;
+    background-position: -946px -575px;
     width: 101px;
     height: 101px; }
   .icon.icon-2 {
@@ -6040,7 +6050,7 @@ img.aligncenter {
     height: 101px; }
   .icon.icon-3 {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -946px -575px;
+    background-position: -736px -575px;
     width: 101px;
     height: 101px; }
   .icon.icon-iphone {
@@ -6050,72 +6060,72 @@ img.aligncenter {
     height: 610px; }
   .icon.icon-ind-restaurants {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1200px -961px;
+    background-position: -1265px -974px;
     width: 61px;
     height: 38px; }
     a:hover .icon.icon-ind-restaurants, a.active .icon.icon-ind-restaurants {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -1265px -961px;
+      background-position: -1200px -974px;
       width: 61px;
       height: 38px; }
   .icon.icon-ind-hospitality {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1312px -1010px;
+    background-position: -1312px -1023px;
     width: 49px;
     height: 39px; }
     a:hover .icon.icon-ind-hospitality, a.active .icon.icon-ind-hospitality {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -1365px -1010px;
+      background-position: -1365px -1023px;
       width: 49px;
       height: 39px; }
   .icon.icon-ind-healthcare {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1418px -1010px;
+    background-position: -1418px -1023px;
     width: 45px;
     height: 38px; }
     a:hover .icon.icon-ind-healthcare, a.active .icon.icon-ind-healthcare {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -1467px -1010px;
+      background-position: -1467px -1023px;
       width: 45px;
       height: 38px; }
   .icon.icon-ind-retail {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1740px -1143px;
+    background-position: -1324px -1156px;
     width: 38px;
     height: 39px; }
     a:hover .icon.icon-ind-retail, a.active .icon.icon-ind-retail {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -1782px -1143px;
+      background-position: -1366px -1156px;
       width: 38px;
       height: 39px; }
   .icon.icon-ind-government {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1615px -1143px;
+    background-position: -1241px -1156px;
     width: 38px;
     height: 43px; }
     a:hover .icon.icon-ind-government, a.active .icon.icon-ind-government {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -1657px -1143px;
+      background-position: -1199px -1156px;
       width: 38px;
       height: 43px; }
   .icon.icon-ind-education {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1947px -562px;
+    background-position: -1392px -974px;
     width: 54px;
     height: 35px; }
     a:hover .icon.icon-ind-education, a.active .icon.icon-ind-education {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -1392px -961px;
+      background-position: -1450px -974px;
       width: 54px;
       height: 35px; }
   .icon.icon-ind-services {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1349px -1094px;
+    background-position: -1361px -1107px;
     width: 42px;
     height: 40px; }
     a:hover .icon.icon-ind-services, a.active .icon.icon-ind-services {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -1303px -1094px;
+      background-position: -1315px -1107px;
       width: 42px;
       height: 40px; }
   .icon.icon-more {
@@ -6125,17 +6135,17 @@ img.aligncenter {
     height: 26px; }
   .icon.icon-news {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1947px -478px;
+    background-position: -1957px -345px;
     width: 80px;
     height: 80px; }
   .icon.arrow-more {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1574px -1094px;
+    background-position: -1586px -1107px;
     width: 37px;
     height: 37px; }
   .icon.blank-avatara {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1401px -1143px;
+    background-position: -825px -1248px;
     width: 50px;
     height: 50px; }
 
@@ -7031,27 +7041,27 @@ img {
     @media only screen and (max-width: 767px) {
       .home-section-slider .owl-nav > div.owl-prev {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1395px -1094px;
+        background-position: -1407px -1107px;
         width: 40px;
         height: 40px; } }
     @media only screen and (min-width: 768px) {
       .home-section-slider .owl-nav > div.owl-prev {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1395px -1094px;
+        background-position: -1407px -1107px;
         width: 40px;
         height: 40px; } }
     @media only screen and (min-width: 992px) {
       .home-section-slider .owl-nav > div.owl-prev {
         left: 10px;
         background-image: url(../images/sprite/sprite.png);
-        background-position: -871px -1143px;
+        background-position: -945px -1156px;
         width: 70px;
         height: 70px; } }
     @media only screen and (min-width: 1200px) {
       .home-section-slider .owl-nav > div.owl-prev {
         left: 45px;
         background-image: url(../images/sprite/sprite.png);
-        background-position: -772px -732px;
+        background-position: -672px -732px;
         width: 96px;
         height: 96px; } }
   .home-section-slider .owl-nav > div.owl-next {
@@ -7059,31 +7069,31 @@ img {
     @media only screen and (max-width: 767px) {
       .home-section-slider .owl-nav > div.owl-next {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1483px -1094px;
+        background-position: -1451px -1107px;
         width: 40px;
         height: 40px; } }
     @media only screen and (min-width: 768px) {
       .home-section-slider .owl-nav > div.owl-next {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -672px -732px;
+        background-position: -772px -732px;
         width: 96px;
         height: 96px;
         background-image: url(../images/sprite/sprite.png);
-        background-position: -1483px -1094px;
+        background-position: -1451px -1107px;
         width: 40px;
         height: 40px; } }
     @media only screen and (min-width: 992px) {
       .home-section-slider .owl-nav > div.owl-next {
         right: 10px;
         background-image: url(../images/sprite/sprite.png);
-        background-position: -945px -1143px;
+        background-position: -871px -1156px;
         width: 70px;
         height: 70px; } }
     @media only screen and (min-width: 1200px) {
       .home-section-slider .owl-nav > div.owl-next {
         right: 45px;
         background-image: url(../images/sprite/sprite.png);
-        background-position: -672px -732px;
+        background-position: -772px -732px;
         width: 96px;
         height: 96px; } }
 
@@ -7333,7 +7343,7 @@ img {
     .owl-home-carousel .owl-nav > *.owl-prev {
       left: 0;
       background-image: url(../images/sprite/sprite.png);
-      background-position: -521px -1248px;
+      background-position: -347px -1318px;
       width: 30px;
       height: 50px;
       left: 0; }
@@ -7345,7 +7355,7 @@ img {
           height: 33px; } }
     .owl-home-carousel .owl-nav > *.owl-next {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -555px -1248px;
+      background-position: -313px -1318px;
       width: 30px;
       height: 50px;
       right: 0; }
@@ -7579,40 +7589,40 @@ img {
         @media only screen and (min-width: 992px) {
           .page-footer .footer-menu .menu.menu-social a.link-social.social-facebook:before {
             background-image: url(../images/sprite/sprite.png);
-            background-position: -1950px -1143px;
+            background-position: -1492px -1156px;
             width: 38px;
             height: 38px; } }
         .page-footer .footer-menu .menu.menu-social a.link-social.social-twitter:before {
-          background-image: url(../images/sprite/sprite.png);
-          background-position: -872px -803px;
-          width: 25px;
-          height: 25px; }
-        @media only screen and (min-width: 992px) {
-          .page-footer .footer-menu .menu.menu-social a.link-social.social-twitter:before {
-            background-image: url(../images/sprite/sprite.png);
-            background-position: -1866px -1143px;
-            width: 38px;
-            height: 38px; } }
-        .page-footer .footer-menu .menu.menu-social a.link-social.social-google:before {
-          background-image: url(../images/sprite/sprite.png);
-          background-position: -1062px -681px;
-          width: 25px;
-          height: 25px; }
-        @media only screen and (min-width: 992px) {
-          .page-footer .footer-menu .menu.menu-social a.link-social.social-google:before {
-            background-image: url(../images/sprite/sprite.png);
-            background-position: -1908px -1143px;
-            width: 38px;
-            height: 38px; } }
-        .page-footer .footer-menu .menu.menu-social a.link-social.social-linkedin:before {
           background-image: url(../images/sprite/sprite.png);
           background-position: -930px -803px;
           width: 25px;
           height: 25px; }
         @media only screen and (min-width: 992px) {
+          .page-footer .footer-menu .menu.menu-social a.link-social.social-twitter:before {
+            background-image: url(../images/sprite/sprite.png);
+            background-position: -1408px -1156px;
+            width: 38px;
+            height: 38px; } }
+        .page-footer .footer-menu .menu.menu-social a.link-social.social-google:before {
+          background-image: url(../images/sprite/sprite.png);
+          background-position: -1017px -803px;
+          width: 25px;
+          height: 25px; }
+        @media only screen and (min-width: 992px) {
+          .page-footer .footer-menu .menu.menu-social a.link-social.social-google:before {
+            background-image: url(../images/sprite/sprite.png);
+            background-position: -1450px -1156px;
+            width: 38px;
+            height: 38px; } }
+        .page-footer .footer-menu .menu.menu-social a.link-social.social-linkedin:before {
+          background-image: url(../images/sprite/sprite.png);
+          background-position: -872px -803px;
+          width: 25px;
+          height: 25px; }
+        @media only screen and (min-width: 992px) {
           .page-footer .footer-menu .menu.menu-social a.link-social.social-linkedin:before {
             background-image: url(../images/sprite/sprite.png);
-            background-position: -1824px -1143px;
+            background-position: -1534px -1156px;
             width: 38px;
             height: 38px; } }
   .page-footer .footer-nav {
@@ -8222,7 +8232,7 @@ label.error {
     font-size: 0;
     line-height: 0;
     background-image: url(../images/sprite/sprite.png);
-    background-position: -1097px -1143px;
+    background-position: -521px -1248px;
     width: 65px;
     height: 60px; }
 
@@ -9000,7 +9010,7 @@ label.error {
   cursor: pointer;
   z-index: 8040;
   background-image: url(../images/sprite/sprite.png);
-  background-position: -1163px -1094px;
+  background-position: -1222px -1107px;
   width: 43px;
   height: 43px; }
 

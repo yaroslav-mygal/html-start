@@ -1,49 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html class="lang-au">
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Ximble</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js">
-     </script>
-  <![endif]-->
-</head>
-
+@@include('./page-head.html', {
+  "page-title":"Ximble"
+ })
 
 <body>
   <div id="page">
-    <div class="page-header">
-	<div class="row">	
-		<div class="col-sm-4 col-xs-7">
-			<strong class="page-logo icon">
-				<a href="#">ximble</a>
-			</strong>
-		</div>
-		<div class="col-sm-8 col-xs-5 header-right">		
-			<nav class="main-nav hidden-xs">
-				<ul>
-					<li><a href="#">Help</a></li>
-					<li><a href="#">LOGIN</a></li>
-				</ul>
-			</nav>
-			<a href="#" class="btn btn-pricing  hidden-xs">pricing &amp; signup </a>			
-		</div>
-		<a href="#" id="btn-toggle" class="btn-toggle-menu icon">toggle</a>
-	</div>
-	<nav id="toggle-nav" class="drop-nav">
-		<ul>
-			<li><a href="#">About Us</a></li>
-			<li><a href="#">Features</a></li>
-			<li><a href="#">Ximble News</a></li>
-			<li><a href="#">Help</a></li>
-			<li><a href="#">Login</a></li>
-			<li><a href="#">Pricing &amp; SignUp</a></li>
-		</ul>
-	</nav>
-</div>
+    @@include('./header.html')
     <a href="#" class="icon-fixed icon"></a>
     <div class="home-splash">
     	<div class="container">
@@ -56,19 +20,10 @@
             <h6>Try Ximble 30 days</h6>
             <p>No credit card required.</p>
           </div>
-          <div class="form-wrap">
-  <form action="#">
-    <div class="row row-5px push-bottom-10">
-      <div class="col-xs-6 col-sxs-12 push-bottom-sxs">
-        <input type="text" value="" placeholder="Full Name">
-      </div>
-      <div class="col-xs-6 col-sxs-12">
-        <input type="email" value="" placeholder="Email Address">
-      </div>
-    </div>
-    <input type="submit" class="btn btn-block btn-green" value="Start free trial">
-  </form>
-</div>
+          @@include('./components/form.html',
+          {
+            "button-text":"Start free trial"
+          })
         </div>
         <div class="splash-gallery-wrap hidden-xs">
           <div class="slider-splash owl-carousel" id="slick-splash">
@@ -384,19 +339,9 @@
               <li>Optimize labor costs and service levels – Finally!</li>
             </ul>
             
-            <div class="form-wrap">
-  <form action="#">
-    <div class="row row-5px push-bottom-10">
-      <div class="col-xs-6 col-sxs-12 push-bottom-sxs">
-        <input type="text" value="" placeholder="Full Name">
-      </div>
-      <div class="col-xs-6 col-sxs-12">
-        <input type="email" value="" placeholder="Email Address">
-      </div>
-    </div>
-    <input type="submit" class="btn btn-block btn-green" value="Start Now">
-  </form>
-</div>
+            @@include('./components/form.html',{
+            "button-text":"Start Now"
+          })
             
           </div>
           <div class="col-md-6 col-lg-5">
@@ -480,19 +425,9 @@
       <div class="container">
         <h3 class="text-center ttl-section">Take Control of Your Life. Test Drive Ximble Today!</h3>
         
-         <div class="form-wrap">
-  <form action="#">
-    <div class="row row-5px push-bottom-10">
-      <div class="col-xs-6 col-sxs-12 push-bottom-sxs">
-        <input type="text" value="" placeholder="Full Name">
-      </div>
-      <div class="col-xs-6 col-sxs-12">
-        <input type="email" value="" placeholder="Email Address">
-      </div>
-    </div>
-    <input type="submit" class="btn btn-block btn-green" value="Start Your Free 14 Day Trial">
-  </form>
-</div>
+         @@include('./components/form.html',{
+            "button-text":"Start Your Free 14 Day Trial"
+          })
 
       </div>
     </div>
@@ -605,90 +540,9 @@
       </div>
     </div>
     <!-- page footer -->
-    <footer class="page-footer">
-	<div class="top-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-4 col-sm-3 footer-widget">
-					<div class="footer-menu first">
-						<h4>Company</h4>
-						<ul class="menu">
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Company News</a></li>
-							<li><a href="#">Partners</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-xs-4 col-sm-6 footer-widget-group">
-					<div class="row">
-							<div class="col-sm-6 footer-widget">
-								<div class="footer-menu">
-									<h4>Customers</h4>
-									<ul class="menu">
-										<li><a href="#">Ximble API</a></li>
-										<li><a href="#">Support</a></li>
-										<li><a href="#">Login</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-sm-6 footer-widget">
-								<div class="footer-menu">
-									<h4>contact</h4>
-									<div class="footer-contact">
-										<i class="icon icon-phone"></i>
-										<span class="line"><a href="mailto:info@ximble.com">info@ximble.com</a></span>
-										<span class="line"><a href="tel:+18583484222" class="link-phone">1 (858) 348-4222</a></span>
-									</div>
-								</div>
-							</div>
-					</div>
-				</div>
-				<div class="col-xs-4 col-sm-3 footer-widget footer-widget-group">
-					<div class="footer-menu">
-						<h4>Connect</h4>
-						<ul class="menu menu-social">
-							<li><a class="link-social social-facebook" target="_blank" href="#">Facebook</a></li>
-							<li><a class="link-social social-twitter" target="_blank" href="#">Twitter</a></li>
-							<li><a class="link-social social-google" target="_blank" href="#">Google +</a></li>
-							<li><a class="link-social social-linkedin" target="_blank" href="#">Linked in</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="bottom-footer">
-		<div class="container">
-			<div class="col-sm-6 footer-privacy">
-				<p>Copyright &copy; 2015 <a href="#">Ximble</a>. All rights reserved. </p>
-			</div>
-			<div class="col-sm-6 text-right-sm">
-				<ul class="footer-nav">
-					<li><a href="#">Terms</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</footer>
-
+    @@include('./footer.html')
     <!-- scripts -->
-    <script type="text/javascript" src="assets/js/libs/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/libs/jquery.matchHeight-min.js"></script>
-<script type="text/javascript" src="assets/js/libs/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" src="assets/js/libs/jquery.easytabs.min.js"></script>
-<script type="text/javascript" src="assets/js/libs/jquery.sticky-kit.min.js"></script>
-<script type="text/javascript" src="assets/js/libs/paraxify.min.js"></script>
-<script type="text/javascript" src="assets/js/libs/owl.carousel.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-<script type="text/javascript" src="assets/js/app.js"></script>
-
-<!-- fonts -->
-
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700italic,700,600italic,600' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    @@include('./scripts.html')
   </div>
 </body>
 
