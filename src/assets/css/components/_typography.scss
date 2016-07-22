@@ -120,7 +120,14 @@ p {
 	}
 	.power-section & {
 		color: #fff;
+		@include respond-to(phones) {
+			margin-bottom: 30px;
+		}
+		@include respond-to(tablets) {
+			margin-bottom: 45px;
+		}
 		@include respond-to(s-desktops) {
+			margin-bottom: 15px;
 			@include font-size(40px);
 			margin-bottom: 71px;
 		}
@@ -129,11 +136,17 @@ p {
 		color: #fff;
 		@include font-size(36px);
 		margin-bottom: 30px;
+		@include respond-to(phones) {
+			@include font-size(30px);
+		}
 	}
 	.schedule-splash-content & {
 		@include font-size(40px);
 		color: #fff;
 		margin-bottom: 20px;
+		@include respond-to(phones) {
+			@include font-size(38px);
+		}
 	}
 }
 .subtitle-senDesk {

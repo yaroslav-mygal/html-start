@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+@@include('./page-head.html', {
+  "page-title":"Ximble Pages List"
+ })
+
+<body>
+  <div id="page">
+    @@include('./header.html')
+    
+    
+    <div class="inner-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <ul>
+              <li><a href="index.html">homepage</a></li>
+              <li><a href="industries.html">industries</a></li>
+              <li><a href="news.html">blog</a></li>
+              <li><a href="single-post.html">single blog post</a></li>
+              <li><a href="zenDesk.html">zenDesk</a></li>
+              <li><a href="scheduling.html">scheduling</a></li>
+              <li><a href="time-clocking.html">time clocking</a></li>
+              <li><a href="partners-integration.html">partners integration</a></li>
+              <li><a href="pricing.html">pricing.html</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <ul>
+              <li><a href="index-au.html">australian homepage</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- page footer -->
+    @@include('./footer.html')
+    <!-- scripts -->
+    @@include('./scripts.html')
+  </div>
+</body>
+
+</html>

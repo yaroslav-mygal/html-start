@@ -72,7 +72,6 @@ a {
       }
     }
     @include respond-to(s-desktops) {
-      // background: url('../images/layout/bg-home-store-section-ipad-landscape.jpg') no-repeat 50%;
       background: url('../images/layout/bg-home-store-section-ipad-landscape-tall.jpg') no-repeat 50%;
       @include bg-cover();
       color: #2f4050;
@@ -81,10 +80,11 @@ a {
       }
     }
     @include respond-to(desktops) {
-      // background: url('../images/layout/bg-home-store-section.jpg') no-repeat 50%;
-      background: url('../images/layout/bg-home-store-section-tall.jpg') no-repeat 50%;
+      background: url('../images/layout/bg-home-store-section-tall.jpg') no-repeat 50%;      
+    }
+    @include respond-to(1920) {
       @include bg-cover();
-    }   
+    }  
   }
   &.home-section-test {
     padding: 40px 0;
@@ -756,13 +756,35 @@ a {
   }
 }
 .power-section {
-  background: #2f4050 url('../images/layout/bg-power-section.jpg') no-repeat;
+  background: url('../images/layout/bg-power-section-sm.jpg') no-repeat 50% 0;
   @include bg-cover();
+  @include respond-to(s-desktops) {
+    background: url('../images/layout/bg-power-section.jpg') no-repeat 50% 0;
+    @include bg-cover();
+  }
   padding: 68px 0;
   position: relative;
   color: #fff;
+  @include respond-to(phones) {
+    padding: 40px 0;
+  }
+  .flow-form {
+    display: none;
+  }
   @include respond-to(s-desktops) {
+    padding: 70px 0 80px;
+    display: block;
+  }
+  @include respond-to(desktops) {
     padding: 80px 0 127px;
+  }
+  .flow-form {
+    @include respond-to(s-desktops) {
+      top: 10px;
+    }
+    @include respond-to(desktops) {
+      top: 350px;
+    }
   }
 }
 .schedule-splash {
@@ -770,6 +792,16 @@ a {
   position: relative;
   @include bg-cover();
   color: #fff;
+  .flow-form {
+    display: none;
+    @include respond-to(s-desktops) {
+      top: 300px;
+      display: block;
+    }
+    @include respond-to(desktops) {
+      top: 363px;
+    }
+  }
   .schedule-splash-top {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -777,6 +809,12 @@ a {
     padding: 34px 0 28px;
     position: relative;
     .btns-wrap {
+      @include respond-to(phones) {
+        padding: 0 10px;
+      }
+      @include respond-to(tablets) {
+        padding: 0 25px;
+      }
       @include respond-to(s-desktops) {
         padding: 0 20px;
       }
@@ -791,6 +829,11 @@ a {
       font-weight: normal;
       padding-left: 5px;
       padding-right: 5px;
+      @include respond-to(phones) {
+        @include font-size(16px);
+        height: 54px;
+        line-height: 50px;
+      }
     }
     &:before {
       content: '';
@@ -813,15 +856,28 @@ a {
   }
   .schedule-splash-content {
     text-align: right;
+    @include respond-to(phones) {
+      padding: 70px 0 120px;
+    }
+    @include respond-to(tablets) {
+      .v-outer>.v-inner {
+        height: 600px;
+      }
+    }
     @include respond-to(s-desktops) {
       .v-outer>.v-inner {
-        height: 530px;
-      }
+        height: 420px;
+      }      
       .text {
         max-width: 640px;
         float: right;
         @include font-size(16px, 30px);
       }    
+    }
+    @include respond-to(desktops) {
+      .v-outer>.v-inner {
+        height: 630px;
+      }
     }
     @include font-size(16px);
     font-weight: 600;
@@ -834,34 +890,82 @@ a {
     }
   }
   &.schedule-splash-time {
-    background: url('../images/layout/bg-schedule-splash-time.jpg') no-repeat;
+    background: url('../images/layout/bg-schedule-splash-time-sm.jpg') no-repeat;
     @include bg-cover();
+    @include respond-to(s-desktops) {
+      background: url('../images/layout/bg-schedule-splash-time.jpg') no-repeat;
+      @include bg-cover();
+    }
     .schedule-splash-content {
       text-align: left;
-      width: 575px;
-    }
+      @include respond-to(s-desktops) {      
+        width: 575px;     
+      }
+    }    
   }
 }
 .schedule-control-area {
-  padding: 80px 0 35px;
-  @include respond-to(desktops) {
-    .container {
-      width: 1380px;
+  padding: 50px 0 35px;
+  position: relative;  
+  .schedule-app-button {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    margin-top: -24px;
+    @include respond-to(s-desktops) {
+      display: none;
+    }
+    &.prev {
+      @include sprite($schedule-app-prev);
+      left: 25px;
+    }
+    &.next {
+      @include sprite($schedule-app-next);
+      right: 25px;
     }
   }
-  .schedule-text {
-    float: left;
-    width: 365px;
-    padding-top: 60px;
+  #tabs-app-container {
+    .schedule-text {
+      float: left;
+      width: 365px;
+      padding-top: 60px;
+    }
+  }  
+  #time-app-container {
+    @include respond-to(tablets) {
+      padding: 0 40px;
+    }
+    @include respond-to(s-desktops) {
+      padding: 0;
+    }
+    .schedule-text {
+      padding-top: 0;
+    }
   }
   .special-tabs {
-    float: left;
-    width: 260px;
-    margin-left: 45px;
+    display: none;
+    @include respond-to(s-desktops) {
+      display: block;
+    }
+    &.vertical {
+      float: left;
+      width: 260px;
+      margin-left: 45px;
+    }
+    &.horizontal {
+      width: 100%;
+    }
   }
   .tab-macbook {
     float: right;
     margin-top: 30px;
+    &.tab-macbook-time {
+      margin: 0;
+      @include respond-to(phones) {
+        float: none;
+        margin: 0 auto;
+      }
+    }
   }
 }
 .industries-content {
@@ -1041,6 +1145,7 @@ a {
             position: absolute;
             top: 10px;
             left: 30px;
+            width: 245px;
           }          
         }
       }

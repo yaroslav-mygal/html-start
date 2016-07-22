@@ -560,8 +560,33 @@
 .power-area {
   position: relative;
   min-height: 610px;
-  padding: 77px 0 0;
+  @include respond-to(tablets) {
+    padding: 0 370px 0 50px;
+  }
+  @include respond-to(s-desktops) {
+    padding: 77px 0 0;
+  }
   @include font-size(14px);
+  .powerOwlLink {
+    top: 50%;
+    margin-top: -26px;
+  }
+  #owlMobilePowerText .slide-item {
+    @include respond-to(phones) {
+      text-align: center;
+      padding: 28px 0 0;
+    }
+    @include respond-to(tablets) {
+      height: 610px;
+      width: 100%;
+      display: table;
+      .text {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+      }
+    }
+  }
   h6 {
     color: #4fabe9;
     text-transform: uppercase;
@@ -592,21 +617,38 @@
       background: url('../images/layout/power-row.png') repeat-x;
       height: 1px;
       position: absolute;
-      left: 345px;
-      right: 345px;
+      left: 280px;
+      right: 280px;
       top: 12px;
+      @include respond-to(desktops) {
+        left: 345px;
+        right: 345px;
+      }
     }
   }
   .icon-iphone {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    margin-left: -146.5px;
-    z-index: 15;
+    @include respond-to(phones) {
+      margin: 0 auto;
+      display: block;
+    }
+    @include respond-to(tablets) {
+      right: 50px;
+      top: 0;
+      position: absolute;
+      z-index: 15;
+    }
+    @include respond-to(s-desktops) {
+      top: 0;
+      left: 50%;
+      margin-left: -154.5px; 
+    }       
   }
   .power-block {
-    width: 340px;
+    width: 275px;
     position: relative;
+    @include respond-to(desktops) {
+      width: 340px;
+    }
     .scale-image {
       display: block;
       &:hover {
@@ -616,15 +658,40 @@
         color: #fff;
       }
     }
+    &.left-block:hover {
+      .icon-holder {
+        .scale-icon {
+          margin-left: -30px;
+          @include respond-to(desktops) {
+            margin-left: -30px;
+          }
+        }
+      }
+    }
+     &.right-block:hover {
+      .icon-holder {
+        .scale-icon {
+          margin-left: -60px;
+          @include respond-to(desktops) {
+            margin-left: -78px;
+          }
+        }
+      }
+    }
     &:hover {
       .icon-holder {
         .scale-icon {
-          visibility: visible;
-          width: 109px;
-          height: 109px;
+          visibility: visible;          
           left: 50%;
           top: 50%;
-          margin: -54.5px 0 0 -54.5px;
+          margin-top: -45px;
+          width: 90px;
+          height: 90px;
+          @include respond-to(desktops) {
+            margin-top: -54.5px;
+            width: 109px;
+            height: 109px;
+          }
         }
       }
     }
@@ -696,16 +763,37 @@
         border: 0;
       }
       a {
-        padding: 34px 20px 34px 40px;
+        padding: 33px 20px 10px 40px;
+        height: 86px;
+        width: 100%;
         &.active {
-          &:before {
-            content: '';
-            position: absolute;
-            @include triangle(30px, #5090bb, left);
-            left: -15px;
-            top: 50%;
-            margin-top: -14px;
-          }
+          // &:before {
+          //   content: '';
+          //   position: absolute;
+          //   @include triangle(30px, #5090bb, left);
+          //   left: -15px;
+          //   top: 50%;
+          //   margin-top: -14px;
+          // }
+        }
+      }
+    }
+  }
+  &.horizontal {
+    li {
+      float: left;
+      a {
+        height: 80px;
+        text-align: center;
+        // display: table-cell;
+        // vertical-align: middle;
+        width: 100%;
+        display: flex;
+        // 
+        &>span {
+          display: block;
+          padding: 0 25px;
+          margin: auto;
         }
       }
     }
@@ -719,14 +807,41 @@
     @include font-size(23px);
     font-family: $f-base-font;
     margin-bottom: 35px;
+    sup {
+      font-size: 0.7em;
+      line-height: 1;
+    }
   }
   p {
     margin-bottom: 25px;
   }
 }
+#schedule-tab-owl {
+  .tab-holder {
+    @include respond-to(phones) {
+      padding: 0 60px;
+    }
+  }  
+}
 .tab-macbook {
   @include sprite($tab-laptop);
   padding: 29px 90px 0 90px;
+  @include respond-to(phones) {
+    @include sprite($tab-laptop-xs);
+    padding: 19px 59px 0;
+    margin: 0 auto;
+    display: block;
+  }
+  &.tab-macbook-time {
+    @include respond-to(s-desktops) {
+      @include sprite($tab-laptop-time-md);
+      padding: 23px 73px 0;
+    }
+    @include respond-to(desktops) {
+      @include sprite($tab-laptop-time);
+      padding: 26px 83px 0;
+    }    
+  }
 }
 .menu-industries {
   font-family: $f-q-family;

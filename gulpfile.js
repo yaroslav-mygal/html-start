@@ -29,6 +29,7 @@ gulp.task("bower", function(){
         'src/bower_components/paraxify/paraxify.min.js',
         'src/bower_components/owl.carousel/dist/owl.carousel.min.js',
         'src/bower_components/sticky-kit/jquery.sticky-kit.min.js',
+        'src/bower_components/slick-carousel/slick/slick.min.js',
         'src/bower_components/easytabs/lib/jquery.easytabs.min.js'
         ])
     .pipe(gulp.dest('dist/assets/js/libs'));

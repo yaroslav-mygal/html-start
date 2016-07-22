@@ -1,15 +1,8 @@
 jQuery(document).ready(function($) {
 
-if(!Modernizr.touch) {
-   myParaxify = paraxify('.paraxify', {
-    speed: 0.5,
-    boost: 0
- });
-}
-
 $(".stick-column").stick_in_parent();
 
- $('#slick-slider').owlCarousel({
+$('#slick-slider').owlCarousel({
     loop:true,
     items:1,
     dots: false,
@@ -52,7 +45,34 @@ $(".stick-column").stick_in_parent();
     items:1,
     dots: false,
     autoplay: false,
-    animateOut: 'fadeOut'
+    animateOut: 'fadeOut',
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false
+  });
+
+ var owlMobilePowerText = $("#owlMobilePowerText");
+
+ owlMobilePowerText.owlCarousel({
+    items:1,
+    dots: false,
+    autoplay: false,
+    animateOut: 'fadeOut',
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false
+  });
+
+  var scheduleTabOwl = $("#schedule-tab-owl");
+
+ scheduleTabOwl.owlCarousel({
+    items:1,
+    dots: false,
+    autoplay: false,
+    animateOut: 'fadeOut',
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false
   });
 
  var powerMobileSlider = $("#powerMobileSlider");
@@ -68,19 +88,6 @@ $(".stick-column").stick_in_parent();
     var slide = $(this).attr('data-slide');
     powerMobileSlider.trigger('to.owl.carousel', [slide, 300]);
   })
-
- $('#tabs-app-container').easytabs({
-  tabs: 'ul.tabs > li',
-  updateHash: false,
-  animationSpeed: 'fast'
- }).bind('easytabs:before', function(evt, tab, panel, data) {
-    var selector = panel.selector;
-    var selectorString = selector.substr(1);
-    var pos = $('div[data-id='+selectorString+']').parent().index();
-    owlMacbook.trigger('to.owl.carousel', [pos, 300]);
-  });
-
- 
 
 
  $('.tabs-container').easytabs({
@@ -147,6 +154,69 @@ var fadeMenuSpeed = 600;
     margin: 0
   });
 
+ $('#slick-vertical').slick({
+    infinite: true,
+    slidesToShow: 5,
+    vertical: true,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    verticalSwiping: true,
+    arrows: false,
+    focusOnSelect: true
+  });
 
+ $('#slick-horizontal').slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    arrows: false,
+    focusOnSelect: true
+  });
+
+  $('.trigger2tabs').on('click', function(e) {
+  var elem = $(this);
+  $('.trigger2tabs').removeClass('active');
+  setTimeout( function(){
+    elem.addClass('active');
+  }, 300)
+  
+  var selector = elem.attr('href');
+  var selectorString = selector.substr(1);
+  var posImage = $('#owl-tab-macbook div[data-id='+selectorString+']').parent().index();
+  owlMacbook.trigger('to.owl.carousel', [posImage, 50]);
+  var posText = $('#schedule-tab-owl div[data-id='+selectorString+']').parent().index();
+  scheduleTabOwl.trigger('to.owl.carousel', [posText, 10]);
+  //return false;
+ });
+
+$('.schedule-control-area .schedule-app-button.prev').on('click', function(e){
+  scheduleTabOwl.trigger('prev.owl.carousel');
+  owlMacbook.trigger('prev.owl.carousel');
+  return false;
+})
+$('.schedule-control-area .schedule-app-button.next').on('click', function(e){
+  scheduleTabOwl.trigger('next.owl.carousel');
+  owlMacbook.trigger('next.owl.carousel');
+  return false;
+})
+
+$('.power-area .powerOwlLink.prev').on('click', function(e){
+  owlMobilePowerText.trigger('prev.owl.carousel');
+  powerMobileSlider.trigger('prev.owl.carousel');
+  return false;
+})
+$('.power-area .powerOwlLink.next').on('click', function(e){
+  owlMobilePowerText.trigger('next.owl.carousel');
+  powerMobileSlider.trigger('next.owl.carousel');
+  return false;
+})
+
+ if(!Modernizr.touch) {
+   myParaxify = paraxify('.paraxify', {
+    speed: 0.5,
+    boost: 0
+ });
+}
 
 });

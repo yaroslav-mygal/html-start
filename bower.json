@@ -30,6 +30,9 @@
     "easytabs": "^3.2.0"
   },
   "devDependencies": {
-    "sticky-kit": "^1.1.2"
+    "sticky-kit": "^1.1.2",
+    "bower": "*",
+    "install": "^1.0.4",
+    "slick-carousel": "^1.6.0"
   }
 }
