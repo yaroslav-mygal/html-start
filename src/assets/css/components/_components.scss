@@ -1186,3 +1186,42 @@
     }
   }
 }
+.about-box {
+  padding: 0 20px 0 18px;
+  font-size: 14px;
+  @include respond-to(s-desktops) {
+    font-size: 16px;
+    padding: 0 40px 0 18px;
+  }
+  .ttl-about {
+    color: #5090bb;
+    position: relative;   
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @include respond-to(s-phones) {
+      font-size: 17px;
+    }
+    @include respond-to(tablets) {
+      font-size: 16px;
+    }
+    @include respond-to(s-desktops) {
+      font-size: 23px;
+      margin-bottom: 25px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: -18px;
+      top: 0;
+      height: 27px;
+      width: 4px;
+      background-color: #d4d6db;
+      @include respond-to(phones) {
+        height: 24px;
+      }
+      @include respond-to(s-desktops) {
+        height: 35px;
+      }
+    }
+  }
+}

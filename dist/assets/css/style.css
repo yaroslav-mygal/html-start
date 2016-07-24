@@ -5273,8 +5273,7 @@ a {
     font-family: "Open Sans", Arial, Helvetica, sans-serif; }
 
 .trial-form {
-  background-color: #5090bb;
-  border-top: 20px solid #0f243b; }
+  background-color: #5090bb; }
   @media only screen and (max-width: 767px) {
     .trial-form {
       padding: 40px 0; } }
@@ -5297,6 +5296,7 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  border-bottom: 20px solid #0f243b;
   padding: 68px 0;
   position: relative;
   color: #fff; }
@@ -5715,6 +5715,45 @@ a {
 img.aligncenter {
   display: block;
   margin: 0 auto; }
+
+.about-section {
+  background-color: #f6f6f6;
+  padding: 50px 0; }
+  @media only screen and (min-width: 992px) {
+    .about-section {
+      padding: 90px 0; } }
+  .about-section .main-about-image {
+    padding: 40px 0; }
+
+.about-content {
+  padding: 40px 0;
+  color: #2f4050;
+  font-size: 16px; }
+  @media only screen and (max-width: 767px) {
+    .about-content {
+      padding: 25px 0; } }
+  @media only screen and (min-width: 1200px) {
+    .about-content {
+      padding: 70px 0 60px;
+      font-size: 18px;
+      line-height: 25px; } }
+  .about-content p {
+    margin-bottom: 20px; }
+  .about-content h1 {
+    color: #2f4050; }
+    @media only screen and (max-width: 767px) {
+      .about-content h1 {
+        font-size: 27px; } }
+    @media only screen and (min-width: 768px) {
+      .about-content h1 {
+        font-size: 30px; } }
+    @media only screen and (min-width: 992px) {
+      .about-content h1 {
+        font-size: 35px; } }
+    @media only screen and (min-width: 1200px) {
+      .about-content h1 {
+        font-size: 40px;
+        margin-bottom: 30px; } }
 
 .icon {
   display: inline-block;
@@ -7119,7 +7158,9 @@ img {
   .container#tabs-app-container {
     width: 1380px; }
   .container#time-app-container {
-    width: 1010px; } }
+    width: 1010px; }
+  .about-section .container {
+    width: 1140px; } }
 
 .sr-only {
   display: none; }
@@ -9118,6 +9159,43 @@ label.error {
         .pagination li.previous .pagination-item:hover, .pagination li.next .pagination-item:hover {
           text-decoration: none;
           color: #5190bb; }
+
+.about-box {
+  padding: 0 20px 0 18px;
+  font-size: 14px; }
+  @media only screen and (min-width: 992px) {
+    .about-box {
+      font-size: 16px;
+      padding: 0 40px 0 18px; } }
+  .about-box .ttl-about {
+    color: #5090bb;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 15px; }
+    @media only screen and (max-width: 479px) {
+      .about-box .ttl-about {
+        font-size: 17px; } }
+    @media only screen and (min-width: 768px) {
+      .about-box .ttl-about {
+        font-size: 16px; } }
+    @media only screen and (min-width: 992px) {
+      .about-box .ttl-about {
+        font-size: 23px;
+        margin-bottom: 25px; } }
+    .about-box .ttl-about:before {
+      content: '';
+      position: absolute;
+      left: -18px;
+      top: 0;
+      height: 27px;
+      width: 4px;
+      background-color: #d4d6db; }
+      @media only screen and (max-width: 767px) {
+        .about-box .ttl-about:before {
+          height: 24px; } }
+      @media only screen and (min-width: 992px) {
+        .about-box .ttl-about:before {
+          height: 35px; } }
 
 .btn {
   display: inline-block;
