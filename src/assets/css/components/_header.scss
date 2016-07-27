@@ -6,6 +6,12 @@
 	right: 0;
 	top: 0;
 	z-index: 20;
+	.page-logo {
+		&>a {
+			display: block;
+			height: 100%;
+		}
+	}
 	@include respond-to(phones) {
 		padding: 8px 40px 8px 15px;
 	}
