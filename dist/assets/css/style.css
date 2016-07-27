@@ -7729,7 +7729,7 @@ img {
     height: 46px; }
 
 .page-header {
-  background: rgba(246, 246, 246, 0.9);
+  background: #f6f6f6;
   padding: 8px 87px 6px 60px;
   position: fixed;
   left: 0;
