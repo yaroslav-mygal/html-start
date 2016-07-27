@@ -76,6 +76,11 @@ gulp.task('font', function(){
 				 .pipe(gulp.dest('dist/assets/fonts'));
 })
 
+gulp.task('favicon', function(){
+	return gulp.src('src/favicon.ico')
+				 .pipe(gulp.dest('dist'));
+})
+
 gulp.task('images', function(){
 	return gulp.src('src/assets/images/**/*')
 				 .pipe(gulp.dest('dist/assets/images'))
@@ -93,6 +98,7 @@ gulp.task('watch', function() {
   gulp.watch('src/assets/fonts/*', ['font']);
   gulp.watch('src/assets/css/**/*.scss', ['sass']);
   gulp.watch('src/**/*.html', ['html']);
+  gulp.watch('src/*.ico', ['favicon']);
   gulp.watch('src/assets/js/*.js', ['js']);
 
 });
@@ -132,4 +138,4 @@ gulp.task('dist-zip', () => {
 });
 
 gulp.task('default', ['watch'])
-gulp.task('dist', ['clean', 'dist-sass','dist-images', 'html', 'bower', 'font','dist-js'])
+gulp.task('dist', ['clean', 'dist-sass','dist-images', 'html', 'bower', 'font','dist-js', 'favicon'])
