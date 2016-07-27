@@ -601,6 +601,10 @@
     padding: 74px 0 0;
     margin: 0 auto;
     width: 263px;
+    @include respond-to(s-phones) {
+      padding-top: 64px;
+      width: 229px;
+    }
   }
   .power-row {
     position: relative;
@@ -733,9 +737,9 @@
   }
 }
 .special-tabs {
-  background-color: #f5f5f5;
-  @include border-radius(6px);
   @include clear-list;
+  background-color: #f5f5f5;
+  @include border-radius(6px);  
   li {
     a {
       color: #2f4050;
@@ -756,45 +760,36 @@
       }
     }
   }
-  &.vertical {
-    li {
-      border-top: 1px solid #fff;
-      &:first-child {
-        border: 0;
-      }
-      a {
-        padding: 33px 20px 10px 40px;
-        height: 86px;
-        width: 100%;
-        &.active {
-          // &:before {
-          //   content: '';
-          //   position: absolute;
-          //   @include triangle(30px, #5090bb, left);
-          //   left: -15px;
-          //   top: 50%;
-          //   margin-top: -14px;
-          // }
-        }
-      }
+  li {
+    float: left;
+    position: relative;
+    @include respond-to(desktops) {
+      float: none;
     }
-  }
-  &.horizontal {
-    li {
-      float: left;
-      a {
-        height: 80px;
-        text-align: center;
-        // display: table-cell;
-        // vertical-align: middle;
+     &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: #fff;
+      width: 1px;
+      height: 100%;
+      @include respond-to(desktops) {
+        right: 0;
+        top: 0;
+        height: 1px;
         width: 100%;
-        display: flex;
-        // 
-        &>span {
-          display: block;
-          padding: 0 25px;
-          margin: auto;
-        }
+      }
+     }
+    a {
+      height: 80px;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      &>span {
+        display: block;
+        padding: 0 25px;
+        margin: auto;
       }
     }
   }
@@ -802,11 +797,18 @@
 .schedule-text {
   color: #2f4050;
   @include font-size(16px, 30px);
+  @include respond-to(s-phones) {
+    @include font-size(14px,18px);
+  }
   h3 {
     text-transform: uppercase;
     @include font-size(23px);
     font-family: $f-base-font;
     margin-bottom: 35px;
+    @include respond-to(s-phones) {
+      @include font-size(19px);
+      margin-bottom: 10px;
+    }
     sup {
       font-size: 0.7em;
       line-height: 1;
@@ -821,27 +823,48 @@
     @include respond-to(phones) {
       padding: 0 60px;
     }
+    @include respond-to(s-phones) {      
+      padding: 0 25px;
+    }
   }  
 }
 .tab-macbook {
-  @include sprite($tab-laptop);
-  padding: 29px 90px 0 90px;
+  @include sprite($tab-laptop-time-md);
+  
   @include respond-to(phones) {
     @include sprite($tab-laptop-xs);
     padding: 19px 59px 0;
     margin: 0 auto;
     display: block;
   }
-  &.tab-macbook-time {
-    @include respond-to(s-desktops) {
-      @include sprite($tab-laptop-time-md);
-      padding: 23px 73px 0;
-    }
-    @include respond-to(desktops) {
-      @include sprite($tab-laptop-time);
-      padding: 26px 83px 0;
-    }    
+  @include respond-to(s-phones) {
+    @include sprite($tab-laptop-sxs);
+    padding: 13px 40px 0;
   }
+  @include respond-to(tablets) {
+    padding: 23px 72px 0;
+    margin: 0 auto;
+  }
+  @include respond-to(s-desktops) {
+    padding: 23px 72px 0;
+  }
+  @include respond-to(desktops) {
+    padding: 23px 72px 0;
+  }
+  @include respond-to(1400px) {
+    padding: 29px 90px 0 90px;
+    @include sprite($tab-laptop);
+  }
+  // &.tab-macbook-time {
+  //   @include respond-to(s-desktops) {
+  //     @include sprite($tab-laptop-time-md);
+  //     padding: 23px 73px 0;
+  //   }
+  //   @include respond-to(desktops) {
+  //     @include sprite($tab-laptop-time);
+  //     padding: 26px 83px 0;
+  //   }    
+  // }
 }
 .menu-industries {
   font-family: $f-q-family;
@@ -921,6 +944,9 @@
 .new-type-block {
   padding: 0 4px;
   position: relative;
+  img {
+    max-width: 200px;
+  }
   .icon-more {
     position: absolute;
     right: 12px;
@@ -1076,6 +1102,7 @@
 }
 .blog-head {
   padding: 24px 0;
+  border-top: 1px solid #bbb;
   .ttl-holder {
     @include respond-to(phones) {
       text-align: center;

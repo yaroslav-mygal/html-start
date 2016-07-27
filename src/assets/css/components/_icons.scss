@@ -274,6 +274,9 @@
 	}
 	&.icon-iphone {
 		@include sprite($smartphone);
+		@include respond-to(s-phones) {
+			@include sprite($icon-iphone-xs);
+		}
 	}
 	&.icon-ind-restaurants {
 		@include sprite($icon-ind-restaurants);

@@ -1054,15 +1054,19 @@ img {
     }
     .page-zenDesk & {
       width: 1022px;
-    }
-    &#tabs-app-container {
-      width: 1380px;
-    }
+    }    
     &#time-app-container {
       width: 1010px;
     }
     .about-section & {
       width: 1140px;
+    }
+  }
+}
+@include respond-to(1400px) {
+  .container {
+    &#tabs-app-container {
+      width: 1370px;
     }
   }
 }

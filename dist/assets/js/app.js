@@ -1,6 +1,10 @@
 jQuery(document).ready(function($) {
 
 $(".stick-column").stick_in_parent();
+$("#stick-btns").stick_in_parent({
+  offset_top: 66,
+  bottoming: false
+});
 
 $('#slick-slider').owlCarousel({
     loop:true,
@@ -58,7 +62,8 @@ $('#slick-slider').owlCarousel({
     dots: false,
     autoplay: false,
     animateOut: 'fadeOut',
-    loop: true,
+    loop:false,
+    URLhashListener:true,
     mouseDrag: false,
     touchDrag: false
   });
@@ -70,7 +75,8 @@ $('#slick-slider').owlCarousel({
     dots: false,
     autoplay: false,
     animateOut: 'fadeOut',
-    loop: true,
+    loop:false,
+    URLhashListener:true,
     mouseDrag: false,
     touchDrag: false
   });
@@ -81,12 +87,14 @@ $('#slick-slider').owlCarousel({
       items:1,
       dots: false,
       autoplay: false,
+      URLhashListener:true,
+      loop:false,
       animateOut: 'fadeOut'
     });
 
   $('.scale-image').on('mouseover', function(){
-    var slide = $(this).attr('data-slide');
-    powerMobileSlider.trigger('to.owl.carousel', [slide, 300]);
+    var slideHash = $(this).attr('href');
+    window.location.hash = slideHash;
   })
 
 
@@ -154,7 +162,7 @@ var fadeMenuSpeed = 600;
     margin: 0
   });
 
- $('#slick-vertical').slick({
+ $('#slick-nav').slick({
     infinite: true,
     slidesToShow: 5,
     vertical: true,
@@ -162,16 +170,19 @@ var fadeMenuSpeed = 600;
     swipeToSlide: true,
     verticalSwiping: true,
     arrows: false,
-    focusOnSelect: true
-  });
-
- $('#slick-horizontal').slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    swipeToSlide: true,
-    arrows: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [{
+       breakpoint: 1200,
+       settings: {
+        vertical: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        arrows: false,
+        focusOnSelect: true
+      }
+    }]
   });
 
   $('.trigger2tabs').on('click', function(e) {
@@ -180,14 +191,6 @@ var fadeMenuSpeed = 600;
   setTimeout( function(){
     elem.addClass('active');
   }, 300)
-  
-  var selector = elem.attr('href');
-  var selectorString = selector.substr(1);
-  var posImage = $('#owl-tab-macbook div[data-id='+selectorString+']').parent().index();
-  owlMacbook.trigger('to.owl.carousel', [posImage, 50]);
-  var posText = $('#schedule-tab-owl div[data-id='+selectorString+']').parent().index();
-  scheduleTabOwl.trigger('to.owl.carousel', [posText, 10]);
-  //return false;
  });
 
 $('.schedule-control-area .schedule-app-button.prev').on('click', function(e){

@@ -46,7 +46,7 @@
 </div>
     
     <div class="schedule-splash schedule-splash-time">
-      <div class="schedule-splash-top">
+      <div class="schedule-splash-top" id="stick-btns" >
         <div class="container">
           <h3 class="ttl-section">Scheduling or Time Tracking</h3>
           <div class="row">
@@ -54,7 +54,7 @@
               <div class="row">
                 <div class="col-xs-6">
                   <div class="btns-wrap">
-                    <a href="#" class="btn blue-border btn-block">Scheduling </a>
+                    <a href="#" class="btn blue-border btn-block">Scheduling</a>
                   </div>
                 </div>
                 <div class="col-xs-6">
@@ -99,80 +99,64 @@
     <div class="schedule-control-area">
       <a href="#" class="schedule-app-button prev"></a>
       <a href="#" class="schedule-app-button next"></a>
-      <div class="container" id="time-app-container">
-      <div class="row">
-        <div class="col-md-5 col-lg-4">
-          <div id="schedule-tab-owl" class="owl-carousel schedule-text">
-          <div class="tab-holder" data-id="intuitive-design">
+      <div class="container" id="tabs-app-container">
+        <div id="schedule-tab-owl" class="owl-carousel schedule-text">
+          <div class="tab-holder" data-hash="intuitive-design">
             <h3>Intuitive Design</h3>
             <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
             <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
           </div>
-          <div class="tab-holder" data-id="manage-requests">
+          <div class="tab-holder" data-hash="manage-requests">
             <h3>Manage Requests</h3>
             <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
             <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
           </div>
-          <div class="tab-holder" data-id="push-notifications">
+          <div class="tab-holder" data-hash="push-notifications">
             <h3>Push Notifications</h3>
             <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
             <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
           </div>
-          <div class="tab-holder" data-id="control-labor-costs">
-            <h3>Flexibility and Control</h3>
-            <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
-            <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
+          <div class="tab-holder" data-hash="control-labor-costs">
+            <h3>Business Insights</h3>
+            <p>Understand how your workforce is performing by accessing our complete, feature-rich reporting system from your mobile phone</p>
           </div>
-          <div class="tab-holder" data-id="ximblechat">
-            <h3>XimbleChat<sup>™</sup></h3>
-            <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
-            <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
-          </div>
-          <div class="tab-holder" data-id="tabExample">
+          <div class="tab-holder" data-hash="ximblechat">
             <h3>XimbleChat<sup>™</sup></h3>
             <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
             <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
           </div>
         </div>
-        </div>
-        <div class="col-md-7 col-lg-8">
-          <div class="tab-macbook tab-macbook-time">
-            <div id="owl-tab-macbook" class="schedule-tab-content owl-carousel">
-              <div data-id="intuitive-design" class="tab-holder active">
-                <img src="assets/images/actionsTab/img01.jpg" alt="" >
-              </div>
-              <div data-id="manage-requests" class="tab-holder">
-                <img src="assets/images/actionsTab/img02.jpg" alt="" >
-              </div>
-              <div data-id="push-notifications" class="tab-holder">
-                <img src="assets/images/actionsTab/img03.jpg" alt="" >
-              </div>
-              <div data-id="control-labor-costs" class="tab-holder">
-                <img src="assets/images/actionsTab/img04.jpg" alt="" >
-              </div>
-              <div data-id="ximblechat" class="tab-holder">
-                <img src="assets/images/actionsTab/img05.jpg" alt="" >
-              </div>
-              <div data-id="tabExample" class="tab-holder">
-                <img src="assets/images/actionsTab/img05.jpg" alt="" >
-              </div>
+        <div class="tab-macbook">
+          <div id="owl-tab-macbook" class="schedule-tab-content owl-carousel">
+            <div class="tab-holder active" data-hash="intuitive-design">
+              <img src="assets/images/actionsTab/img01.jpg" alt="" >
+            </div>
+            <div class="tab-holder" data-hash="manage-requests">
+              <img src="assets/images/actionsTab/img02.jpg" alt="" >
+            </div>
+            <div class="tab-holder" data-hash="push-notifications">
+              <img src="assets/images/actionsTab/img03.jpg" alt="" >
+            </div>
+            <div class="tab-holder" data-hash="control-labor-costs">
+              <img src="assets/images/actionsTab/img04.jpg" alt="" >
+            </div>
+            <div class="tab-holder" data-hash="ximblechat">
+              <img src="assets/images/actionsTab/img05.jpg" alt="" >
             </div>
           </div>
         </div>
-      </div>        
-      <ul id="slick-horizontal" class="special-tabs horizontal">
-        <li><a href="#intuitive-design" class="trigger2tabs active"><span>Intuitive Design</span></a></li>
-        <li><a href="#manage-requests" class="trigger2tabs"><span>Manage Requests</span></a></li>
-        <li><a href="#push-notifications" class="trigger2tabs"><span>Push Notifications</span></a></li>
-        <li><a href="#control-labor-costs" class="trigger2tabs"><span>Control Labor Costs</span></a></li>
-        <li><a href="#ximblechat" class="trigger2tabs"><span>XimbleChat<sup>™</sup></span></a></li>
-        <li><a href="#tabExample" class="trigger2tabs"><span>Tab Example</span></a></li>
-      </ul>        
+        <ul id="slick-nav" class="special-tabs vertical">
+          <li><a href="#intuitive-design" class="trigger2tabs active"><span>Intuitive Design</span></a></li>
+          <li><a href="#manage-requests" class="trigger2tabs"><span>Manage Requests</span></a></li>
+          <li><a href="#push-notifications" class="trigger2tabs"><span>Push Notifications</span></a></li>
+          <li><a href="#control-labor-costs" class="trigger2tabs"><span>Control Labor Costs</span></a></li>
+          <li><a href="#ximblechat" class="trigger2tabs"><span>XimbleChat<sup>™</sup></span></a></li>
+        </ul>
       </div>
     </div>
     <div class="power-section">
 
-      <div class="flow-form @@class">
+      <div class="flow-form ">
   <h6>Try Ximble 30 days free</h6>
   <p><em>No credit card required.</em></p>
   <form action="#">
@@ -196,14 +180,14 @@
             <div class="icon icon-iphone">
               <div class="owl-slider-holder">
                 <div class="owl-carousel" id="powerMobileSlider">
-                  <div><img class="img-responsive" src="assets/images/powerMobile/slide1.jpg" alt="" ></div>
-                  <div><img class="img-responsive" src="assets/images/powerMobile/slide2.jpg" alt="" ></div>
-                  <div><img class="img-responsive" src="assets/images/powerMobile/slide3.jpg" alt="" ></div>
-                  <div><img class="img-responsive" src="assets/images/powerMobile/slide4.jpg" alt="" ></div>
-                  <div><img class="img-responsive" src="assets/images/powerMobile/slide5.jpg" alt="" ></div>
-                  <div><img class="img-responsive" src="assets/images/powerMobile/slide6.jpg" alt="" ></div>
-                  <div><img class="img-responsive" src="assets/images/powerMobile/slide7.jpg" alt="" ></div>
-                  <div><img class="img-responsive" src="assets/images/powerMobile/slide8.jpg" alt="" ></div>
+                  <div data-hash="time-interface"><img class="img-responsive" src="assets/images/powerMobile/slide1.jpg" alt="" ></div>
+                  <div data-hash="time-geo"><img class="img-responsive" src="assets/images/powerMobile/slide2.jpg" alt="" ></div>
+                  <div data-hash="time-monitor"><img class="img-responsive" src="assets/images/powerMobile/slide3.jpg" alt="" ></div>
+                  <div data-hash="time-notification"><img class="img-responsive" src="assets/images/powerMobile/slide4.jpg" alt="" ></div>
+                  <div data-hash="time-timesheets"><img class="img-responsive" src="assets/images/powerMobile/slide5.jpg" alt="" ></div>
+                  <div data-hash="time-chat"><img class="img-responsive" src="assets/images/powerMobile/slide6.jpg" alt="" ></div>
+                  <div data-hash="time-tracking"><img class="img-responsive" src="assets/images/powerMobile/slide7.jpg" alt="" ></div>
+                  <div data-hash="time-disputes"><img class="img-responsive" src="assets/images/powerMobile/slide8.jpg" alt="" ></div>
                 </div>
               </div>            
             </div>
@@ -211,56 +195,56 @@
             <div class="power-area-mobile visible-sm visible-xs">
             <div class="owl-carousel" id="owlMobilePowerText">
               <!-- 1 slide -->
-              <div class="slide-item">
+              <div class="slide-item" data-hash="time-interface">
                 <div class="text">
                   <h6>Simple Time Clock Interface</h6>
                   <p>The clean, intuitive design of our time clock app lets employees of all ages and abilities produce error-free timesheets</p>
                 </div>
               </div>
               <!-- 2 slide -->
-              <div class="slide-item">
+              <div class="slide-item" data-hash="time-geo">
                 <div class="text">
                   <h6>Geo-Fencing</h6>
                   <p>With our mobile punch clock, management can limit exactly where employees can punch in and out from</p>
                 </div>
               </div>
               <!-- 3 slide -->
-              <div class="slide-item">
+              <div class="slide-item" data-hash="time-monitor">
                 <div class="text">
                   <h6>Monitor Attendance</h6>
                   <p>Who’s clocked in? Who is late? Our our real time clock lets you know in seconds – from anywhere!</p>
                 </div>
               </div>
               <!-- 4 slide -->
-              <div class="slide-item">
+              <div class="slide-item" data-hash="time-notification">
                 <div class="text">
                   <h6>Push Notification</h6>
                   <p>Need to let an employee off a little early? Instantly deliver any notice with our powerful new messaging tools</p>
                 </div>
               </div>
               <!-- 5 slide -->
-              <div class="slide-item">
+              <div class="slide-item" data-hash="time-timesheets">
                 <div class="text">
                   <h6>Manage Timesheets</h6>
                   <p>Review and approve employee time punches. You can prepare payroll on-the-go – from anywhere!</p>
                 </div>
               </div>
               <!-- 6 slide -->
-              <div class="slide-item">
+              <div class="slide-item" data-hash="time-chat">
                 <div class="text">
                   <h6>Ximble Chat<sup>™</sup></h6>
                   <p>Keep in touch with your Team in real time, on all devices.  Upload and share files and images instantaneously. Leverage “channels” to group and direct messages to appropriate participants.</p>
                 </div>
               </div>
               <!-- 7 slide -->
-              <div class="slide-item">
+              <div class="slide-item" data-hash="time-tracking">
                 <div class="text">
                   <h6>Activity Tracking</h6>
                   <p>With our customizable clocking mechanism, employees can easily report their activities from anywhere while clocked-in – perfect for contract or project work</p>
                 </div>
               </div>
               <!-- 8 slide -->
-              <div class="slide-item">
+              <div class="slide-item" data-hash="time-disputes">
                 <div class="text">
                   <h6>Avoid Disputes</h6>
                   <p>Because employees can see their own history with our timesheet app, employers are protected from disputes</p>
@@ -270,21 +254,21 @@
           </div>
 
 
-            <div class="power-rows-holder visible-md">
+            <div class="power-rows-holder hidden-sm hidden-xs">
               <div class="power-row">
                 <article class="left-block power-block">
-                  <a href="javascript: return false;" class="scale-image" data-slide="0">
+                  <a href="#time-interface" class="scale-image">
                     <h6>Simple Time Clock Interface</h6>
                     <p>The clean, intuitive design of our time clock app lets employees of all ages and abilities produce error-free timesheets</p>
                   </a>
                   <div class="icon-holder">                
                     <div class="scale-icon">
-                      <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
+                      <img class="img-responsive" src="assets/images/timeclocking/bullet01.png" alt="" >
                     </div>
                   </div>
                 </article>
                 <article class="right-block power-block">
-                  <a href="javascript: return false;" class="scale-image" data-slide="1">
+                  <a href="#time-geo" class="scale-image">
                     <h6>Geo-Fencing</h6>
                     <p>With our mobile punch clock, management can limit exactly where employees can punch in and out from</p>
                   </a>
@@ -297,18 +281,18 @@
               </div>
               <div class="power-row">
                 <article class="left-block power-block">
-                  <a href="javascript: return false;" class="scale-image" data-slide="2">
+                  <a href="#time-monitor" class="scale-image">
                     <h6>Monitor Attendance</h6>
                     <p>Who’s clocked in? Who is late? Our our real time clock lets you know in seconds – from anywhere!</p>
                   </a>
                   <div class="icon-holder">                
                     <div class="scale-icon">
-                      <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
+                      <img class="img-responsive" src="assets/images/timeclocking/bullet03.png" alt="" >
                     </div>
                   </div>
                 </article>
                 <article class="right-block power-block">
-                  <a href="javascript: return false;" class="scale-image" data-slide="3">
+                  <a href="#time-notification" class="scale-image">
                     <h6>Push Notification</h6>
                     <p>Need to let an employee off a little early? Instantly deliver any notice with our powerful new messaging tools</p>
                   </a>
@@ -321,48 +305,48 @@
               </div>
               <div class="power-row">
                 <article class="left-block power-block">
-                  <a href="javascript: return false;" class="scale-image" data-slide="4">
+                  <a href="#time-timesheets" class="scale-image">
                     <h6>Manage Timesheets</h6>
                     <p>Review and approve employee time punches. You can prepare payroll on-the-go – from anywhere!</p>
                   </a>
                   <div class="icon-holder">                
                     <div class="scale-icon">
-                      <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
+                      <img class="img-responsive" src="assets/images/timeclocking/bullet05.png" alt="" >
                     </div>
                   </div>
                 </article>
                 <article class="right-block power-block">
-                  <a href="javascript: return false;" class="scale-image" data-slide="5">
+                  <a href="#time-chat" class="scale-image">
                     <h6>Ximble Chat<sup>™</sup></h6>
                     <p>Keep in touch with your Team in real time, on all devices.  Upload and share files and images instantaneously. Leverage “channels” to group and direct messages to appropriate participants.</p>
                    </a>
                   <div class="icon-holder">                
                     <div class="scale-icon">
-                      <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
+                      <img class="img-responsive" src="assets/images/timeclocking/bullet06.png" alt="" >
                     </div>
                   </div>
                 </article>
               </div>
               <div class="power-row">
                 <article class="left-block power-block">
-                  <a href="javascript: return false;" class="scale-image" data-slide="6">
+                  <a href="#time-tracking" class="scale-image">
                     <h6>Activity Tracking</h6>
                     <p>With our customizable clocking mechanism, employees can easily report their activities from anywhere while clocked-in – perfect for contract or project work</p>
                   </a>
                   <div class="icon-holder">                
                     <div class="scale-icon">
-                      <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
+                      <img class="img-responsive" src="assets/images/timeclocking/bullet07.png" alt="" >
                     </div>
                   </div>
                 </article>
                 <article class="right-block power-block">
-                  <a href="javascript: return false;" class="scale-image" data-slide="7">
+                  <a href="#time-disputes" class="scale-image">
                     <h6>Avoid Disputes</h6>
                     <p>Because employees can see their own history with our timesheet app, employers are protected from disputes</p>
                   </a>
                   <div class="icon-holder">                
                     <div class="scale-icon">
-                      <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
+                      <img class="img-responsive" src="assets/images/timeclocking/bullet08.png" alt="" >
                     </div>
                   </div>
                 </article>

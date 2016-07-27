@@ -45,7 +45,7 @@
 	</nav>
 </div>    
     <div class="schedule-splash">
-      <div class="schedule-splash-top">
+      <div class="schedule-splash-top" id="stick-btns">
         <div class="container">
           <h3 class="ttl-section">Scheduling or Time Tracking</h3>
           <div class="row">
@@ -66,7 +66,7 @@
           </div>
         </div>
       </div>
-     <div class="flow-form @@class">
+      <div class="flow-form ">
   <h6>Try Ximble 30 days free</h6>
   <p><em>No credit card required.</em></p>
   <form action="#">
@@ -94,74 +94,68 @@
       </div>
     </div>
     <div class="schedule-control-area">
+      <a href="#" class="schedule-app-button prev"></a>
+      <a href="#" class="schedule-app-button next"></a>
       <div class="container" id="tabs-app-container">
         <div id="schedule-tab-owl" class="owl-carousel schedule-text">
-          <div class="tab-holder" data-id="intuitive-design">
+          <div class="tab-holder" data-hash="intuitive-design">
             <h3>Intuitive Design</h3>
             <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
             <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
           </div>
-          <div class="tab-holder" data-id="manage-requests">
+          <div class="tab-holder" data-hash="manage-requests">
             <h3>Manage Requests</h3>
             <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
             <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
           </div>
-          <div class="tab-holder" data-id="push-notifications">
+          <div class="tab-holder" data-hash="push-notifications">
             <h3>Push Notifications</h3>
             <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
             <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
           </div>
-          <div class="tab-holder" data-id="control-labor-costs">
-            <h3>Flexibility and Control</h3>
-            <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
-            <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
+          <div class="tab-holder" data-hash="control-labor-costs">
+            <h3>Business Insights</h3>
+            <p>Understand how your workforce is performing by accessing our complete, feature-rich reporting system from your mobile phone</p>
           </div>
-          <div class="tab-holder" data-id="ximblechat">
-            <h3>XimbleChat<sup>™</sup></h3>
-            <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
-            <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
-          </div>
-          <div class="tab-holder" data-id="tabExample">
+          <div class="tab-holder" data-hash="ximblechat">
             <h3>XimbleChat<sup>™</sup></h3>
             <p>By entering employees’ hourly pay, employers can clearly see exactly what your total scheduled employee cost is for the week.</p>
             <p>Is overtime a nagging cost? No problem – set overtime to any amount of hours per day or week and our system will alert you before scheduling someone for overtime, allowing you to make a different choice and saving valuable resources as as result.</p>
           </div>
         </div>
-        <ul id="slick-vertical" class="special-tabs vertical">
-          <li><a href="#intuitive-design" class="trigger2tabs active">Intuitive Design</a></li>
-          <li><a href="#manage-requests" class="trigger2tabs">Manage Requests</a></li>
-          <li><a href="#push-notifications" class="trigger2tabs">Push Notifications</a></li>
-          <li><a href="#control-labor-costs" class="trigger2tabs">Control Labor Costs</a></li>
-          <li><a href="#ximblechat" class="trigger2tabs">XimbleChat<sup>™</sup></a></li>
-          <li><a href="#tabExample" class="trigger2tabs">Tab Example</a></li>
-        </ul>
         <div class="tab-macbook">
           <div id="owl-tab-macbook" class="schedule-tab-content owl-carousel">
-            <div data-id="intuitive-design" class="tab-holder active">
+            <div class="tab-holder active" data-hash="intuitive-design">
               <img src="assets/images/actionsTab/img01.jpg" alt="" >
             </div>
-            <div data-id="manage-requests" class="tab-holder">
+            <div class="tab-holder" data-hash="manage-requests">
               <img src="assets/images/actionsTab/img02.jpg" alt="" >
             </div>
-            <div data-id="push-notifications" class="tab-holder">
+            <div class="tab-holder" data-hash="push-notifications">
               <img src="assets/images/actionsTab/img03.jpg" alt="" >
             </div>
-            <div data-id="control-labor-costs" class="tab-holder">
+            <div class="tab-holder" data-hash="control-labor-costs">
               <img src="assets/images/actionsTab/img04.jpg" alt="" >
             </div>
-            <div data-id="ximblechat" class="tab-holder">
-              <img src="assets/images/actionsTab/img05.jpg" alt="" >
-            </div>
-            <div data-id="tabExample" class="tab-holder">
+            <div class="tab-holder" data-hash="ximblechat">
               <img src="assets/images/actionsTab/img05.jpg" alt="" >
             </div>
           </div>
         </div>
+        <ul id="slick-nav" class="special-tabs vertical">
+          <li><a href="#intuitive-design" class="trigger2tabs active"><span>Intuitive Design</span></a></li>
+          <li><a href="#manage-requests" class="trigger2tabs"><span>Manage Requests</span></a></li>
+          <li><a href="#push-notifications" class="trigger2tabs"><span>Push Notifications</span></a></li>
+          <li><a href="#control-labor-costs" class="trigger2tabs"><span>Control Labor Costs</span></a></li>
+          <li><a href="#ximblechat" class="trigger2tabs"><span>XimbleChat<sup>™</sup></span></a></li>
+        </ul>
       </div>
     </div>
+
+    
     <div class="power-section">
 
-      <div class="flow-form @@class">
+      <div class="flow-form ">
   <h6>Try Ximble 30 days free</h6>
   <p><em>No credit card required.</em></p>
   <form action="#">
@@ -177,119 +171,190 @@
 
       <div class="container">
 
-         <h3 class="ttl-section text-center">Power of Mobile</h3>
-<div class="power-area">
-  <div class="icon icon-iphone">
-    <div class="owl-slider-holder">
-      <div class="owl-carousel" id="powerMobileSlider">
-        <div><img class="img-responsive" src="assets/images/powerMobile/slide1.jpg" alt="" ></div>
-        <div><img class="img-responsive" src="assets/images/powerMobile/slide2.jpg" alt="" ></div>
-        <div><img class="img-responsive" src="assets/images/powerMobile/slide3.jpg" alt="" ></div>
-        <div><img class="img-responsive" src="assets/images/powerMobile/slide4.jpg" alt="" ></div>
-        <div><img class="img-responsive" src="assets/images/powerMobile/slide5.jpg" alt="" ></div>
-        <div><img class="img-responsive" src="assets/images/powerMobile/slide6.jpg" alt="" ></div>
-        <div><img class="img-responsive" src="assets/images/powerMobile/slide7.jpg" alt="" ></div>
-        <div><img class="img-responsive" src="assets/images/powerMobile/slide8.jpg" alt="" ></div>
-      </div>
-    </div>            
-  </div>
-  <div class="power-row">
-    <article class="left-block power-block">
-      <a href="javascript: return false;" class="scale-image" data-slide="0">
-        <h6>One-handed Scheduling</h6>
-        <p>Create new shifts and handle last-minute schedule changes on-the-go</p>
-      </a>
-      <div class="icon-holder">                
-        <div class="scale-icon">
-          <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
-        </div>
-      </div>
-    </article>
-    <article class="right-block power-block">
-      <a href="javascript: return false;" class="scale-image" data-slide="1">
-        <h6>XimbleChat<sup>™</sup></h6>
-        <p>Keep in touch with your Team in real time, on all devices.  Upload and share files and images instantaneously. Leverage “channels” to group and direct messages to appropriate participants. </p>
-      </a>
-      <div class="icon-holder">                
-        <div class="scale-icon">
-          <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="power-row">
-    <article class="left-block power-block">
-      <a href="javascript: return false;" class="scale-image" data-slide="2">
-        <h6>Shift Reminders</h6>
-        <p>Never hear, “Gee, boss, I didn’t realize I was supposed to work today,” ever again!</p>
-      </a>
-      <div class="icon-holder">                
-        <div class="scale-icon">
-          <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
-        </div>
-      </div>
-    </article>
-    <article class="right-block power-block">
-      <a href="javascript: return false;" class="scale-image" data-slide="3">
-        <h6>Reduce Absenteeism</h6>
-        <p>With our free mobile app for iPhone and Android, your employees are always carrying their up-to-date schedule</p>
-      </a>
-      <div class="icon-holder">                
-        <div class="scale-icon">
-          <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="power-row">
-    <article class="left-block power-block">
-      <a href="javascript: return false;" class="scale-image" data-slide="4">
-        <h6>Manage Requests</h6>
-        <p>Give employees a speedy ‘yes’ or ‘no’ on their time off, shift trade, replacement and/or drop requests</p>
-      </a>
-      <div class="icon-holder">                
-        <div class="scale-icon">
-          <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
-        </div>
-      </div>
-    </article>
-    <article class="right-block power-block">
-      <a href="javascript: return false;" class="scale-image" data-slide="5">
-        <h6>Business Insights</h6>
-        <p>Understand how your workforce is performing by accessing our complete, feature-rich reporting system from your mobile phone</p>
-       </a>
-      <div class="icon-holder">                
-        <div class="scale-icon">
-          <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="power-row">
-    <article class="left-block power-block">
-      <a href="javascript: return false;" class="scale-image" data-slide="6">
-        <h6>Open Shift Alerts</h6>
-        <p>Fill that last-minute vacancy: employees are automatically alerted to open shifts needing to be filled</p>
-      </a>
-      <div class="icon-holder">                
-        <div class="scale-icon">
-          <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
-        </div>
-      </div>
-    </article>
-    <article class="right-block power-block">
-      <a href="javascript: return false;" class="scale-image" data-slide="7">
-        <h6>Push notifications</h6>
-        <p>The latest in mobile technology empowers your workforce and keeps them in the loop</p>
-      </a>
-      <div class="icon-holder">                
-        <div class="scale-icon">
-          <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
-        </div>
-      </div>
-    </article>
-  </div>
-</div>      
+      <h3 class="ttl-section text-center">Power of Mobile</h3>
+        <div class="power-area">
+          <a href="#" class="powerOwlLink prev visible-sm visible-xs"></a>  
+          <a href="#" class="powerOwlLink next visible-sm visible-xs"></a>
+          <div class="icon icon-iphone">
+            <div class="owl-slider-holder">
+              <div class="owl-carousel" id="powerMobileSlider">
+                <div data-hash="power-one-handed-scheduling"><img class="img-responsive" src="assets/images/powerMobile/slide1.jpg" alt="" ></div>
+                <div data-hash="power-ximbleChat"><img class="img-responsive" src="assets/images/powerMobile/slide2.jpg" alt="" ></div>
+                <div data-hash="power-shift-reminders"><img class="img-responsive" src="assets/images/powerMobile/slide3.jpg" alt="" ></div>
+                <div data-hash="power-reduce-absenteeism"><img class="img-responsive" src="assets/images/powerMobile/slide4.jpg" alt="" ></div>
+                <div data-hash="power-manage-requests"><img class="img-responsive" src="assets/images/powerMobile/slide5.jpg" alt="" ></div>
+                <div data-hash="power-business-insights"><img class="img-responsive" src="assets/images/powerMobile/slide6.jpg" alt="" ></div>
+                <div data-hash="power-open-shift-alerts"><img class="img-responsive" src="assets/images/powerMobile/slide7.jpg" alt="" ></div>
+                <div data-hash="power-push-notifications"><img class="img-responsive" src="assets/images/powerMobile/slide8.jpg" alt="" ></div>
+              </div>
+            </div>            
+          </div>
+          <div class="power-area-mobile visible-sm visible-xs">
+            <div class="owl-carousel" id="owlMobilePowerText">
+              <!-- 1 slide -->
+              <div class="slide-item" data-hash="power-one-handed-scheduling">
+                <div class="text">
+                  <h6>One-handed Scheduling</h6>
+                  <p>Create new shifts and handle last-minute schedule changes on-the-go</p>
+                </div>
+              </div>
+              <!-- 2 slide -->
+              <div class="slide-item" data-hash="power-ximbleChat">
+                <div class="text">
+                  <h6>XimbleChat<sup>™</sup></h6>
+                  <p>Keep in touch with your Team in real time, on all devices.  Upload and share files and images instantaneously. Leverage “channels” to group and direct messages to appropriate participants. </p>
+                </div>
+              </div>
+              <!-- 3 slide -->
+              <div class="slide-item" data-hash="power-shift-reminders">
+                <div class="text">
+                  <h6>Shift Reminders</h6>
+                  <p>Never hear, “Gee, boss, I didn’t realize I was supposed to work today,” ever again!</p>
+                </div>
+              </div>
+              <!-- 4 slide -->
+              <div class="slide-item" data-hash="power-reduce-absenteeism">
+                <div class="text">
+                  <h6>Reduce Absenteeism</h6>
+                  <p>With our free mobile app for iPhone and Android, your employees are always carrying their up-to-date schedule</p>
+                </div>
+              </div>
+              <!-- 5 slide -->
+              <div class="slide-item" data-hash="power-manage-requests">
+                <div class="text">
+                  <h6>Manage Requests</h6>
+                  <p>Give employees a speedy ‘yes’ or ‘no’ on their time off, shift trade, replacement and/or drop requests</p>
+                </div>
+              </div>
+              <!-- 6 slide -->
+              <div class="slide-item" data-hash="power-business-insights">
+                <div class="text">
+                  <h6>Business Insights</h6>
+                  <p>Understand how your workforce is performing by accessing our complete, feature-rich reporting system from your mobile phone</p>
+                </div>
+              </div>
+              <!-- 7 slide -->
+              <div class="slide-item" data-hash="power-open-shift-alerts">
+                <div class="text">
+                  <h6>Open Shift Alerts</h6>
+                  <p>Fill that last-minute vacancy: employees are automatically alerted to open shifts needing to be filled</p>
+                </div>
+              </div>
+              <!-- 8 slide -->
+              <div class="slide-item" data-hash="power-push-notifications">
+                <div class="text">
+                  <h6>Push notifications</h6>
+                  <p>The latest in mobile technology empowers your workforce and keeps them in the loop</p>
+                </div>
+              </div>              
+            </div>
+          </div>
+
+
+
+          <div class="power-rows-holder hidden-sm hidden-xs">
+            <div class="power-row">
+              <article class="left-block power-block">
+                <a href="#power-one-handed-scheduling" class="scale-image">
+                  <h6>One-handed Scheduling</h6>
+                  <p>Create new shifts and handle last-minute schedule changes on-the-go</p>
+                </a>
+                <div class="icon-holder">                
+                  <div class="scale-icon">
+                    <img class="img-responsive" src="assets/images/scheduling/bullet01.png" alt="" >
+                  </div>
+                </div>
+              </article>
+              <article class="right-block power-block">
+                <a href="#power-ximbleChat" class="scale-image">
+                  <h6>XimbleChat<sup>™</sup></h6>
+                  <p>Keep in touch with your Team in real time, on all devices.  Upload and share files and images instantaneously. Leverage “channels” to group and direct messages to appropriate participants. </p>
+                </a>
+                <div class="icon-holder">                
+                  <div class="scale-icon">
+                    <img class="img-responsive" src="assets/images/scheduling/bullet02.png" alt="" >
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="power-row">
+              <article class="left-block power-block">
+                <a href="#power-shift-reminders" class="scale-image">
+                  <h6>Shift Reminders</h6>
+                  <p>Never hear, “Gee, boss, I didn’t realize I was supposed to work today,” ever again!</p>
+                </a>
+                <div class="icon-holder">                
+                  <div class="scale-icon">
+                    <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
+                  </div>
+                </div>
+              </article>
+              <article class="right-block power-block">
+                <a href="#power-reduce-absenteeism" class="scale-image">
+                  <h6>Reduce Absenteeism</h6>
+                  <p>With our free mobile app for iPhone and Android, your employees are always carrying their up-to-date schedule</p>
+                </a>
+                <div class="icon-holder">                
+                  <div class="scale-icon">
+                    <img class="img-responsive" src="assets/images/scheduling/bullet04.png" alt="" >
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="power-row">
+              <article class="left-block power-block">
+                <a href="#power-manage-requests" class="scale-image">
+                  <h6>Manage Requests</h6>
+                  <p>Give employees a speedy ‘yes’ or ‘no’ on their time off, shift trade, replacement and/or drop requests</p>
+                </a>
+                <div class="icon-holder">                
+                  <div class="scale-icon">
+                    <img class="img-responsive" src="assets/images/scheduling/bullet05.png" alt="" >
+                  </div>
+                </div>
+              </article>
+              <article class="right-block power-block">
+                <a href="#power-business-insights" class="scale-image">
+                  <h6>Business Insights</h6>
+                  <p>Understand how your workforce is performing by accessing our complete, feature-rich reporting system from your mobile phone</p>
+                 </a>
+                <div class="icon-holder">                
+                  <div class="scale-icon">
+                    <img class="img-responsive" src="assets/images/scheduling/bullet06.png" alt="" >
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="power-row">
+              <article class="left-block power-block">
+                <a href="#power-open-shift-alerts" class="scale-image">
+                  <h6>Open Shift Alerts</h6>
+                  <p>Fill that last-minute vacancy: employees are automatically alerted to open shifts needing to be filled</p>
+                </a>
+                <div class="icon-holder">                
+                  <div class="scale-icon">
+                    <img class="img-responsive" src="assets/images/temp-bullet01.png" alt="" >
+                  </div>
+                </div>
+              </article>
+              <article class="right-block power-block">
+                <a href="#power-push-notifications" class="scale-image">
+                  <h6>Push notifications</h6>
+                  <p>The latest in mobile technology empowers your workforce and keeps them in the loop</p>
+                </a>
+                <div class="icon-holder">                
+                  <div class="scale-icon">
+                    <img class="img-responsive" src="assets/images/scheduling/bullet08.png" alt="" >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+
+
+
+        </div>      
 
       </div>
 

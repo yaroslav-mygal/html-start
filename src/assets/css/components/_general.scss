@@ -768,8 +768,14 @@ a {
   @include respond-to(phones) {
     padding: 40px 0;
   }
+  @include respond-to(s-phones) {
+    padding: 15px 0;
+  }
   .flow-form {
     display: none;
+    @include respond-to(1400px) {
+      display: block;
+    }
   }
   @include respond-to(s-desktops) {
     padding: 70px 0 80px;
@@ -808,9 +814,19 @@ a {
     text-align: center;
     padding: 34px 0 28px;
     position: relative;
+    &.is_stuck {
+      z-index: 1000;
+      padding: 10px 0;
+      .ttl-section {
+        display: none;
+      }
+    }
     .btns-wrap {
       @include respond-to(phones) {
         padding: 0 10px;
+      }
+      @include respond-to(s-phones) {
+        padding: 0 4px;
       }
       @include respond-to(tablets) {
         padding: 0 25px;
@@ -834,6 +850,10 @@ a {
         height: 54px;
         line-height: 50px;
       }
+      @include respond-to(s-phones) {
+        @include font-size(14px, 46px);
+        height: 50px;
+      }
     }
     &:before {
       content: '';
@@ -855,9 +875,14 @@ a {
     }
   }
   .schedule-splash-content {
-    text-align: right;
+    @include respond-to(1650px) {
+      text-align: right;
+    }
     @include respond-to(phones) {
       padding: 70px 0 120px;
+    }
+    @include respond-to(s-phones) {
+      padding: 30px 0;
     }
     @include respond-to(tablets) {
       .v-outer>.v-inner {
@@ -869,8 +894,10 @@ a {
         height: 420px;
       }      
       .text {
-        max-width: 640px;
-        float: right;
+        max-width: 640px;        
+        @include respond-to(1650px) {
+          float: right;
+        }
         @include font-size(16px, 30px);
       }    
     }
@@ -887,6 +914,9 @@ a {
       font-family: $f-base-font;
       @include font-size(22px);
       margin-bottom: 20px;
+      @include respond-to(s-phones) {
+        @include font-size(19px);
+      }
     }
   }
   &.schedule-splash-time {
@@ -901,34 +931,63 @@ a {
       @include respond-to(s-desktops) {      
         width: 575px;     
       }
-    }    
+    } 
   }
 }
 .schedule-control-area {
   padding: 50px 0 35px;
-  position: relative;  
+  position: relative;
+  @include respond-to(s-phones) {
+    padding: 30px 0;
+  }
   .schedule-app-button {
     position: absolute;
     top: 50%;
     z-index: 100;
     margin-top: -24px;
+    @include respond-to(phones) {
+      margin: -16.5px;
+    }
     @include respond-to(s-desktops) {
       display: none;
     }
     &.prev {
       @include sprite($schedule-app-prev);
       left: 25px;
+      @include respond-to(phones) {
+        @include sprite($schedule-app-prev-xs);
+      }
+      @include respond-to(s-phones) {
+        left: 3px;
+        margin: 0;
+      }
     }
     &.next {
       @include sprite($schedule-app-next);
       right: 25px;
+      @include sprite($schedule-app-next-xs);
+      @include respond-to(s-phones) {
+        right: 3px;
+        margin: 0;
+      }
     }
   }
   #tabs-app-container {
+    @include respond-to(s-desktops) {
+      position: relative;
+      padding-bottom: 150px;
+    }
+    @include respond-to(desktops) {
+      padding: 0;
+    }
     .schedule-text {
-      float: left;
-      width: 365px;
-      padding-top: 60px;
+      @include respond-to(s-desktops) {
+        width: 355px;   
+        float: left;
+      }      
+      @include respond-to(desktops) {
+        padding-top: 60px;
+      }
     }
   }  
   #time-app-container {
@@ -944,21 +1003,34 @@ a {
   }
   .special-tabs {
     display: none;
+    float: none;
+    overflow: hidden;
     @include respond-to(s-desktops) {
       display: block;
-    }
-    &.vertical {
-      float: left;
-      width: 260px;
-      margin-left: 45px;
-    }
-    &.horizontal {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
       width: 100%;
+    }
+    @include respond-to(desktops) {
+      float: left;        
+      margin-left: 25px;
+      position: static;
+      width: 260px;
+    }
+    @include respond-to(1400px) {
+      margin-left: 45px;
     }
   }
   .tab-macbook {
-    float: right;
-    margin-top: 30px;
+    @include respond-to(s-desktops) {
+      float: right;
+    }
+    @include respond-to(desktops) {
+      float: right;
+      margin-top: 30px;
+    }
     &.tab-macbook-time {
       margin: 0;
       @include respond-to(phones) {
@@ -1175,11 +1247,12 @@ a {
   }
 }
 .posts-holder {
+  padding-top: 20px;
   @include respond-to(s-desktops) {
     padding-right: 30px;
   }
   @include respond-to(desktops) {
-    padding-right: 70px;
+    padding-right: 30px;
   }
   color: #3c3c3c;
   .post:first-child {

@@ -22,7 +22,10 @@ p {
 }
 .ttl-news {
 	color: #515151;
-	@include font-size(35px, 80px);
+	@include font-size(35px, 110px);
+	.icon-news {
+		margin-right: 6px;
+	}
 	@include respond-to(phones) {
 		display: inline-block;
 		vertical-align: top;
@@ -139,6 +142,9 @@ p {
 		@include respond-to(phones) {
 			@include font-size(30px);
 		}
+		@include respond-to(s-phones) {
+			@include font-size(27px);
+		}
 	}
 	.schedule-splash-content & {
 		@include font-size(40px);
@@ -146,6 +152,9 @@ p {
 		margin-bottom: 20px;
 		@include respond-to(phones) {
 			@include font-size(38px);
+		}
+		@include respond-to(s-phones) {
+			@include font-size(30px);
 		}
 	}
 }
