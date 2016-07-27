@@ -1191,12 +1191,6 @@ a {
   .blog-aside {
     background-color: #eee;
     padding: 20px;
-    @include respond-to(s-desktops) {
-      padding: 30px 10px 10px;
-    }
-    @include respond-to(desktops) {
-      padding: 64px 18px 30px;
-    }
     .blog-advert {
       padding: 0 5px;
       @include respond-to(phones) {
@@ -1205,7 +1199,7 @@ a {
       .blog-ad {
         position: relative;
         margin-bottom: 22px;
-        .ad-promo {
+        .try-promo {
           @include respond-to(phones) {
             margin-bottom: 15px;
           }
@@ -1225,11 +1219,11 @@ a {
     .blog-widget {
       @include font-size(20px);
       .ttl-widget {
-        font-weight: normal;
-        @include font-size(22px);
+        @include font-size(18px);
         color: #515151;
         font-family: $f-q-family;
         text-transform: uppercase;
+        margin-bottom: 10px;
       }
       a {
         color: #515151;
@@ -1239,7 +1233,6 @@ a {
       margin-bottom: 20px;
     }
     .rss-wrap {
-      padding: 0 0 40px 17px;
       @include respond-to(phones) {
         padding: 0 0 10px;
       }
