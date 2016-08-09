@@ -1,175 +1,51 @@
 h1, h2, h3, h4, h5, h6 {
-	font-family: $f-alt-family;
-	opacity:0.99;
+	font-family: $f-font-medium;
+	font-weight: normal;
 }
-h1 {
-	@include font-size(50px, 60px);
-	color: $c-blue;
-	
+.title {
+	font-family: $f-base-font;
+	font-size: 30px;
+	color: #424e5c;
+	letter-spacing: 0px;
+	line-height: 36px;
+	position: relative;	
+	display: inline-block;
+	margin: 0;
+	@include respond-to(s-desktops) {
+		font-size: 36px;
+		padding: 0 170px 0 0;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 120px;
+			height: 1px;
+			right: 0;
+			@include verticalTransform;
+			background-color: #d7d8dc;
+		}
+	}	
 }
-h2, h3 {
-	@include font-size(40px);
-	color: $c-dark-blue;	
+h4 {
+	@include font-size(28px, 64px);
+	color: #444E58;
 }
-h4, h5 {
-	@include font-size(24px, 30px);	
+h5 {
+	@include font-size(24px, 33px);
+	color: #444E58;
+	margin: 0 0 30px;
 }
-h6 {
-	@include font-size(18px, 24px);
+.bigger {
+	@include font-size(20px, 52px);
 }
 p {
 	margin: 0 0 15px;
 }
-.ttl-news {
-	color: #515151;
-	@include font-size(35px, 110px);
-	.icon-news {
-		margin-right: 6px;
-	}
-	@include respond-to(phones) {
-		display: inline-block;
-		vertical-align: top;
-	}
-	@include respond-to(tablets) {
-		.blog-head & {
-			margin: 40px 0 0;
-		}
-	}	
+.c-gray {
+	color: $c-gray;
 }
-.ttl-section {
-	@include respond-to(phones) {
-		@include font-size(25px);
-	}
-	@include respond-to(tablets) {
-		@include font-size(30px);
-	}
-	@include respond-to(s-desktops) {
-		@include font-size(40px);
-	}
-	.home-section & {
-		margin-bottom: 17px;
-		@include respond-to(s-desktops) {
-			margin-bottom: 30px;
-		}
-	}
-	.home-section-reasons & {
-		@include respond-to(m-phones) {
-			margin-bottom: 25px;
-		}
-		@include respond-to(s-phones) {
-			margin-bottom: 25px;
-		}
-		@include respond-to(s-desktops) {
-			 @include font-size(36px);
-			 margin-bottom: 40px;
-		}
-		@include respond-to(desktops) {
-			margin-bottom: 48px;
-		}
-	}
-	.home-store-section & {		
-		@include respond-to(s-desktops) {
-			@include font-size(31px);
-		}
-		@include respond-to(s-phones) {
-			@include font-size(20px);
-		}
-		margin-bottom: 23px;
-	}
-	.home-section-test & {
-		@include respond-to(tablets) {
-			@include font-size(27px);
-		}
-		@include respond-to(s-desktops) {
-			@include font-size(36px);
-		}
-		@include respond-to(desktops) {
-			@include font-size(40px);
-		}
-		@include respond-to(tablets) {
-			margin-bottom: 50px;
-		}		
-	}
-	.home-section-integration & {
-		@include respond-to(s-desktops) {
-			@include font-size(35px);
-		}		
-		@include respond-to(desktops) {
-			padding: 0 85px 45px;
-		}
-	}
-	.home-section-features & {
-		@include respond-to(s-desktops) {
-			@include font-size(50px);
-			margin-bottom: 18px;
-		}
-	}
-	.pricing-options-sections & {
-		@include respond-to(s-desktops) {
-			@include font-size(35px);
-			margin-bottom: 85px;
-		}
-	}
-	.home-section-services & {
-		color: #fff;
-		margin-bottom: 45px;
-	}
-	.trial-form & {
-		color: #fff;
-		@include respond-to(s-desktops) {
-			@include font-size(40px);
-			margin-bottom: 41px;
-		}
-	}
-	.power-section & {
-		color: #fff;
-		@include respond-to(phones) {
-			margin-bottom: 30px;
-		}
-		@include respond-to(tablets) {
-			margin-bottom: 45px;
-		}
-		@include respond-to(s-desktops) {
-			margin-bottom: 15px;
-			@include font-size(40px);
-			margin-bottom: 71px;
-		}
-	}
-	.schedule-splash-top & {
-		color: #fff;
-		@include font-size(36px);
-		margin-bottom: 30px;
-		@include respond-to(phones) {
-			@include font-size(30px);
-		}
-		@include respond-to(s-phones) {
-			@include font-size(27px);
-		}
-	}
-	.schedule-splash-content & {
-		@include font-size(40px);
-		color: #fff;
-		margin-bottom: 20px;
-		@include respond-to(phones) {
-			@include font-size(38px);
-		}
-		@include respond-to(s-phones) {
-			@include font-size(30px);
-		}
-	}
+.c-red {
+	color: $c-red;
 }
-.subtitle-senDesk {
-	@include font-size(28px);
-	color: $c-dark-blue;
-	margin-bottom: 20px;
-	strong {
-		color: #5090bb;
-	}
-	@include respond-to(phones) {
-		text-align: center;
-		@include font-size(24px);
-	}
-	@include respond-to(desktops) {
-		margin-bottom: 50px;
-	}
+.c-blue {
+	color: $c-blue;
 }

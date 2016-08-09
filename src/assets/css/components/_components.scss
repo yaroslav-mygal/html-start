@@ -1,1255 +1,370 @@
-.home-list-services {
-  @include clear-list;
-  text-align: center;
-  @include respond-to(s-desktops) {
-    padding: 0 60px;
-  }
-  li {
-    display: inline-block;
-    vertical-align: top;
-    padding: 0 5px 15px;
-    @include respond-to(phones) {
-      padding: 0 3px;
-    }
-    @include respond-to(s-phones) {
-      padding: 0 3px 9px;
-    }
-    .link-service {
-      border: 2px solid #fff;      
-      display: block;
-      @include border-radius(50%);
-      color: #fff;
-      text-transform: uppercase;
-      @include font-size(16px);
-      position: relative;
-      @include respond-to(phones) {
-        width: 105px;
-        height: 105px;
-        @include font-size(16px);
-      }
-      @include respond-to(s-phones) {
-        width: 90px;
-        height: 90px;
-      }
-      @include respond-to(tablets) {
-        width: 166px;
-        height: 166px;
-      }
-      @include respond-to(s-desktops) {
-        width: 180px;
-        height: 180px;
-        @include font-size(18px);
-      }
-      @include respond-to(desktops) {
-        width: 204px;
-        height: 204px;
-      }
-      &:hover {
-        text-decoration: none;
-        background: rgba(76, 127, 162, 0.8);
-        border: 2px solid transparent;
-      }
-      .icon-holder {
-        position: absolute;
-        left: 0;
-        right: 0;        
-        text-align: center;
-        height: 50px;
-        width: 100%;
-        @include respond-to(phones) {
-          top: 29px;
-        }
-        @include respond-to(s-phones) {
-          top: 20px;
-        }
-        @include respond-to(tablets) {
-          top: 40px;
-        }
-        @include respond-to(s-desktops) {
-          top: 50px;
-        }
-        .icon {
-          display: block;
-          margin: 0 auto;
-        }
-      }
-      span.text {
-        display: block;
-        cursor: pointer;
-        position: absolute;
-        top: 110px;
-        left: 0;
-        right: 0;
-        @include respond-to(phones) {
-          top: 82px;
-          display: none;
-        }
-        @include respond-to(tablets) {
-          top: 102px;
-        }
-        @include respond-to(s-desktops) {
-          top: 110px;
-        }
-      }
-    }
-  }
+.home-info-box {
+	background-color: #fff;
+	font-size: 16px;
+	color: #444E58;
+	line-height: 22px;
+	position: relative;
+	cursor: pointer;	
+	margin: 0 0 10px;
+	padding: 30px 50px 20px 20px;
+	@include respond-to(tablets) {
+		height: 265px;
+		padding: 30px 50px 55px 20px;
+	}
+	@include respond-to(s-desktops) {
+		padding: 35px 35px 55px;
+		line-height: 28px;
+	}
+	@include respond-to(desktops) {
+		padding-top: 42px;
+	}
+	.date {
+		@include font-size(12px, 14px);
+		display: block;
+		margin-bottom: 15px;
+		color: $c-gray;
+	}
+	a {
+		color: $c-blue;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	h4 {
+		font-family: $f-font-demi;
+		font-weight: 600;
+		font-size: 20px;
+		letter-spacing: 0px;
+		margin: 0 0 12px;
+	}
+	.link {		
+		font-family: $f-font-medium;
+		font-size: 14px;
+		color: $c-gray;
+		line-height: 14px;
+		
+		text-decoration: none;
+		@include respond-to(tablets) {
+			position: absolute;
+			left: 35px;
+			bottom: 32px;
+		}		
+		&:hover {
+			color: darken($c-gray,25);
+		}
+	}
+	.icon-post,
+	.icon-twitter,
+	.icon-twitter-light {
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	}
+	&:hover {
+		box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.10);
+		.link {
+			color: #69243C;
+		}
+	}
+	&.twitter {
+		@include font-size(20px, 30px);
+	}
+	&.twitter-info-box {
+		display: block;
+		text-align: center;
+		background: url('../images/layout/bg-twitter-info-box.png') no-repeat 50% 0;
+		@include bg-cover;
+		padding: 105px 35px 55px;
+		.twitter-username {
+			padding: 23px;
+			display: block;
+			opacity: 0.4;
+			font-family: Avenir-Book;
+			font-size: 16px;
+			color: #FFFFFF;
+			letter-spacing: 0px;
+			line-height: 16px;
+		}		
+	}
 }
-.devices-holder {
-  position: relative;
-  @include respond-to(phones) {
-    width: 400px;
-    margin: 60px auto 0;
-  }
-  @include respond-to(s-phones) {
-    width: 300px;
-    margin: 40px auto 0;
-  }
-  @include respond-to(tablets) {
-    width: 554px;
-    height: 329px;
-    margin: 60px auto 0;
-  }
-  @include respond-to(s-desktops) {
-    margin-top: 40px;
-    width: 400px;
-    height: 238px;
-    float: right;
-  }
-  @include respond-to(desktops) {
-    margin-top: 15px;
-  }
-  @include respond-to('1305px') {
-     width: 554px;
-     height: 329px;
-  }
-  .link-device {
-    position: absolute;
-    &.link-device-tab {
-      bottom: 7px;
-      left: -24px;
-      @include respond-to('1305px') {
-        bottom: 45px;
-      }
-      @include respond-to(s-phones) {
-        left: -4px;
-      }
-    }
-    &.link-device-laptop {
-      top: -20px;
-      right: 21px;
-      @include respond-to('1305px') {
-        top: 5px;
-      }
-    }
-    &.link-device-phone {
-      bottom: -35px;
-      left: 119px;
-      @include respond-to(s-phones) {
-        bottom: -5px;
-      }
-      @include respond-to(tablets) {
-        bottom: 5px;
-        left: 212px;
-      }
-      @include respond-to(s-desktops) {
-        left: 122px;
-        bottom: -35px;
-      }
-      @include respond-to('1305px') {
-        bottom: 5px;
-        left: 212px;
-      }
-    }
-  }
+.capacity-section {
+	background-color: #fff;
+	box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.10);
+	margin: -20px auto 0;
+	max-width: 480px;
+	.btn-holder {
+		border-top: 1px solid #eff0f1;
+		.btn-default {
+			padding-right: 50px;
+		}
+	}
+	.header {
+		padding: 20px 0;
+		h4 {
+			font-size: 18px;
+			color: #444E58;
+			margin: 0 0 5px;
+		}
+	}
+	.capacity-block {
+		border-top: 2px solid #b2b7bb !important;
+		border-left: 2px solid #a542c4;
+	}
+	.capacity-block-head {
+		padding: 14px 12px;
+		border-bottom: 1px solid #eff0f1;
+	}
+	.capacity-slide {
+		.capacity-slide-link {
+			padding: 14px 12px;
+			display: block;
+			color: #444E58;
+			position: relative;
+			outline: none;
+			&:after {
+				content: '';
+				position: absolute;
+				@include verticalTransform;
+				right: 15px;
+				@include sprite($bullet-capacity-slide-link);
+			}
+			&.collapsed {
+				&:after {
+					@include sprite($collapsedbullet-capacity-slide-link);
+				}
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		.toggle-slide {
+			@include font-size(16px, 18px);
+			padding: 12px;
+			color: #444E58;
+			.label {
+				color: rgba(102, 111, 120, 0.5);
+				@include font-size(12px, 18px);
+			}
+			&>.row {
+				padding-top: 12px;
+				padding-bottom: 12px;
+			}
+		}
+	}	
 }
-.box-integration {
-  border: 2px solid #fff; 
-  height: 167px;
-  text-align: center;
-  cursor: pointer;
-  overflow: hidden;
-  .inner-content & {
-    border-color: #f6f6f6;
-  }
-  &.hvr-sweep-to-top {
-    &:before {
-      background: #fff;
-      -webkit-transition-duration: 0.6s;
-      transition-duration: 0.6s;
-    }    
-  }
-  @include respond-to(phones) {
-    border-width: 1px 0 0;
-  }
-  @include respond-to(tablets) {
-    border-width: 1px 0 0;
-  }
-  @include respond-to(s-desktops) {
-     border-width: 2px 0 0 2px;
-  }
-  .text {
-    visibility: hidden;
-    opacity: 0;
-    padding: 14px 10px 0;
-    color: $c-text;
-    height: 0;
-    @include font-size(14px, 20px);
-    @include transition(all 0.4s linear);
-  }
-  .v-outer, .v-inner {
-    height: 167px;
-  }
-  .icon {
-    transition: visibility 0s, opacity 0.6s, height 0.3s linear;
-    display: block;
-    margin: 0 auto;
-  }
-  .icon-colored {
-    visibility: hidden;
-    opacity: 0;
-  }
-  .icon-colored-wrap {
-    height: 0;
-  }
-  &:hover {
-    .icon-gray {
-      visibility: hidden;
-      opacity: 0;
-      height: 0;
-    }
-    .icon-colored-wrap {
-      height: auto;
-    }
-    .icon-colored {
-      visibility: visible;
-      opacity: 1;
-    }
-    .text {
-      height: auto;
-      opacity: 1;
-      visibility: visible;
-    }
-  }
+.list-capacity-select {
+	@include clear-list;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		@include font-size(12px);
+		a {
+			color: #444E58;			
+			padding: 6px 8px;
+			&:hover {
+				background-color: #69243c;
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+		&.active {
+			a {
+				color: #fff;
+				background-color: #69243c;
+			}
+		}
+	}
 }
-.link-home-feature {
-  display: block;
-  position: relative;  
-  color: $c-text;
-  @include font-size(16px,20px);
-  @include respond-to(phones) {
-    overflow: hidden;
-    padding: 20px 10px 20px 95px;
-  }
-  @include respond-to(s-phones) {
-    @include font-size(14px);
-    padding: 10px 5px 10px 85px;
-  }
-  @include respond-to(tablets) {
-    padding: 20px 10px 20px 95px;
-  }
-  @include respond-to(s-desktops) {
-    padding: 50px 25px 5px 165px;
-    min-height: 178px;
-  }
-  &.border {
-    &:before {
-      content: '';
-      position: absolute;
-      right: -1px;
-      top: 0;
-      bottom: 0;
-      height: 100%;
-      width: 1px;
-      background-color: #ebecee;
-    }
-  }
-  .l-title {
-    display: block;
-    color: $c-dark-blue;
-    @include font-size(20px);
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    @include respond-to(s-phones) {
-      @include font-size(16px);
-    }
-  }
-  .icon {
-    position: absolute;
-    left: 18px;
-    top: 50%;
-    margin-top: -32.5px;
-    @include respond-to(s-phones) {
-      left: 8px;
-    }
-    @include respond-to(s-desktops) {
-      margin-top: -64.5px;
-    }    
-  }
-  &:hover {
-    text-decoration: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
-  }
-  .home-features & {
-    margin-bottom: 7px;
-  }
+.add-splash {
+	color: #fff;
+	background: #414141;
+	background-position: 50% 0;
+	.v-table,
+	.v-cell {
+		height: 280px;
+	}
+	h2 {
+		@include font-size(36px, 42px);
+		margin: 0;
+	}
+	&.head-historique {
+		background-image: url('../images/layout/head-historique.jpg');		
+	}
+	&.head-equipes {
+		background-image: url('../images/layout/head-equipes.png');
+	}
+	&.head-metiers {
+		background-image: url('../images/layout/Head-metiers.png');		
+	}
 }
-.box-sub-feature {
-  padding: 0 20px;
-  color: $c-text;
-  text-align: center;
-  @include respond-to(s-phones) {
-    padding: 0;
-  }
-  @include respond-to(desktops) {
-    padding: 0 30px;
-  }
-  h5 {
-    @include font-size(20px);
-    margin-bottom: 11px;
-    color: #5090bb;
-    @include respond-to(s-phones) {
-      @include font-size(18px);
-    }
-  }
-  p {
-    line-height: 1.2;
-  }
-  .icon-wrap {
-    margin-bottom: 13px;
-    .v-outer,
-    .v-inner {
-      height: 100px;
-      @include respond-to(s-phones) {
-        height: auto;
-      }
-    }
-  }
+.tabs {
+	@include clear-list;
+	overflow: hidden;
+	margin-top: -60px;
+	li {
+		float: left;
+		margin-right: 20px;
+		line-height: 19px;
+		font-family: $f-font-demi;
+		a {
+			display: block;
+			height: 60px;
+			color: #fff;
+			background: rgba(0,0,0,0.20);
+			padding: 20px 28px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		&.active {
+			a {
+				background: #fff;
+				color: #69243C;
+			}
+		}
+	}
 }
-.icon-fixed {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  margin-top: -137.5px;
+.list {
+	@include clear-list;
+	@include font-size(14px, 38px);
+	&>li {
+		padding: 0 0 0 20px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			@include triangle(8px, #5b2437, right);
+			top: 14px;
+		}
+	}
 }
-.block-pricing-option {
-  background-color: #f6f6f6;
-  padding: 57px 50px 22px;
-  text-align: center;
-  position: relative;
-  @include font-size(15px);
-  @include respond-to(tablets) {
-    margin: 0 9px;
-  }
-  color: #212931;
-  h4 {
-    color: #5090bb;
-    @include font-size(20px);
-    span {
-      display: block;
-      text-transform: uppercase;
-    }
-  }
-  .icon {
-    position: absolute;
-    left: 50%;
-    top: -41px;
-    margin-left: -40px;
-  }
+.list-team {
+	@include clear-list;
+	li {
+		margin-bottom: 22px;
+	}
 }
-.pricing-tabs {
-  width: 100%;
-  @include clearfix;
-  @include clear-list;
-  margin-bottom: 35px;
-  li {
-    float: left;
-    width: 33.3%;
-    // border-right: 1px solid #d4d4d4;
-    &:first-child {
-      .tab {
-        border-left: 1px solid #d4d4d4;
-      }
-    }
-    .tab {
-      display: block;
-      position: relative;
-      @include font-size(15px);
-      color: $c-dark-blue;
-      @include linear-gradient(#fff, #f1f1f1);
-      border: 1px solid #d4d4d4;
-      border-width: 1px 1px 1px 0;
-      padding: 20px 38px;
-      &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 17px;
-        background: url('../images/layout/bg-tab-shadow.png') repeat-y;
-      }
-      .label-popular {
-        position: absolute;
-        color: #fff;
-        @include font-size(15px,18px);
-        font-family: $f-alt-family;
-        @include sprite($label-popular);
-        right: 0;
-        top: -15px;
-        font-weight: bold;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 4px 0 0;
-      }
-      .title {
-        display: block;
-        @include font-size(22px);
-        margin-bottom: 5px;
-        font-family: $f-alt-family;
-        color: #5090bb;
-      }
-      &.tab-green {
-        .title {
-          color: #00b274;
-        }
-        &.active {
-          border-color: #00b274 #d4d4d4 #d4d4d4;
-        }
-      }
-      &.tab-yellow {
-        padding-left: 90px;
-        .title {
-          color: #fdad76;
-        }
-        .icon-star {
-          position: absolute;
-          left: 33px;
-          top: 50%;
-          margin-top: -21.5px;
-        }
-        &.active {
-          border-color: #fdad76 #d4d4d4 #d4d4d4;
-        }  
-      }
-      &:hover {
-        text-decoration: none;
-        background: #fff;
-      }
-      &.active {
-        background: #fff;
-        border-top: 5px solid #5090bb;
-        padding-top: 18px;
-        padding-bottom: 18px;
-        &:before {
-          display: none;
-        }
-      }
-    }
-  }
+.link-team {
+	overflow: hidden;
+	display: block;
+	.avatara {
+		float: left;
+		width: 80px;
+		height: 80px;
+		overflow: hidden;
+		position: relative;
+		margin-right: 25px;		
+		&:before {
+
+		}
+		img {
+			width: 80px;
+			height: 80px;
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+		}		
+	}
+	&>.holder {
+		display: block;
+		overflow: hidden;
+		height: 80px;
+		font-family: $f-font-medium;
+		font-size: 14px;
+		color: rgba(102,110,120,0.50);
+		@include flex;
+		.name {
+			display: block;
+			font-size: 16px;
+			color: #444E58;
+			font-weight: normal;
+		}
+	}
+	&:hover {
+		text-decoration: none;
+		box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.10);
+		.avatara {
+			img {
+				-webkit-filter: none;
+				filter: none;
+			}
+		}
+	}
 }
-.search-form {
-  background-color: #fff;
-  @include border-radius(4px);
-  position: relative;
-  padding-right: 65px;
-  height: 60px;
-  .field-search {
-    color: #2f4050;
-    border: 0;
-    height: 60px;
-    @include font-size(18px);
-    font-family: $f-base-font;
-    padding: 15px 24px;
-  }
-  .btn-search {
-    position: absolute;
-    border: 0;
-    top: 0;
-    right: 0;
-    text-indent: -9999px;
-    background: none;
-    border-left: 1px solid #ccc;
-    width: 65px;
-    font-size: 0;
-    line-height: 0;
-    @include sprite($btn-search);
-  }
+.tabs-content {
+	padding: 60px 0;
 }
-.zen-product {
-  box-shadow: 0 0 7px #dcdbdb;
-  padding: 32px 25px 23px;
-  @include font-size(16px, 25px);
-  color: $c-dark-blue;
-  text-align: center;
-  h5 {
-    @include font-size(20px);
-    text-transform: uppercase;
-    font-family: $f-alt-family;
-    min-height: 50px;
-    height: 50px;
-    margin-bottom: 19px;
-    &>span {
-      display: block;
-      height: auto;
-      width: 200px;
-      vertical-align: middle;
-      margin: 0 auto;
-    }
-    &.v-outer {
-      .v-inner {
-        height: 50px;
-        @include respond-to(desktops) {
-          padding: 0 20px;
-        }
-      }
-    }
-  }
-  p {
-    margin: 0;
-  }
-  .icon-holder {
-    margin-bottom: 34px;
-    text-align: center;
-  }
-  .zen-products-wrap & {
-    margin: 0 7px;
-    @include respond-to(phones) {
-      margin: 0 0 25px;
-    }
-  }
+.team-vertical-slider {
+	background-color: #eff0f2;
+	max-width: 635px;
+	position: relative;
+	padding: 60px;
+	@include font-size(16px, 32px);
+	@include respond-to(desktops) {
+		margin-top: 180px;
+	}
+	.slick-arrow {
+		text-indent: -9999px;
+		overflow: hidden;
+		position: absolute;
+		@include verticalTransform;
+		width: 60px;
+		height: 60px;
+		border: 0;
+		padding: 0;
+		&:before {
+			content: '';
+			@include verticalTransform;
+			position: absolute;
+			left: 50%;
+			margin-left: -5.5px;
+		}
+		&.slick-prev {
+			background-color: #fff;
+			right: 0;
+			&:before {
+				@include sprite($arrow-up);
+			}
+		}
+		&.slick-next {
+			background-color: $c-red;
+			right: -60px;
+			&:before {
+				@include sprite($arrow-down);
+			}
+		}
+	}
 }
-.flow-form {
-  position: absolute;
-  right: 0;
-  top: 363px;
-  width: 240px;
-  color: #fff;
-  background: rgba(47, 64, 80, 0.8);
-  padding: 20px;
-  @include font-size(14px);
-  z-index: 18;
-  border-radius: 9px 0 0 9px;
-  &.fixed {
-    position: fixed;
-  }
-  h6 {
-    text-transform: uppercase;
-    @include font-size(15px);
-    margin-bottom: 5px;
-    font-family: $f-base-font;
-  }
-  p {
-    margin-bottom: 10px;
-  }
-  .form-field {
-    margin-bottom: 6px;
-  }
-  #{$all-text-inputs} {
-    height: 34px;
-    border-color: #7e8082;
-    background: none;
-    color: #fff;
-    text-align: center;
-    @include font-size(14px);
-    @include placeholder {
-      color: #fff;
-    }
-  }
-}
-.power-area {
-  position: relative;
-  min-height: 610px;
-  @include respond-to(tablets) {
-    padding: 0 370px 0 50px;
-  }
-  @include respond-to(s-desktops) {
-    padding: 77px 0 0;
-  }
-  @include font-size(14px);
-  .powerOwlLink {
-    top: 50%;
-    margin-top: -26px;
-  }
-  #owlMobilePowerText .slide-item {
-    @include respond-to(phones) {
-      text-align: center;
-      padding: 28px 0 0;
-    }
-    @include respond-to(tablets) {
-      height: 610px;
-      width: 100%;
-      display: table;
-      .text {
-        display: table-cell;
-        vertical-align: middle;
-        width: 100%;
-      }
-    }
-  }
-  h6 {
-    color: #4fabe9;
-    text-transform: uppercase;
-    @include font-size(18px);
-    font-family: $f-base-font;
-    margin-bottom: 10px;
-    sup {
-      @include font-size(14px);
-    }
-  }
-  .owl-slider-holder {
-    padding: 74px 0 0;
-    margin: 0 auto;
-    width: 263px;
-    @include respond-to(s-phones) {
-      padding-top: 64px;
-      width: 229px;
-    }
-  }
-  .power-row {
-    position: relative;
-    min-height: 128px;
-    &:after {
-      content: ".";
-      display: block;
-      height: 0;
-      clear: both;
-      visibility: hidden;
-    }
-    &:before {
-      content: '';
-      background: url('../images/layout/power-row.png') repeat-x;
-      height: 1px;
-      position: absolute;
-      left: 280px;
-      right: 280px;
-      top: 12px;
-      @include respond-to(desktops) {
-        left: 345px;
-        right: 345px;
-      }
-    }
-  }
-  .icon-iphone {
-    @include respond-to(phones) {
-      margin: 0 auto;
-      display: block;
-    }
-    @include respond-to(tablets) {
-      right: 50px;
-      top: 0;
-      position: absolute;
-      z-index: 15;
-    }
-    @include respond-to(s-desktops) {
-      top: 0;
-      left: 50%;
-      margin-left: -154.5px; 
-    }       
-  }
-  .power-block {
-    width: 275px;
-    position: relative;
-    @include respond-to(desktops) {
-      width: 340px;
-    }
-    .scale-image {
-      display: block;
-      &:hover {
-        text-decoration: none;
-      }
-      p {
-        color: #fff;
-      }
-    }
-    &.left-block:hover {
-      .icon-holder {
-        .scale-icon {
-          margin-left: -30px;
-          @include respond-to(desktops) {
-            margin-left: -30px;
-          }
-        }
-      }
-    }
-     &.right-block:hover {
-      .icon-holder {
-        .scale-icon {
-          margin-left: -60px;
-          @include respond-to(desktops) {
-            margin-left: -78px;
-          }
-        }
-      }
-    }
-    &:hover {
-      .icon-holder {
-        .scale-icon {
-          visibility: visible;          
-          left: 50%;
-          top: 50%;
-          margin-top: -45px;
-          width: 90px;
-          height: 90px;
-          @include respond-to(desktops) {
-            margin-top: -54.5px;
-            width: 109px;
-            height: 109px;
-          }
-        }
-      }
-    }
-    .icon-holder {
-      width: 25px;
-      height: 25px;
-      border: 2px solid #878787;
-      @include border-radius(50%);
-      position: absolute;
-      top: 0;
-      .scale-icon {
-        position: absolute;
-        width: 27px;
-        height: 27px;
-        border: 2px solid transparent;
-        @include border-radius(50%);
-        visibility: hidden;
-        transition: all .6s ease-in-out;
-        left: -3px;
-        top: -3px;
-        // transform: scale(1);
-      }
-    }
-    &.left-block {      
-      padding-right: 40px;
-      float: left;
-      text-align: right;
-      .icon-holder {
-        right: 0;
-      }
-    }
-    &.right-block {
-      padding-left: 40px;
-      float: right;
-      .icon-holder {
-        left: 0;
-      }
-    }
-  }
-}
-.special-tabs {
-  @include clear-list;
-  background-color: #f5f5f5;
-  @include border-radius(6px);  
-  li {
-    a {
-      color: #2f4050;
-      @include font-size(15px);
-      font-weight: bold;
-      position: relative;
-      display: block;      
-      text-transform: uppercase;
-      sup {
-        @include font-size(12px);
-      }
-      &:hover {
-        text-decoration: none;
-      }
-      &.active {
-        background-color: #5090bb;
-        color: #fff;
-      }
-    }
-  }
-  li {
-    float: left;
-    position: relative;
-    @include respond-to(desktops) {
-      float: none;
-    }
-     &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      background-color: #fff;
-      width: 1px;
-      height: 100%;
-      @include respond-to(desktops) {
-        right: 0;
-        top: 0;
-        height: 1px;
-        width: 100%;
-      }
-     }
-    a {
-      height: 80px;
-      text-align: center;
-      width: 100%;
-      display: flex;
-      &>span {
-        display: block;
-        padding: 0 25px;
-        margin: auto;
-      }
-    }
-  }
-}
-.schedule-text {
-  color: #2f4050;
-  @include font-size(16px, 30px);
-  @include respond-to(s-phones) {
-    @include font-size(14px,18px);
-  }
-  h3 {
-    text-transform: uppercase;
-    @include font-size(23px);
-    font-family: $f-base-font;
-    margin-bottom: 35px;
-    @include respond-to(s-phones) {
-      @include font-size(19px);
-      margin-bottom: 10px;
-    }
-    sup {
-      font-size: 0.7em;
-      line-height: 1;
-    }
-  }
-  p {
-    margin-bottom: 25px;
-  }
-}
-#schedule-tab-owl {
-  .tab-holder {
-    @include respond-to(phones) {
-      padding: 0 60px;
-    }
-    @include respond-to(s-phones) {      
-      padding: 0 25px;
-    }
-  }  
-}
-.tab-macbook {
-  @include sprite($tab-laptop-time-md);
-  
-  @include respond-to(phones) {
-    @include sprite($tab-laptop-xs);
-    padding: 19px 59px 0;
-    margin: 0 auto;
-    display: block;
-  }
-  @include respond-to(s-phones) {
-    @include sprite($tab-laptop-sxs);
-    padding: 13px 40px 0;
-  }
-  @include respond-to(tablets) {
-    padding: 23px 72px 0;
-    margin: 0 auto;
-  }
-  @include respond-to(s-desktops) {
-    padding: 23px 72px 0;
-  }
-  @include respond-to(desktops) {
-    padding: 23px 72px 0;
-  }
-  @include respond-to(1400px) {
-    padding: 29px 90px 0 90px;
-    @include sprite($tab-laptop);
-  }
-  // &.tab-macbook-time {
-  //   @include respond-to(s-desktops) {
-  //     @include sprite($tab-laptop-time-md);
-  //     padding: 23px 73px 0;
-  //   }
-  //   @include respond-to(desktops) {
-  //     @include sprite($tab-laptop-time);
-  //     padding: 26px 83px 0;
-  //   }    
-  // }
-}
-.menu-industries {
-  font-family: $f-q-family;
-  padding-top: 20px;
-  @include respond-to(desktops) {
-    padding-top: 41px;
-  }
-  ul {
-    @include clear-list;
-    li {
-      margin-bottom: 12px;
-      a {
-        position: relative;
-        display: block;
-        padding: 10px 0 10px 85px;
-        @include respond-to(tablets) {
-          padding-left: 70px;
-        }
-        @include respond-to(s-desktops) {
-          padding-left: 85px;
-        }
-        line-height: 23px;
-        color: #000;
-        text-transform: uppercase;
-        .icon-holder {
-          position: absolute;
-          left: 0;
-          top: 0;
-          text-align: center;
-          width: 70px;
-        }
-        &:hover {
-          text-decoration: none;
-        }
-        &.active,
-        &:hover {
-          color: #5090bb;
-        }
-      }
-    }
-  }
-}
-.industry-box {
-  padding: 8px;
-  .industry-box-holder {
-    padding: 20px;
-    min-height: 265px;
-    color: #878787;
-    background: rgba(255, 255, 255, 0.9);
-    @include font-size(14px, 20px);
-    text-align: center;
-    figure {
-      text-align: center;
-      min-height: 85px;
-      margin-bottom: 20px;
-      .v-outer,
-      .v-inner {
-        height: 85px;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        width: auto;
-        margin: 0 auto;
-      }
-    }
-    h6 {
-      color: #000;
-      @include font-size(16px);
-      font-weight: 600;
-    }
-    p {
-      margin: 0;
-    }
-  }
-}
-.new-type-block {
-  padding: 0 4px;
-  position: relative;
-  img {
-    max-width: 200px;
-  }
-  .icon-more {
-    position: absolute;
-    right: 12px;
-    @include verticalTransform();
-  }
-  .text {
-    position: absolute;
-    color: #fff;
-    padding: 6px 50px 6px 15px;
-    background: rgba(80, 144, 187, 0.8);
-    @include font-size(16px);
-    font-weight: bold;
-    left: 4px;
-    right: 4px;
-    bottom: 68px;
-    text-transform: uppercase;
-    font-family: $f-alt-family;
-    @include respond-to(phones) {
-      bottom: 30px;
-    }
-  }
-}
-.try-promo {
-  background-color: #5090bb;
-  color: #fff;
-  display: block;
-  padding: 28px 65px 28px 15px;
-  width: 264px;
-  position: relative;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
-  margin-bottom: 30px;
-  @include respond-to(phones) {
-    padding: 15px 65px 15px 15px;
-  }
-  &:hover {
-    text-decoration: none;
-  }
-  strong {   
-    font-family: $f-alt-family;
-    display: block;
-    @include font-size(20px);
-    @include respond-to(desktops) {
-      @include font-size(25px);
-    }
-  }
-  span {
-    display: block;
-    @include font-size(16px);
-    @include respond-to(desktops) {
-      @include font-size(20px);
-    }
-  }
-  .arrow-more {
-    right: 15px;
-    @include verticalTransform();
-  }
-}
-.posts-list {
-  @include clear-list;
-  @include font-size(14px);
-  font-family: $f-q-family;
-  li {
-    border-bottom: 1px solid #fff;
-    padding: 12px 5px 10px 20px;
-    position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 14px;
-      @include triangle(10px 10px, #333, right);
-    }
-    a {
-      color: #515151;
-    }
-  }
-}
-.link-rss {
-  display: inline-block;
-  position: relative;
-  color: #000;
-  padding: 0 0 0 50px;
-  @include font-size(14px,50px);
-  min-height: 50px;
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;    
-    @include sprite($icon-rss);
-  }
-}
-.post {
-  color: #3c3c3c;
-  border-bottom: 2px solid #cacaca;
-  padding: 30px 0 25px;
-  font-family: $f-q-family;
-  b {
-    font-weight: bold;
-  }
-  &.single-post {
-    border: 0;
-    padding-top: 0;
-    .title-post {
-      @include font-size(28px);
-    }
-  }
-  .title-post {
-    color: #515151;
-    @include font-size(22px);
-    a {
-      color: #515151;
-    }
-  }
-  .post-info {
-    margin-bottom: 25px;
-    padding: 3px;
-    @include font-size(14px);
-    p {
-      margin-bottom: 5px;
-    }
-    .wrap {
-      overflow: hidden;
-      padding-top: 10px;
-    }
-    .avtor {
-      float: left;
-      margin-right: 15px;
-      border: 2px solid #fff;
-      box-shadow: 0 0 5px rgba(0, 0, 0, .3);
-    }
-  }
-  .post-entry {
-    overflow: hidden;
-    @include respond-to(tablets) {
-      padding-right: 10px;
-    }
-    @include respond-to(s-desktops) {
-      padding-right: 15px;
-    }
-    @include respond-to(desktops) {
-      padding-right: 35px;
-    }    
-  }
-  .post-thumbnail {
-    @include respond-to(phones) {
-      margin: 0 0 20px;
-    }
-  }
-  .post-text {
-    @include font-size(17px, 25px);
-  }
-}
-.blog-head {
-  padding: 24px 0;
-  border-top: 1px solid #bbb;
-  .ttl-holder {
-    @include respond-to(phones) {
-      text-align: center;
-    }
-  }
-  .new-top-promo {
-    @include respond-to(s-phones) {
-      margin: 0 auto;
-      max-width: 270px;
-      .col-xs-4 {
-        width: 100%;
-        margin: 0 0 10px;
-      }
-    }
-  }
-}
-.menu-posts {
-  @include clear-list;
-  font-family: $f-q-family;
-  @include font-size(17px);
-  @include respond-to(tablets) {
-    float: right;
-  }
-  li {
-    position: relative;
-    padding: 0 7px 0 16px;
-    @include respond-to(tablets) {
-      float: left;
-    }
-    &:first-child {
-      padding-left: 0;
-      &:before {
-        display: none;
-      }
-    }
-    @include respond-to(s-phones) {
-      &:first-child {
-        padding-left: 16px;
-        &:before {
-          display: block;
-        }
-      }
-    }
-    &:last-child {
-      padding-right: 0;
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 7px;
-      background-color: #5090bb;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-    }
-    a {
-      color: #515151;
-    }
-  }
-}
-.pagination {
-  @include clear-list;
-  .pagination-holder & {
-    padding: 25px 0;
-    overflow: hidden;
-    float: right;
-  }
-  li {
-    float: left;
-    margin-left: 10px;
-    &.page,
-    &.pages-indicator {
-      .pagination-item,
-      &>span {
-        border: 1px solid #ccc;
-        font-weight: bold;
-        border-radius: 50%;
-        @include font-size(19px, 36px);
-        font-family: $f-alt-family;
-        text-align: center;
-        display: block;
-        color: #515151;
-        min-width: 40px;
-        height: 40px;
-        &:hover {
-          text-decoration: none;
-          background-color: #5090bb;
-          color: #fff;
-        }
-      }
-      &.current-page {
-        .pagination-item {
-          background-color: #5090bb;
-          color: #fff;
-        }
-      }
-    }
-    &.previous, &.next {      
-      display: inline-block;
-      padding: 7px 3px 0;
-      .pagination-item {
-        color: #515151;
-        &:hover {
-          text-decoration: none;
-          color: #5190bb;
-        }
-      }
-    }
-  }
-}
-.about-box {
-  padding: 0 20px 0 18px;
-  font-size: 14px;
-  @include respond-to(s-desktops) {
-    font-size: 16px;
-    padding: 0 40px 0 18px;
-  }
-  .ttl-about {
-    color: #5090bb;
-    position: relative;   
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    @include respond-to(s-phones) {
-      font-size: 17px;
-    }
-    @include respond-to(tablets) {
-      font-size: 16px;
-    }
-    @include respond-to(s-desktops) {
-      font-size: 23px;
-      margin-bottom: 25px;
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      left: -18px;
-      top: 0;
-      height: 27px;
-      width: 4px;
-      background-color: #d4d6db;
-      @include respond-to(phones) {
-        height: 24px;
-      }
-      @include respond-to(s-desktops) {
-        height: 35px;
-      }
-    }
-  }
+.history-box {
+	background-color: #fff;
+	height: 100px;
+	overflow: hidden;
+	color: #B2B7BB;
+	.years-holder {
+		float: left;
+		width: 125px;
+		height: 100px;
+		@include font-size(14px, 22px);
+		padding-left: 40px;
+		font-family: $f-font-demi;
+		@include flex;
+	}
+	.holder {
+		overflow: hidden;
+		height: 100px;
+		padding-left: 50px;
+		@include font-size(20px, 27px);
+		@include flex;
+		p {
+			margin: 0;
+		}
+	}
+	&.active {
+		color: #444E58;
+		box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.10);
+		.years-holder {
+			color: $c-red;
+		}
+	}
 }

@@ -1,240 +1,48 @@
 .page-footer {
-	background-color: #2f4050;
-	color: $c-footer;
+	color: $c-gray;	
+	line-height: 24px;
+	padding: 50px 0 20px;
+	@include respond-to(s-desktops) {
+		padding: 123px 0 60px;
+	}
 	a {
-		color: $c-footer;
-		&:hover {
-			text-decoration: none;
-			color: $c-footer-hover;
-		}
+		color: #666F78;
 	}
-	.footer-contact {
-		a {
-			color: $c-blue;
-			&:hover {
-				text-decoration: underline;
-			}
-			&.link-phone {
-				display: inline-block;
-				color: $c-footer;
-				&:hover {
-					text-decoration: none;
-					color: $c-footer-hover;
-				}
-			}
-		}
-	}
-	
-	.top-footer {		
-		@include respond-to(phones) {
-			padding: 10px 0;
-		}
-		@include respond-to(s-phones) {
-			.footer-widget {
-				width: 100%;
-			}
-		}
-		@include respond-to(tablets) {
-			padding: 35px 0 14px;
-		}
-		.footer-widget-group {
-			@include respond-to(phones) {
-				border-left: 1px solid #344759;
-				min-height: 205px;
-			}
-			@include respond-to(s-phones) {
-				border: 0;
-				min-height: 1px;
-			}
-			@include respond-to(s-phones) {
-				width: 100%;
-			}
-		}
-	}
-	.bottom-footer {
-		@include font-size(14px);
-		padding: 15px 0;
-		border-top: 1px solid #384e62;		
-		@include respond-to(phones) {
-			text-align: center;
-		}
-		@include respond-to(s-phones) {			
-			border: 0;
-			padding-top: 0;
-		}
-		@include respond-to(s-desktops) {
-			@include font-size(16px);
-			padding: 10px 0 15px;
-		}
-		
-		p {
-			margin: 0;
-		}
-	}
-	.footer-menu {
-		@include font-size(14px);
-		@include respond-to(s-desktops) {
-			@include font-size(16px);
-		}
-		@include respond-to(phones) {
-				padding: 0 10px 5px;
-				margin-bottom: 10px;
-			}
-			@include respond-to(s-phones) {
-				border-bottom: 1px solid #384e62;
-				padding: 0 0 10px;
-			}
-			@include respond-to(tablets) {
-				padding: 0 10px 5px;
-				min-height: 170px;
-				border-right: 1px solid #344759;
-			}
-			@include respond-to(s-desktops) {
-				padding: 0 25px 5px;
-				min-height: 230px;
-				border-right: 2px solid #384e62;
-			}
-			&.first {
-				padding-left: 0;
-			}
-			overflow: hidden;
-			
-			h4 {
-				margin-bottom: 8px;
-			}
-			li {
-				a {
-					&:hover {
-						text-decoration: none;
-						color: $c-footer-hover;
-					}
-				}
-			}
-		h4 {
-			@include font-size(18px);
-			text-transform: uppercase;
-			color: $c-blue;
-			@include respond-to(s-desktops) {
-				@include font-size(22px);
-			}
-		}
-		.menu {
-			@include clear-list;
-			li {
-				margin-bottom: 4px;				
-			}
-			&.menu-social {
-				li {
-					margin-bottom: 9px;
-				}
-				a.link-social {
-					display: inline-block;
-					padding: 0 0 0 30px;
-					position: relative;
-					line-height: 25px;
-					@include respond-to(s-desktops) {
-						padding-left: 51px;
-						line-height: 38px;
-					}
-					&:before {
-						content: '';
-						position: absolute;
-						left: 0;
-						top: 0;
-						width: 38px;
-						height: 38px;
-					}
-					&.social-facebook {						
-						&:before {
-							@include sprite($facebook-xs);
-						}
-						@include respond-to(s-desktops) {
-							&:before {
-								@include sprite($facebook);
-							}
-						}
-					}
-					&.social-twitter {
-						&:before {
-							@include sprite($twitter-xs);
-						}
-						@include respond-to(s-desktops) {
-							&:before {
-								@include sprite($twitter);
-							}							
-						}
-					}
-					&.social-google {
-						&:before {
-							@include sprite($google-xs);
-						}
-						@include respond-to(s-desktops) {
-							&:before {
-								@include sprite($google);
-							}
-						}
-					}
-					&.social-linkedin {
-						&:before {
-							@include sprite($linkedin-xs);
-						}
-						@include respond-to(s-desktops) {
-							&:before {
-								@include sprite($linkedin);
-							}							
-						}
-					}
-				}
-			}
-		}
-	}
-	.footer-nav {
-		@include clear-list;
-		@include inline-block;
-		@include font-size(14px,14px);		
-		padding: 4px 0 0;
-		li {
-			@include inline-block;
-			border-left: 1px solid #fff;
-			padding: 0 12px;
-			&:first-child {
-				padding-left: 0;
-				border: 0;
-			}
-		}
-	}
-	.footer-privacy {
-		a {
-			color: $c-blue;
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
-	.footer-contact {
+	h5, .h5 {
+		color: #444E58;
 		position: relative;
-		.line {
-			display: block;
-		}
-		@include respond-to(phones) {
-			padding: 35px 0 0;
-		}
+		margin: 0 0 30px;		
 		@include respond-to(tablets) {
-			padding: 35px 0 0;
+			margin: 0 0 37px;
 		}
-		@include respond-to(s-desktops) {
-			padding: 0 0 0 60px;
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 20px;
+			height: 1px;
+			background-color: #e1e1e1;
+			margin-left: 12px;
+			vertical-align: middle;
 		}
-		.icon {
-			position: absolute;
-			top: 0;
-			@include respond-to(phones) {
-				left: 0;
-				margin: 0;
-			}
-			@include respond-to(s-desktops) {
-				left: 0;
-			}	
+	}
+	.footer-box {
+		@include respond-to(phones) {
+			margin: 0 0 30px;
 		}
+	}
+	.foote-nav {
+		@include clear-list();
+		margin-bottom: 10px;
+		li {
+			line-height: 24px;
+		}
+	}
+	address {
+		font-style: normal;
+		line-height: 2;
+	}
+	.detailed-address {
+		font-size: 12px;
+		line-height: 20px;
 	}
 }

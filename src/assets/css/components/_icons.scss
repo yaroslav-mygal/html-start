@@ -5,331 +5,49 @@
 	white-space: nowrap;
 	text-indent:101%;
 	vertical-align: top;
-	&.page-logo {
+	&.logo {
 		@include sprite($logo);
-		.lang-au & {
-			@include sprite($logo-australian);
-		}
 		@include respond-to(s-phones) {
-			@include sprite($logo-phone);
-			.lang-au & {
-				@include sprite($logo-australian-phone);
-			}
+			@include sprite($logo-sphones);
 		}
 	}
-	&.btn-toggle-menu {
-		@include sprite($btn-toggle);		
-	}
-	&.icon-phone {
-		@include sprite($icon-phone-xs);
-		@include respond-to(s-desktops) {
-			@include sprite($icon-phone);
+	&.icon-post {
+		@include sprite($icon-post);
+		.home-info-box:hover & {
+			@include sprite($icon-post-hover);
 		}
 	}
-	&.app-store {
-		@include sprite($icon-app-store);
-	}
-	&.google-play {
-		@include sprite($google-play);
-	}
-	&.icon-restaurant {
-		@include sprite($icon-restaurant);
-		@include respond-to(phones) {
-			@include sprite($icon-restaurant-xs);
+	&.icon-twitter {
+		@include sprite($icon-twitter);
+		.home-info-box:hover & {
+			@include sprite($icon-twitter-hover);
 		}
 	}
-	&.icon-hospitality {
-		@include sprite($icon-hospitality);
-		@include respond-to(phones) {
-			@include sprite($icon-hospitality-xs);
-		}
+	&.icon-avatara {
+		@include sprite($icon-avatara);
 	}
-	&.icon-healthcare {
-		@include sprite($icon-healthcare);
-		@include respond-to(phones) {
-			@include sprite($icon-healthcare-xs);
-		}
+	&.icon-twitter-white {
+		@include sprite($icon-twitter-white);
 	}
-	&.icon-retail {
-		@include sprite($icon-retail);
-		@include respond-to(phones) {
-			@include sprite($icon-retail-xs);
-		}
+	&.icon-linkedin-white {
+		@include sprite($icon-linkedin-white);
 	}
-	&.icon-government {
-		@include sprite($icon-government);
-		@include respond-to(phones) {
-			@include sprite($icon-government-xs);
-		}
+	&.icon-vertical-splash {
+		@include sprite($icon-vertical-splash);
 	}
-	&.icon-education {
-		@include sprite($icon-education);
-		@include respond-to(phones) {
-			@include sprite($icon-education-xs);
-		}
+	&.icon-logo-white {
+		@include sprite($icon-logo-white);
 	}
-	&.icon-services{
-		@include sprite($icon-services);
-		@include respond-to(phones) {
-			@include sprite($icon-services-xs);
-		}
+	&.icon-twitter-light {
+		@include sprite($icon-twitter-light);
 	}
-	&.icon-devices {
-		@include respond-to(phones) {
-			@include sprite($icon-devices-s-desk);
-		}
-		@include respond-to(s-phones) {
-			@include sprite($icon-devices-s);
-		}
-		@include respond-to(tablets) {
-			@include sprite($icon-devices);
-		}
-		@include respond-to(s-desktops) {
-			@include sprite($icon-devices-s-desk);
-		}
-		@include respond-to('1305px') {
-			@include sprite($icon-devices);
-		}
+	&.icon-slide-divider {
+		@include sprite($icon-slide-divider);
 	}
-	&.icon-plus {		
-		@include sprite($icon-plus-ipad);
-		&:hover {
-			@include sprite($icon-plus-ipad-hover);
-		}
-		@include respond-to(tablets) {
-			@include sprite($icon-plus);
-			&:hover {
-				@include sprite($icon-plus-hover);
-			}
-		}
-		@include respond-to(s-desktops) {
-			@include sprite($icon-plus-ipad);
-			&:hover {
-				@include sprite($icon-plus-ipad-hover);
-			}
-		}
-		@include respond-to('1305px') {
-			@include sprite($icon-plus);
-			&:hover {
-				@include sprite($icon-plus-hover);
-			}
-		}
+	&.flag-france {
+		@include sprite($flag-france);
 	}
-	&.icon-bamboo {
-		@include sprite($icon-bamboo);
-	}
-	&.icon-bamboo-colored {
-		@include sprite($icon-bamboo-hover);
-	}
-	&.icon-quickbooks {
-		@include sprite($icon-quickbooks);
-	}
-	&.icon-quickbooks-colored {
-		@include sprite($icon-quickbooks-hover);
-	}
-	&.icon-gusto {
-		@include sprite($icon-gusto);
-	}
-	&.icon-gusto-colored {
-		@include sprite($icon-gusto-hover);
-	}
-	&.icon-synchr {
-		@include sprite($icon-synchr);
-	}
-	&.icon-synchr-colored {
-		@include sprite($icon-synchr-hover);
-	}
-	&.icon-traxpayroll {
-		@include sprite($icon-traxpayroll);
-	}
-	&.icon-traxpayroll-colored {
-		@include sprite($icon-traxpayroll-hover);
-	}
-	&.icon-epson {
-		@include sprite($icon-epson);
-	}
-	&.icon-epson-colored {
-		@include sprite($icon-epson-hover);
-	}
-	&.icon-kounta {
-		@include sprite($icon-kounta);
-	}
-	&.icon-kounta-colored {
-		@include sprite($icon-kounta-colored);
-	}
-	&.icon-zendesk {
-		@include sprite($icon-zendesk);
-	}
-	&.icon-zendesk-colored {
-		@include sprite($icon-zendesk);
-	}
-	&.icon-adp {
-		@include sprite($icon-adp);
-	}
-	&.icon-adp-colored {
-		@include sprite($icon-adp-colored);
-	}
-	&.icon-onelogin {
-		@include sprite($icon-onelogin);	
-	}
-	&.icon-onelogin-colored {
-		@include sprite($icon-onelogin-colored);	
-	}
-	&.icon-xero {
-		@include sprite($icon-xero);
-	}
-	&.icon-xero-colored {
-		@include sprite($icon-xero-colored);
-	}
-	&.icon-myob {
-		@include sprite($icon-myob);
-	}
-	&.icon-myob-colored {
-		@include sprite($icon-myob-colored);
-	}
-	&.icon-kounta-colored {
-		@include sprite($icon-kounta-hover);
-	}
-	&.icon-lightspeed {
-		@include sprite($icon-lightspeed);
-	}
-	&.icon-lightspeed-colored {
-		@include sprite($icon-lightspeed-hover);
-	}
-	&.icon-schedule {
-		@include respond-to(phones) {
-			@include sprite($icon-schedule-xs);
-		}
-		@include respond-to(tablets) {
-			@include sprite($icon-schedule-xs);
-		}
-		@include respond-to(s-desktops) {
-			@include sprite($icon-schedule);
-		}
-	}
-	&.icon-users{
-		@include sprite($icon-users);
-	}
-	&.icon-comment {
-		@include sprite($icon-comment);
-	}
-	&.icon-time {
-		@include respond-to(phones) {
-			@include sprite($icon-time-xs);
-		}
-		@include respond-to(tablets) {
-			@include sprite($icon-time-xs);
-		}
-		@include respond-to(s-desktops) {
-			@include sprite($icon-time);
-		}
-	}
-	&.icon-puzzle {
-		@include sprite($icon-puzzle);
-	}
-	&.icon-pie {
-		@include sprite($icon-pie);
-	}
-	&.icon-heart {
-		@include sprite($icon-heart);
-	}
-	&.icon-fixed {
-		@include sprite($icon-fixed);
-		z-index: 19;
-		@include respond-to(phones) {
-			display: none;
-		}
-	}
-	&.icon-pricing-alert {
-		@include sprite($icon-pricing-alert);
-	}
-	&.icon-pricing-sms {
-		@include sprite($icon-pricing-sms );
-	}
-	&.icon-pricing-call {
-		@include sprite($icon-pricing-call);
-	}
-	&.icon-check {
-		&.blue {
-			@include sprite($icon-check-blue);
-		}
-		&.green {
-			@include sprite($icon-check-green);
-		}
-		&.yellow {
-			@include sprite($icon-check-yellow);
-		}
-	}
-	&.icon-star {
-		@include sprite($icon-star);
-	}
-	&.icon-1 {
-		@include sprite($icon-1);
-	}
-	&.icon-2 {
-		@include sprite($icon-2);
-	}
-	&.icon-3 {
-		@include sprite($icon-3);
-	}
-	&.icon-iphone {
-		@include sprite($smartphone);
-		@include respond-to(s-phones) {
-			@include sprite($icon-iphone-xs);
-		}
-	}
-	&.icon-ind-restaurants {
-		@include sprite($icon-ind-restaurants);
-		a:hover &, a.active & {
-			@include sprite($icon-ind-restaurants-blue);
-		}
-	}
-	&.icon-ind-hospitality {
-		@include sprite($icon-ind-hospitality);
-		a:hover &, a.active & {
-			@include sprite($icon-ind-hospitality-blue);
-		}
-	}
-	&.icon-ind-healthcare {
-		@include sprite($icon-ind-healthcare);
-		a:hover &, a.active & {
-			@include sprite($icon-ind-healthcare-blue);
-		}
-	}
-	&.icon-ind-retail {
-		@include sprite($icon-ind-retail);
-		a:hover &, a.active & {
-			@include sprite($icon-ind-retail-blue);
-		}
-	}
-	&.icon-ind-government {
-		@include sprite($icon-ind-government);
-		a:hover &, a.active & {
-			@include sprite($icon-ind-government-blue);
-		}
-	}
-	&.icon-ind-education {
-		@include sprite($icon-ind-education);
-		a:hover &, a.active & {
-			@include sprite($icon-ind-education-blue);
-		}
-	}
-	&.icon-ind-services {
-		@include sprite($icon-ind-services);
-		a:hover &, a.active & {
-			@include sprite($icon-ind-services-blue);
-		}
-	}
-	&.icon-more {
-		@include sprite($icon-more);
-	}
-	&.icon-news {
-		@include sprite($icon-news);
-	}
-	&.arrow-more {
-		@include sprite($arrow-more);
-	}
-	&.blank-avatara {
-		@include sprite($blank-avatara);
+	&.flag-belgique {
+		@include sprite($flag-belgique);
 	}
 }

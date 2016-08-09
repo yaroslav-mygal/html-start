@@ -24,13 +24,10 @@ gulp.task("bower", function(){
 
      gulp.src([
         'src/bower_components/jquery/dist/jquery.min.js',
-        'src/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
-        'src/bower_components/fancybox/source/jquery.fancybox.pack.js',
-        'src/bower_components/paraxify/paraxify.min.js',
-        'src/bower_components/owl.carousel/dist/owl.carousel.min.js',
-        'src/bower_components/sticky-kit/jquery.sticky-kit.min.js',
         'src/bower_components/slick-carousel/slick/slick.min.js',
-        'src/bower_components/easytabs/lib/jquery.easytabs.min.js'
+        'src/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js',
+        'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+        'src/bower_components/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js'
         ])
     .pipe(gulp.dest('dist/assets/js/libs'));
 
@@ -54,6 +51,18 @@ gulp.task('sprite', function () {
   spriteData.css.pipe(gulp.dest('src/assets/css/components'));
   spriteData.img.pipe(gulp.dest('src/assets/images'));
 });
+
+// gulp.task('sprite', function () {
+//   var spriteData = gulp.src('src/assets/sprite-images/*.png').pipe(spritesmith({
+//   	retinaSrcFilter: ['src/assets/sprite-images/*@2x.png'],
+//     imgName: '../images/sprite/sprite.png',
+//     retinaImgName: '../images/sprite/sprite@2x.png',
+//     cssName: '_sprite.scss',
+//     padding: 4
+//   }));
+//   spriteData.css.pipe(gulp.dest('src/assets/css/components'));
+//   spriteData.img.pipe(gulp.dest('src/assets/images'));
+// });
 
 gulp.task('html', function(){
 	return gulp.src('src/*.html')

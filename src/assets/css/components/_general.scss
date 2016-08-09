@@ -8,1316 +8,311 @@ body {
   background-color: $bg-body;
   color: $c-text;
   font-family: $f-base-font;
-  font-size: 16px;
 }
-a {
-  color: $c-link;
+a {  
+  color: $c-red;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
 }
-#page {
-  position: relative;
-  padding-top: 59px;
-  @include respond-to(s-phones) {
-    padding-top: 44px;
-  }
-  @include respond-to(s-desktops) {
-    padding-top: 67px;
-  }  
-}
-.home-section {
-  padding: 60px 0;
-  color: $c-dark-blue;
-  &.partners-area {
-    @include respond-to(phones) {
-      padding: 15px 0;
-    }
-    @include respond-to(tablets) {
-      padding: 30px 0;
-    }
-    @include respond-to(s-desktops) {
-      padding: 60px 0;
-    }
-    @include respond-to(desktops) {
-      padding-bottom: 82px;
-    }
-  }
-  &.home-store-section {
-    padding: 65px 0 40px;
-    @include respond-to(phones) {
-      background: url('../images/layout/bg-home-iPhone.jpg') no-repeat 50%;
-      @include bg-cover();
-      color: #fff;
-      .ttl-section {
-        color: #fff;
-      }
-      .list-option {
-        li:before {
-          @include sprite($list-option-white);
-          top: 3px;
-        }
-      }
-    }
-    @include respond-to(s-phones) {
-      padding: 30px 0;
-    }
-    @include respond-to(tablets) {
-      background: url('../images/layout/bg-home-store-section-ipad.jpg') no-repeat 50%;
-      @include bg-cover();
-      color: #fff;
-      .ttl-section {
-        color: #fff;
-      }
-    }
-    @include respond-to(s-desktops) {
-      background: url('../images/layout/bg-home-store-section-ipad-landscape-tall.jpg') no-repeat 50%;
-      @include bg-cover();
-      color: #2f4050;
-      .ttl-section {
-        color: #2f4050;
-      }
-    }
-    @include respond-to(desktops) {
-      background: url('../images/layout/bg-home-store-section-tall.jpg') no-repeat 50%;      
-    }
-    @include respond-to(1920) {
-      @include bg-cover();
-    }  
-  }
-  &.home-section-test {
-    padding: 40px 0;
-    @include respond-to(m-phones) {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-    @include respond-to(s-desktops) {
-      padding: 65px 0;
-    }
-    background-color: #5090bb;
-    color: #fff;
-    h2, h3 {
-      color: #fff;
-    }
-    .form-wrap {
-      max-width: 555px;
-      margin: 0 auto;
-    }
-  }
-  &.home-section-services {
-    border: 1px solid #e3e2e1;
-    border-width: 1px 0;
-    position: relative;
-    background-color: #000;
-    .bg-fill {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background: url('../images/layout/bg-home-section-services.jpg') no-repeat 50%;
-      @include bg-cover();
-      display: none;
-      @include opacity(0);
-      -webkit-transition: opacity 1s ease-in-out;
-      -moz-transition: opacity 1s ease-in-out;
-      -o-transition: opacity 1s ease-in-out;
-      transition: opacity 1s ease-in-out;
-      &.active {
-        display: block;
-        opacity:1;
-      }
-    }
-    @include transition(all 1s ease-in-out);
-    @include respond-to(s-desktops) {
-      padding: 70px 0 100px;
-    }
-  }
-  &.home-section-reasons {
-    @include respond-to(s-desktops) {
-      padding: 102px 0 110px;
-    }
-    @include respond-to(s-phones) {
-      padding: 30px 0;
-    }
-    .form-wrap {
-      @include respond-to(s-desktops) {        
-        max-width: 415px;
-        margin-left: 18px;
-      }
-      @include respond-to(desktops) {
-        margin-left: 77px;
-      }
-    }
-  }
-  &.home-section-slider {
-    position: relative;
-    padding: 0;
-    z-index: 18;
-  }
-  &.home-section-integration {
-    padding: 50px 0 60px;
-    background-color: #f6f6f6;
-  }
-  &.home-section-features {
-    padding: 40px 0 60px;
-    @include respond-to(s-desktops) {
-      padding: 80px 0 118px;
-    }
-        
-    .headline {
-      color: $c-text;
-      @include respond-to(phones) {
-        margin-bottom: 20px;
-        @include font-size(20px);
-      }
-      @include respond-to(tablets) {
-        @include font-size(30px);
-        margin-bottom: 30px;
-      }
-      @include respond-to(s-desktops) {
-        margin-bottom: 75px;   
-        @include font-size(45px);
-      }
-      p {
-        margin: 0;
-      }
-    }
-  }
-}
-.color-blue {
-  color: $c-blue;
-}
-.store-btns {
-  .btn-store {
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-.list-option {
-  @include clear-list;
-  @include font-size(20px);
-  margin-bottom: 35px;
+.home-finance {
+  background: #f3f4f6;
   @include respond-to(phones) {
-    @include font-size(16px);
-  }
-  li {
-    position: relative;
-    
-    @include respond-to(phones) {
-      padding: 0 0 14px 25px;
-    }
-    @include respond-to(tablets) {
-      padding: 0 0 14px 36px;
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      @include sprite($bullet-option);
-      .home-section-reasons & {
-        @include sprite($bullet-option-smaller);
-        @include respond-to(s-desktops) {
-          top: 9px;
-        }
-        @include respond-to(desktops) {
-          top: 3px;
-        }        
-      }
-    }
-  }
-  .home-section-reasons & {
-    @include respond-to(tablets) {
-      
-    }
-    @include respond-to(s-desktops) {
-      @include font-size(19px, 36px);
-    }
-    @include respond-to(desktops) {
-      @include font-size(22px);
-    }
-    li {
-      @include respond-to(s-desktops) {
-        padding-bottom: 0;
-      }
-      @include respond-to(desktops) {
-        padding-bottom: 17px;
-      }      
-    }
-  }
-}
-.area-integration-wrap {
-  overflow: hidden;
-  @include respond-to(phones) {
-    max-width: 480px;
-    margin: 0 auto 20px;
-  }
-  @include respond-to(m-phones) {
-    width: 100%;
-    max-width: 100%;
-  }
-  @include respond-to(s-desktops) {
-    width: 100%;
-    margin-bottom: 55px;
-  }
-}
-.area-integration {
-  width: 100%;
-  @include respond-to(phones) {
-    margin: -2px 0 0;
+    padding: 30px 0;
   }
   @include respond-to(tablets) {
-    margin: -2px 0 20px;
+    padding: 79px 0;
   }
-  @include respond-to(s-desktops) {
-     margin: -2px 0 0 -2px;
-  }
-  &>.row{
-    .col-xs-6 {
-      @include respond-to(s-phones) {
-        width: 100%;
-        float: none;
-      }
+  .home-finance-headline {
+    margin: 0 0 30px;
+    @include respond-to(tablets) {
+       margin: 0 0 50px;
     }
-    &>div:nth-child(2n){
-      @include respond-to(m-phones) {
-        border-left: 1px solid #fff;
-        .inner-content & {
-          border-color: #f6f6f6;
-        }
-      }
-      @include respond-to(tablets) {
-        border-left: 1px solid #fff;
-        .inner-content & {
-          border-color: #f6f6f6;
-        }
-      }
-      @include respond-to(s-desktops) {
-        border: 0;
-      }
+    .title {
+      margin-top: 9px;
     }
   }
-}
-.home-features {
-  margin-bottom: 30px;
-  @include respond-to(tablets) {
-    margin-bottom: 69px;
-  }
-  .sub-features {
-    $temp: #5090bb;
-    position: relative;
-    border-top: 4px solid $temp;
-    padding: 18px 0 0;
-    .row {
-      &>div {
-        @include respond-to(m-phones) {
-          width: 50%;
-          float: left;
-        }
-      }
-    }
-    h5 {
-      span {
-        font-weight: normal;
-        display: block;
-      }
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      @include triangle(27px 12px, $temp, down);
-      margin-left: -12px;
-    }
-    .box-sub-feature {
-      @include respond-to(s-desktops) {
-        border-left: 1px solid #ebecee;
-      }      
-    }
-    &.green-theme {
-      $temp: #00b274;
-      border-top: 4px solid $temp;
-      &:before {
-        @include triangle(27px 12px, $temp, down);
-      }
-      h5 {
-        color: $temp;
-      }
+  .home-finance-body {
+    font-size: 36px;
+    color: #444E58;
+    letter-spacing: 0px;
+    line-height: 36px;
+    .button-holder {
+      padding: 20px 0 0;
     }
   }
 }
 .home-splash {
-  border-top: 3px solid #fff;
-  padding: 40px 0 0;
-  @include respond-to(s-desktops) {
-    padding: 74px 0 0;
-  }
-  background: url('../images/layout/bg-splash.jpg') no-repeat;
-  @include bg-cover();
-  .splash-form {
-    margin: 0 auto;
-    max-width: 472px;
-  }
-  .splash-headline {
-    text-align: center;
-    @include font-size(30px);
-    color: $c-dark-blue;
-    overflow: hidden;
-    margin-bottom: 15px;
-    @include respond-to(m-phones) {
-      max-width: 490px;
-      margin: 0 auto 15px;
-    }
-    @include respond-to(s-desktops) {
-       margin-bottom: 30px;
-    }
-    @include respond-to(desktops) {
-      margin-bottom: 58px;
-    }
-    .ttl-section {
-      @include font-size(36px);
-      @include respond-to(s-phones) {
-        @include font-size(23px);
-      }
-      @include respond-to(m-phones) {
-        @include font-size(32px);
-      }
-      @include respond-to(tablets) {
-        @include font-size(30px);
-      }
-      @include respond-to(s-desktops) {
-        @include font-size(38px);
-      }
-      @include respond-to(desktops) {
-        @include font-size(46px);
-      }
-      letter-spacing: 2px;
-      color: $c-dark-blue;
-      letter-spacing: 0.3px;
-      margin-bottom: 5px;
-      .icon-heart {
-        position: relative;
-        margin-top: 6px;
-      }
-      .nimble-icon {
-        color: #ef4056;
-        line-height: 1em;
-        vertical-align: top;
-        position: relative;
-        margin-top: 6px;
-        @include respond-to(tablets) {
-          font-size: 1em;
-        }
-        @include respond-to(s-desktops) {
-          font-size: 1.2em;
-        }
-      }
-    }
-    h4 {
-      font-weight: normal;
-      font-family: $f-base-font;
-      margin: 0 0 10px;
-      @include respond-to(phones) {
-        @include font-size(20px);
-      }
-      @include respond-to(s-phones) {
-        @include font-size(15px);
-      }
-      @include respond-to(tablets) {
-        @include font-size(19px);
-      }
-      @include respond-to(s-desktops) {
-        @include font-size(25px);
-      }
-      @include respond-to(desktops) {
-        @include font-size(30px);
-      }
-    }
-  }
-  .splash-gallery-wrap {
-    margin: 0 auto;
-    @include respond-to(tablets) {
-      @include sprite($bg-mac-tab);
-      padding: 32px 35px 0;
-    }
-    @include respond-to(s-desktops) {
-      @include sprite($bg-mac-s-desk);
-      padding: 48px 54px 0 52px;
-    }
-    @include respond-to(desktops) {
-      @include sprite($bg-mac);
-    }
-  }
-  .splash-form {
-    padding: 0 0 60px;
-    .head {
-      color: $c-dark-blue;
-      overflow: hidden;
-      margin-bottom: 25px;
-      @include font-size(18px);
-      h6 {
-        @include font-size(22px);
-        letter-spacing: -0.5px;  
-        margin: 0 0 5px;
-      }
-      p {
-        margin: 0 0 5px;
-      }
-    }
-  }
-}
-.inner-question-area {
-  background-color: $c-light-gray;
-  padding: 70px 0 30px;
-  color: $c-dark-blue;
-  @include font-size(15px);
-  .question-box {
-    overflow: hidden;
-    padding: 0 0 10px;
-  }
-  .ttl-section {
-    @include font-size(30px);
-    margin-bottom: 25px;
-  }
-  h6 {
-    color: #5090bb;
-    @include font-size(16px);
-    margin-bottom: 5px;
-  }
-  .row-question {
-    @include respond-to(tablets) {
-      margin: 0 -20px;
-      *>div {
-        padding: 0 20px;
-      }
-    }
-    @include respond-to(s-desktops) {
-      margin: 0 -45px;
-      *>div {
-        padding: 0 45px;
-      }
-    }
-    
-  }
-}
-.inner-sign {
-  background-color: #5090bb;
-  color: #fff;
-  padding: 60px 0 40px;
-  text-align: center;
-  h3 {
-    color: #fff;
-    @include font-size(27px);
-    margin-bottom: 22px;
-  }
-}
-.inner-pricing-info {
-  background: #f6f6f6;
-  padding: 35px 0;
-  color: $c-dark-blue;
-  .pricing-info {
-    padding: 25px 55px;
-    @include font-size(20px,27px);
-    h5 {
-      @include font-size(25px,27px);
-      margin-bottom: 7px;
-      &.inline {
-        margin-bottom: 0;
-      }
-    }
-    p {
-       &.inline {
-        margin-bottom: 0;
-      }
-    }
-    .inline {
-      display: inline-block;
-      vertical-align: top;
-    }
-    .pricing-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #5190bb;
-      display: inline-block;
-      margin: 0 10px;
-    }
-    &.left-pricing-info {
-      padding-top: 45px;
-      border-right: 1px solid #ebebeb;
-    }
-  }
-}
-.pricing-options-sections {
-  border-top: 1px solid #ebebeb;  
-  @include respond-to(tablets) {
-    padding: 70px 0 110px;
-  }
-}
-.main-pricing-section {
-  padding: 60px 0;
-  .headline {
-    color: #2f4050;
-    @include font-size(23px);
-    .btn {
-      height: 42px;
-      @include font-size(20px, 42px);
-    }
-    margin-bottom: 47px;
-  }
-}
-.table-pricing {
-  border: 0;
-  thead {
-    tr {
-      th {
-        padding: 0;
-        border: 0;
-        border-bottom: 3px solid #d0d0d0;
-        .plan-action {
-          background-color: #f6f6f6;
-          box-shadow: 0 0 6px rgba(0, 0, 0, .3);
-          padding: 15px 15px 15px 25px;
-          display: table;
-          width: 100%;
-          .plan-info {
-            display: table-cell;
-            width: 102px;
-            text-align: center;
-            vertical-align: middle;
-            padding: 20px 4px;
-            span {
-              display: block;
-              text-align: center;
-              text-transform: uppercase;
-              margin-bottom: 8px;
-              color: $c-dark-blue;
-              @include font-size(19px);
-              font-family: $f-alt-family;
-            }
-          }
-          .price-info {
-            display: table-cell;
-            width: 125px;
-            vertical-align: middle;
-            .price {
-              @include font-size(45px, 45px);
-              text-transform: uppercase;
-              font-weight: normal;
-              color: #5090bb;
-              display: block;
-              .green-tab & {
-                color: #00b274;
-              }
-              .yellow-tab & {
-                color: #fdad76;
-              }
-            }
-            span {
-              @include font-size(14px);
-              color: #878787;
-              font-weight: 600;
-            }
-          }
-          &.left-side {
-            border-radius: 12px 0 0 ;
-          }
-          &.right-side {
-            border-radius: 0 12px 0 0 ;
-          }
-        }
-      }
-    }
-  }
-  tbody {
-    color: #212931;
-    tr {
-      td {
-        padding: 9px 30px;
-        border: 0;
-      }
-    }
-  }
-  tfoot {
-    tr {
-      td {
-        border: 0;
-        border-top: 3px solid #d0d0d0;
-        padding: 0;
-        .label-bottom {
-          color: #2f4050;
-          @include font-size(19px);
-          font-family: $f-alt-family;
-          padding: 15px 35px;
-          display: inline-block;
-        }
-        .pricing-buttom-wrap {
-          background-color: #f6f6f6;
-          padding: 15px 0;
-          text-align: center;
-          box-shadow: 0 0 6px rgba(0, 0, 0, .3);
-          &.left-side {
-            border-radius: 0 0 0 12px;
-          }
-          &.right-side {
-            border-radius: 0 0 12px 0;
-          }
-        }
-      }
-    }
-  }
-}
-.table-striped {
-  tbody {
-    tr:nth-child(2n-1) {
-      td {
-        background-color: #f8f8f8;
-      }
-    }
-  }
-}
-.tab-content {
-  display: none;
-}
-.tab-content.active {
-  display: block;
-}
-.support-area-splash {
-  color: #fff;
-  padding: 36px 0 48px;
-  border-bottom: 1px solid #152f48;
-  background: url('../images/layout/bg-support-area.jpg') no-repeat 50% 0;
-  @include bg-cover();
-  @include respond-to(desktops) {
-    .support-area {
-      padding: 0 25px;
-    }
-  }  
-  .ttl-support {
-    color: #fff;
-    font-family: $f-alt-family;
-    @include font-size(35px);
-    margin-bottom: 26px;
-  }
-  .search-divider {
-    text-transform: uppercase;
-    @include font-size(20px);
-    font-family: $f-alt-family;
-    line-height: 60px;
-  }
-  .btn {
-    height: 60px;
-  }
-}
-.inner-content {
-  padding: 50px 0;
   position: relative;
-  @include respond-to(s-phones) {
-    padding: 20px 0;
-  }
-  h1 {
-    color: #2f4050;
-    @include font-size(35px);
-  }
-  h2, h3 {
-    @include font-size(30px);
-  }
-  h4, h5 {
-    color: #2f4050;
-  }
-  h5 {
-    font-weight: normal;
-    @include font-size(20px);
-    font-family: $f-base-font;
-  }
-}
-.trial-form {
-  background-color: #5090bb;
+  z-index: 1;
+  background: url('../images/layout/bg-home-splash.png') no-repeat;
+  @include bg-cover;
+  height: 680px;
+  padding: 190px 0 0;
   @include respond-to(phones) {
-    padding: 40px 0;
+    padding: 110px 0 0;
+    height: 510px;
   }
-  @include respond-to(tablets) {
-    padding: 50px 0;
+  .home-splash-vertical {
+    left: -108px;
+    @include verticalTransform;
+    transform: rotate(-90deg);
+    font-size: 11px;
+    color: #D2D2D2;
+    letter-spacing: 4px;
   }
-  @include respond-to(s-desktops) {
-    padding: 57px 0 80px;
+  .btn.btn-default {
+    padding-right: 65px;
+    padding-left: 29px;
   }
-  .form-wrap {
-    @include respond-to(s-desktops) {
-      padding: 0 50px;
-    }
-    @include respond-to(desktops) {
-      padding: 0 130px;
-    }
-  }
-}
-.power-section {
-  background: url('../images/layout/bg-power-section-sm.jpg') no-repeat 50% 0;
-  @include bg-cover();
-  border-bottom: 20px solid #0f243b;
-  @include respond-to(s-desktops) {
-    background: url('../images/layout/bg-power-section.jpg') no-repeat 50% 0;
-    @include bg-cover();
-  }
-  padding: 68px 0;
-  position: relative;
-  color: #fff;
-  @include respond-to(phones) {
-    padding: 40px 0;
-  }
-  @include respond-to(s-phones) {
-    padding: 15px 0;
-  }
-  .flow-form {
+  .splash-socials {
+    position: absolute;
+    right: 5px;
+    @include verticalTransform;
+    @include clear-list;
     display: none;
-    @include respond-to(1400px) {
+    @include respond-to(tablets) {
       display: block;
     }
-  }
-  @include respond-to(s-desktops) {
-    padding: 70px 0 80px;
-    display: block;
-  }
-  @include respond-to(desktops) {
-    padding: 80px 0 127px;
-  }
-  .flow-form {
     @include respond-to(s-desktops) {
-      top: 10px;
+      right: 45px;
     }
-    @include respond-to(desktops) {
-      top: 350px;
+    li {
+      padding: 12px 0;
     }
   }
-}
-.schedule-splash {
-  background: #2f4050 url('../images/layout/bg-schedule-splash-content.jpg') no-repeat;
-  position: relative;
-  @include bg-cover();
-  color: #fff;
-  .flow-form {
+  .icon-vertical-splash {
+    position: absolute;
+    @include verticalTransform;
+    left: 5px;
     display: none;
-    @include respond-to(s-desktops) {
-      top: 300px;
+    @include respond-to(tablets) {
       display: block;
     }
-    @include respond-to(desktops) {
-      top: 363px;
+    @include respond-to(s-desktops) {
+      left: 45px;
     }
   }
-  .schedule-splash-top {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    padding: 34px 0 28px;
+  .home-slide-nav {
     position: relative;
-    &.is_stuck {
-      z-index: 1000;
-      padding: 10px 0;
-      .ttl-section {
+    padding: 23px 40px 30px;
+    width: 215px;
+    text-align: center;
+    position: absolute;
+    top: 111px;
+    left: 50%;
+    margin-left: -107.5px;
+    @include respond-to(phones) {
+      top: 24px;
+      width: 280px;
+      margin-left: -140px;
+      padding: 50px 40px 0;
+    }
+    .slides-num {
+      position: relative;
+      width: 100%;
+      .icon-slide-divider {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -15px;
+      }
+      .current {
+        float: left;
+        width: 46%;
+        font-family: PlayfairDisplay-Regular;
+        font-size: 21px;
+        line-height: 1;
+        color: #FFFFFF;
+        text-align: right;
+        margin: -15px 0 0;
+      }
+      .all {
+        float: right;
+        width: 46%;
+        opacity: 0.3;
+        font-family: PlayfairDisplay-Bold;
+        font-size: 12px;
+        line-height: 1;
+        color: #F7F7F7;
+        text-align: left;
+        padding: 15px 0 0;
+      }    
+    }
+    .slide-nav {
+      position: absolute;
+      top: 24px;
+      text-indent: -9999px;
+      overflow: hidden;
+      @include respond-to(phones) {
+        top: 45px;
+      }
+      &.slide-prev {
+        left: 0;
+        @include sprite($slide-prev);
+      }
+      &.slide-next {
+        right: 0;
+        @include sprite($slide-next);
+      }
+    }
+    .slider-progress {
+      position: absolute;
+      width: 100px;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50px;
+      height: 1px;
+      background-color: #7c475b;
+      @include respond-to(phones) {
+        left: 0;
+        margin: 0;
+        right: 0;
+        width: 100%;
+        top: 0;
+      }
+      .progress {
+        position: absolute;
+        height: 1px;
+        width: 0;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+      }
+    }
+  }
+}
+.home-slider {
+  position: relative;
+  text-align: center;
+  .slide {
+    .v-table,
+    .v-cell {
+      height: 250px;
+    }
+  }
+  blockquote {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 780px;
+    border: 0;
+    q {
+      font-size: 24px;
+      color: #FFFFFF;
+      line-height: 52px;
+      font-style: normal;
+      @include respond-to(phones) {
+        @include font-size(20px, 42px);
+        display: block;
+      }
+      &:before,
+      &:after {
         display: none;
       }
     }
-    .btns-wrap {
-      @include respond-to(phones) {
-        padding: 0 10px;
-      }
-      @include respond-to(s-phones) {
-        padding: 0 4px;
-      }
-      @include respond-to(tablets) {
-        padding: 0 25px;
-      }
-      @include respond-to(s-desktops) {
-        padding: 0 20px;
-      }
-      @include respond-to(desktops) {
-        padding: 0 40px;
-      }      
-    }
-    .btn {
-      height: 64px;
-      @include font-size(20px);
-      line-height: 58px;
-      font-weight: normal;
-      padding-left: 5px;
-      padding-right: 5px;
-      @include respond-to(phones) {
-        @include font-size(16px);
-        height: 54px;
-        line-height: 50px;
-      }
-      @include respond-to(s-phones) {
-        @include font-size(14px, 46px);
-        height: 50px;
-      }
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 50%;
-      height: 3px;
-      bottom: 0;
-      background-color: #5090bb;
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      right: 0;
-      width: 50%;
-      height: 3px;
-      bottom: 0;
-      background-color: #0ab177;
-    }
-  }
-  .schedule-splash-content {
-    @include respond-to(1650px) {
-      text-align: right;
-    }
-    @include respond-to(phones) {
-      padding: 70px 0 120px;
-    }
-    @include respond-to(s-phones) {
-      padding: 30px 0;
-    }
-    @include respond-to(tablets) {
-      .v-outer>.v-inner {
-        height: 600px;
-      }
-    }
-    @include respond-to(s-desktops) {
-      .v-outer>.v-inner {
-        height: 420px;
-      }      
-      .text {
-        max-width: 640px;        
-        @include respond-to(1650px) {
-          float: right;
-        }
-        @include font-size(16px, 30px);
-      }    
-    }
-    @include respond-to(desktops) {
-      .v-outer>.v-inner {
-        height: 630px;
-      }
-    }
-    @include font-size(16px);
-    font-weight: 600;
-    text-shadow: 3px 2px 0 #6b7177;
-    h6 {
-      font-weight: normal;
-      font-family: $f-base-font;
-      @include font-size(22px);
-      margin-bottom: 20px;
-      @include respond-to(s-phones) {
-        @include font-size(19px);
-      }
-    }
-  }
-  &.schedule-splash-time {
-    background: url('../images/layout/bg-schedule-splash-time-sm.jpg') no-repeat;
-    @include bg-cover();
-    @include respond-to(s-desktops) {
-      background: url('../images/layout/bg-schedule-splash-time.jpg') no-repeat;
-      @include bg-cover();
-    }
-    .schedule-splash-content {
-      text-align: left;
-      @include respond-to(s-desktops) {      
-        width: 575px;     
-      }
-    } 
-  }
-}
-.schedule-control-area {
-  padding: 50px 0 35px;
-  position: relative;
-  @include respond-to(s-phones) {
-    padding: 30px 0;
-  }
-  .schedule-app-button {
-    position: absolute;
-    top: 50%;
-    z-index: 100;
-    margin-top: -24px;
-    @include respond-to(phones) {
-      margin: -16.5px;
-    }
-    @include respond-to(s-desktops) {
-      display: none;
-    }
-    &.prev {
-      @include sprite($schedule-app-prev);
-      left: 25px;
-      @include respond-to(phones) {
-        @include sprite($schedule-app-prev-xs);
-      }
-      @include respond-to(s-phones) {
-        left: 3px;
-        margin: 0;
-      }
-    }
-    &.next {
-      @include sprite($schedule-app-next);
-      right: 25px;
-      @include sprite($schedule-app-next-xs);
-      @include respond-to(s-phones) {
-        right: 3px;
-        margin: 0;
-      }
-    }
-  }
-  #tabs-app-container {
-    @include respond-to(s-desktops) {
-      position: relative;
-      padding-bottom: 150px;
-    }
-    @include respond-to(desktops) {
-      padding: 0;
-    }
-    .schedule-text {
-      @include respond-to(s-desktops) {
-        width: 355px;   
-        float: left;
-      }      
-      @include respond-to(desktops) {
-        padding-top: 60px;
-      }
-    }
-  }  
-  #time-app-container {
-    @include respond-to(tablets) {
-      padding: 0 40px;
-    }
-    @include respond-to(s-desktops) {
-      padding: 0;
-    }
-    .schedule-text {
-      padding-top: 0;
-    }
-  }
-  .special-tabs {
-    display: none;
-    float: none;
-    overflow: hidden;
-    @include respond-to(s-desktops) {
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-    }
-    @include respond-to(desktops) {
-      float: left;        
-      margin-left: 25px;
-      position: static;
-      width: 260px;
-    }
-    @include respond-to(1400px) {
-      margin-left: 45px;
-    }
-  }
-  .tab-macbook {
-    @include respond-to(s-desktops) {
-      float: right;
-    }
-    @include respond-to(desktops) {
-      float: right;
-      margin-top: 30px;
-    }
-    &.tab-macbook-time {
-      margin: 0;
-      @include respond-to(phones) {
-        float: none;
-        margin: 0 auto;
-      }
-    }
-  }
-}
-.industries-content {
-  max-width: 1180px;
-  color: #fff;
-  @include respond-to(tablets) {
-    min-height: 436px;
-  }
-  @include respond-to(desktops) {
-    min-height: 550px;
-  }
-  .text-content {
-    @include font-size(16px, 25px);
-    overflow: hidden;
-    padding: 0 0 25px 8px;
-    h2 {      
-      color: #fff;
-      @include respond-to(tablets) {
-        @include font-size(30px);
-        margin-bottom: 15px;
-      }
-      @include respond-to(s-desktops) {
-        @include font-size(38px);
-        margin-bottom: 22px;
-      }
-    }
-  }
-}
-.main-industries {
-  overflow: hidden;
-  position: relative;
-  #tabs-industries {
-     @include respond-to(tablets) {
-      padding-left: 250px;
-    }
-    @include respond-to(s-desktops) {
-      padding-left: 280px;
-    }
-  } 
-  .left-column-wrap {   
-    background-color: #fff;
-    @include respond-to(phones) {
-      padding: 20px;
-    }
-    @include respond-to(tablets) {
-      position: fixed;
-      padding-top: 18px;
-      left: 0;
-      width: 250px;
-    }
-    @include respond-to(s-desktops) {
-      width: 280px;
-    }
-    @include respond-to(desktops) {
-      padding-top: 35px;      
-    }
-  }
-  .col-industries {
-    @include respond-to(tablets) {
+    cite {
+      font-family: AvenirNext-Medium;
+      font-size: 11px;
+      color: rgba(255,255,255,0.50);
+      letter-spacing: 2px;
+      display: inline-block;
+      font-style: normal;
       padding: 0 0 0 30px;
-    }
-    // @include respond-to(s-desktops) {
-    //   padding: 0 15px 0 0;
-    // }
-    // @include respond-to(desktops) {
-    //   min-width: 230px;
-    //   padding: 0 10px 0 0;
-    // }
-    // @include respond-to('1500px') {
-    //   // min-width: 245px;
-    // }
-    h4 {      
-      text-transform: uppercase;
-      color: #2f4050;
-      margin: 0;
-      @include respond-to(tablets) {
-        @include font-size(20px);
-      }
-      @include respond-to(s-desktops) {
-        text-align: left;
-        @include font-size(25px);
-      }
-    }
-  }
-  .right-column-wrap {       
-    background-color: #4f4f4f;
-    @include respond-to(phones) {
-      padding: 20px;
-    }    
-    .tab-content {
-      @include respond-to(tablets) {
-        padding: 10px 20px;        
-      }
-      @include respond-to(desktops) {
-        padding: 30px 25px 15px;
-      }
-      @include respond-to('1400px') {
-        padding: 30px 75px 15px;
-      }
-    }
-    #tab-restaurants {
-      background: url('../images/industries-tabs/restaurants.jpg') no-repeat;
-      background-size: 100% auto;
-      background-attachment: fixed;
-    }
-    #tab-hospitality {
-      background: url('../images/industries-tabs/hospitality.jpg') no-repeat;
-      background-size: 100% auto;
-      background-attachment: fixed;
-    }
-    #tab-healthcare {
-      background: url('../images/industries-tabs/healthcare.jpg') no-repeat;
-      background-size: 100% auto;
-      background-attachment: fixed;
-    }
-    #tab-retail {
-      background: url('../images/industries-tabs/retail.jpg') no-repeat;
-      background-size: 100% auto;
-      background-attachment: fixed;
-    }
-    #tab-government {
-      background: url('../images/industries-tabs/government.jpg') no-repeat;
-      background-size: 100% auto;
-      background-attachment: fixed;
-    }
-    #tab-education {
-      background: url('../images/industries-tabs/education.jpg') no-repeat;
-      background-size: 100% auto;
-      background-attachment: fixed;
-    }
-    #tab-services {
-      background: url('../images/industries-tabs/services.jpg') no-repeat;
-      background-size: 100% auto;
-      background-attachment: fixed;
-    }
-  }
-  @include respond-to(desktops) {
-    .container {
-      width: 1450px;
-    }
-  }  
-  .flow-form {
-    top: 220px;
-  }
-}
-.page-content {
-  margin-bottom: 40px;
-}
-.blog-area {
-  border-top: 3px solid #5090bb;
-  .blog-aside {
-    background-color: #eee;
-    padding: 20px;
-    .blog-advert {
-      padding: 0 5px;
-      @include respond-to(phones) {
-        padding: 0;
-      }
-      .blog-ad {
-        position: relative;
-        margin-bottom: 22px;
-        .try-promo {
-          @include respond-to(phones) {
-            margin-bottom: 15px;
-          }
-          @include respond-to(s-desktops) {
-            margin: 0 0 25px;
-            width: auto;
-          }
-          @include respond-to(desktops) {
-            position: absolute;
-            top: 10px;
-            left: 30px;
-            width: 245px;
-          }          
-        }
-      }
-    }
-    .blog-widget {
-      @include font-size(20px);
-      .ttl-widget {
-        @include font-size(18px);
-        color: #515151;
-        font-family: $f-q-family;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-      }
-      a {
-        color: #515151;
-      }
-    }
-    .posts-list {
-      margin-bottom: 20px;
-    }
-    .rss-wrap {
-      @include respond-to(phones) {
-        padding: 0 0 10px;
+      position: relative;      
+      &:before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        background-color: #fff;
+        width: 12px;
+        left: 6px;
+        margin-top: -2px;
+        @include verticalTransform;
       }
     }
   }
 }
-.posts-holder {
-  padding-top: 20px;
-  @include respond-to(s-desktops) {
-    padding-right: 30px;
-  }
-  @include respond-to(desktops) {
-    padding-right: 30px;
-  }
-  color: #3c3c3c;
-  .post:first-child {
-    padding-top: 0;
-  }
-}
-.posts-header {
-  color: #515151;
-  border-bottom: 1px solid #e7e7e7;
-  padding: 15px 0 6px;
-  margin-bottom: 15px;
-  @include respond-to(s-desktops) {
-    padding: 30px 10px 6px 0;
-    margin-bottom: 35px;
-  }
-  .menu-posts {
-    padding-top: 4px;
-    @include respond-to(m-phones) {
-      overflow: hidden;
-      li {
-        float: left;
+.home-table-area {
+  padding: 0 0 100px;
+  position: relative;
+  z-index: 20;
+  .table-performance-holder {
+    width: 100%;
+    background-color: #fff;
+    float: left;
+    margin: -100px 0 0;
+    box-shadow: 0px 20px 60px 0px rgba(0,0,0,0.07);
+    .table-action-holder {
+      padding: 10px 0;
+      .btn.btn-default {
+        padding-right: 60px;
       }
     }
   }
-  h4 {
-    @include font-size(23px);
-    margin: 0;
-  }
 }
-img.aligncenter {
-  display: block;
-  margin: 0 auto;
-}
-.about-section {
-  background-color: #f6f6f6;
-  padding: 50px 0;
-  @include respond-to(s-desktops) {
-    padding: 90px 0;
+.theme-1 { border-color: #a434c4 !important; }
+.theme-2 { border-color: #359bb5 !important; }
+.theme-3 { border-color: #5c5f9d !important; }
+.theme-4 { border-color: #b2b7bb !important; }
+.page-splash {
+  background: #68243d;
+  color: #fff;
+  &.page-splash-company {
+    background-image: url('../images/layout/bandeau.jpg');
+    background-position: 50% 0;
+    @include bg-cover;
   }
-  .main-about-image {
-    padding: 40px 0;
-  }
-}
-.about-content {
-  padding: 40px 0;
-  color: #2f4050;
-  font-size: 16px;
-  @include respond-to(phones) {
-    padding: 25px 0;
-  }
-  @include respond-to(desktops) {
-    padding: 70px 0 60px;
-    font-size: 18px;
-  line-height: 25px;
-  }
-  p {
-    margin-bottom: 20px;
+  .v-table,
+  .v-cell {
+    height: 400px;
   }
   h1 {
-    color: #2f4050;
-    @include respond-to(phones) {
-      font-size: 27px;
-    }
-    @include respond-to(tablets) {
-      font-size: 30px;
-    }
-    @include respond-to(s-desktops) {
-      font-size: 35px;
+    font-family: $f-base-font;
+    margin: 0;
+    span {
+      display: block;
     }
     @include respond-to(desktops) {
-      font-size: 40px;
-      margin-bottom: 30px;
+      @include font-size(48px, 66px);
+    }    
+  }
+}
+.inner-content {
+  padding: 75px 0;
+}
+.history-area {
+  position: relative;
+  margin-top: -52px;
+  .line {
+    position: absolute;
+    left: 125px;
+    top: 50px;
+    bottom: 0;
+    width: 1px;
+    background-color: #d3d3d5;
+    .moving {
+      top: 0;
+      background-color: #51303b;
+      height: 300px;
+      position: absolute;
+      width: 100%;
+      &:before {
+        width: 7px;
+        height: 7px;
+        background-color: #51303b;
+        content: '';
+        position: absolute;
+        margin-left: -3px;
+        top: -4px;
+        @include border-radius(50%);
+      }
+    }
+  }
+  .history-box {
+    margin-top: 40px;
+    &:first-child {
+      margin: 0;
     }
   }
 }
