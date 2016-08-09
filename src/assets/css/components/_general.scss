@@ -48,8 +48,24 @@ a {
   z-index: 1;
   background: url('../images/layout/bg-home-splash.png') no-repeat;
   @include bg-cover;
-  height: 680px;
-  padding: 190px 0 0;
+  padding: 100px 0 0;
+  height: 450px; 
+  @media (min-height: 500px) and (min-width: 768px) {
+    padding: 100px 0 0;
+    height: 450px;
+  }
+  @media (min-height: 600px) and (min-width: 768px) {
+    height: 500px;
+    padding: 120px 0 0;
+  }
+  @media (min-height: 700px) and (min-width: 768px) {
+    padding: 160px 0 0;
+    height: 600px;
+  }
+  @media (min-height: 800px) and (min-width: 768px) {
+    padding: 190px 0 0;
+    height: 680px;
+  }
   @include respond-to(phones) {
     padding: 110px 0 0;
     height: 510px;
@@ -61,6 +77,9 @@ a {
     font-size: 11px;
     color: #D2D2D2;
     letter-spacing: 4px;
+    @include respond-to(phones) {
+      display: none;
+    }
   }
   .btn.btn-default {
     padding-right: 65px;
@@ -100,9 +119,15 @@ a {
     width: 215px;
     text-align: center;
     position: absolute;
-    top: 111px;
+    top: 5%;
     left: 50%;
     margin-left: -107.5px;
+    @media (min-height: 500px) and (min-width: 768px) {
+      top: 5%;
+    }
+    @media (min-height: 600px) and (min-width: 768px) {
+      top: 14%;
+    }
     @include respond-to(phones) {
       top: 24px;
       width: 280px;
@@ -189,7 +214,20 @@ a {
   .slide {
     .v-table,
     .v-cell {
-      height: 250px;
+      height: 150px;
+        @media (min-height: 500px) and (min-width: 768px) {
+          height: 150px;
+        }
+        @media (min-height: 600px) and (min-width: 768px) {
+          height: 200px;
+        }
+        @media (min-height: 700px) and (min-width: 768px) {
+          height: 230px;
+        }
+        @media (min-height: 800px) and (min-width: 768px) {
+          height: 250px;
+        }
+
     }
   }
   blockquote {

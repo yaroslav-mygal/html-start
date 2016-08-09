@@ -3180,6 +3180,11 @@ At the bottom of this section, we provide information about the spritesheet itse
 $spritesheet: width height image $spritesheet-sprites;
 */
 /*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+/*
 The provided mixins are intended to be used with the array-like variables
 
 .icon-home {
@@ -3206,10 +3211,28 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 <i class="icon icon-home"></i>
 */
 /*
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+
+.icon-home {
+  @include retina-sprite($icon-home-group);
+}
+*/
+/*
 The `sprites` mixin generates identical output to the CSS template
   but can be overridden inside of SCSS
 
 @include sprites($spritesheet-sprites);
+*/
+/*
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
+
+@include retina-sprites($retina-groups);
 */
 /* Slider */
 .slick-slider {
@@ -5283,8 +5306,24 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 680px;
-  padding: 190px 0 0; }
+  padding: 100px 0 0;
+  height: 450px; }
+  @media (min-height: 500px) and (min-width: 768px) {
+    .home-splash {
+      padding: 100px 0 0;
+      height: 450px; } }
+  @media (min-height: 600px) and (min-width: 768px) {
+    .home-splash {
+      height: 500px;
+      padding: 120px 0 0; } }
+  @media (min-height: 700px) and (min-width: 768px) {
+    .home-splash {
+      padding: 160px 0 0;
+      height: 600px; } }
+  @media (min-height: 800px) and (min-width: 768px) {
+    .home-splash {
+      padding: 190px 0 0;
+      height: 680px; } }
   @media only screen and (max-width: 767px) {
     .home-splash {
       padding: 110px 0 0;
@@ -5298,6 +5337,9 @@ a {
     font-size: 11px;
     color: #D2D2D2;
     letter-spacing: 4px; }
+    @media only screen and (max-width: 767px) {
+      .home-splash .home-splash-vertical {
+        display: none; } }
   .home-splash .btn.btn-default {
     padding-right: 65px;
     padding-left: 29px; }
@@ -5339,9 +5381,15 @@ a {
     width: 215px;
     text-align: center;
     position: absolute;
-    top: 111px;
+    top: 5%;
     left: 50%;
     margin-left: -107.5px; }
+    @media (min-height: 500px) and (min-width: 768px) {
+      .home-splash .home-slide-nav {
+        top: 5%; } }
+    @media (min-height: 600px) and (min-width: 768px) {
+      .home-splash .home-slide-nav {
+        top: 14%; } }
     @media only screen and (max-width: 767px) {
       .home-splash .home-slide-nav {
         top: 24px;
@@ -5386,13 +5434,13 @@ a {
       .home-splash .home-slide-nav .slide-nav.slide-prev {
         left: 0;
         background-image: url(../images/sprite/sprite.png);
-        background-position: -170px -192px;
+        background-position: -59px -98px;
         width: 15px;
         height: 11px; }
       .home-splash .home-slide-nav .slide-nav.slide-next {
         right: 0;
         background-image: url(../images/sprite/sprite.png);
-        background-position: -151px -192px;
+        background-position: -40px -98px;
         width: 15px;
         height: 11px; }
     .home-splash .home-slide-nav .slider-progress {
@@ -5423,7 +5471,23 @@ a {
   text-align: center; }
   .home-slider .slide .v-table,
   .home-slider .slide .v-cell {
-    height: 250px; }
+    height: 150px; }
+    @media (min-height: 500px) and (min-width: 768px) {
+      .home-slider .slide .v-table,
+      .home-slider .slide .v-cell {
+        height: 150px; } }
+    @media (min-height: 600px) and (min-width: 768px) {
+      .home-slider .slide .v-table,
+      .home-slider .slide .v-cell {
+        height: 200px; } }
+    @media (min-height: 700px) and (min-width: 768px) {
+      .home-slider .slide .v-table,
+      .home-slider .slide .v-cell {
+        height: 230px; } }
+    @media (min-height: 800px) and (min-width: 768px) {
+      .home-slider .slide .v-table,
+      .home-slider .slide .v-cell {
+        height: 250px; } }
   .home-slider blockquote {
     padding: 0;
     margin: 0 auto;
@@ -5553,80 +5617,131 @@ a {
   vertical-align: top; }
   .icon.logo {
     background-image: url(../images/sprite/sprite.png);
-    background-position: 0px -94px;
+    background-position: 0px 0px;
     width: 118px;
     height: 45px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.logo {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
     @media only screen and (max-width: 479px) {
       .icon.logo {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -122px -94px;
+        background-position: -122px 0px;
         width: 92px;
         height: 35px; } }
+  @media only screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 479px) and (min-resolution: 192dpi) {
+    .icon.logo {
+      background-image: url(../images/sprite/sprite@2x.png);
+      background-size: 214px 130px; } }
   .icon.icon-post {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -53px -192px;
+    background-position: -163px -72px;
     width: 14px;
     height: 16px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.icon-post {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
     .home-info-box:hover .icon.icon-post {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -35px -192px;
+      background-position: -181px -72px;
       width: 14px;
       height: 16px; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .home-info-box:hover .icon.icon-post {
+          background-image: url(../images/sprite/sprite@2x.png);
+          background-size: 214px 130px; } }
   .icon.icon-twitter {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -71px -192px;
+    background-position: -180px -39px;
     width: 16px;
     height: 13px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.icon-twitter {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
     .home-info-box:hover .icon.icon-twitter {
       background-image: url(../images/sprite/sprite.png);
-      background-position: -218px -114px;
+      background-position: 0px -98px;
       width: 16px;
       height: 13px; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .home-info-box:hover .icon.icon-twitter {
+          background-image: url(../images/sprite/sprite@2x.png);
+          background-size: 214px 130px; } }
   .icon.icon-avatara {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -15px -192px;
+    background-position: -143px -72px;
     width: 16px;
     height: 16px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.icon-avatara {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
   .icon.icon-twitter-white {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -91px -192px;
+    background-position: -180px -39px;
     width: 16px;
     height: 13px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.icon-twitter-white {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
   .icon.icon-linkedin-white {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -218px -94px;
+    background-position: -122px -72px;
     width: 17px;
     height: 16px; }
-  .icon.icon-vertical-splash {
-    background-image: url(../images/sprite/sprite.png);
-    background-position: 0px -192px;
-    width: 11px;
-    height: 321px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.icon-linkedin-white {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
   .icon.icon-logo-white {
     background-image: url(../images/sprite/sprite.png);
-    background-position: 0px -143px;
+    background-position: 0px -49px;
     width: 118px;
     height: 45px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.icon-logo-white {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
   .icon.icon-twitter-light {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -111px -192px;
+    background-position: -180px -39px;
     width: 16px;
     height: 13px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.icon-twitter-light {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
   .icon.icon-slide-divider {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -166px -143px;
+    background-position: -122px -39px;
     width: 30px;
     height: 29px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.icon-slide-divider {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
   .icon.flag-france {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -122px -177px;
+    background-position: -178px -58px;
     width: 18px;
     height: 10px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.flag-france {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
   .icon.flag-belgique {
     background-image: url(../images/sprite/sprite.png);
-    background-position: -200px -162px;
+    background-position: -156px -58px;
     width: 18px;
     height: 10px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .icon.flag-belgique {
+        background-image: url(../images/sprite/sprite@2x.png);
+        background-size: 214px 130px; } }
 
 .cf:before,
 .cf:after {
@@ -5648,7 +5763,7 @@ table.table-performance {
   margin: 0; }
   table.table-performance thead th {
     border-width: 1px;
-    font-family: Avenir-Medium;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 13px;
     color: rgba(102, 110, 120, 0.5);
     line-height: 18px;
@@ -5677,7 +5792,6 @@ table.table-performance {
   table.table-performance tbody tr td {
     vertical-align: middle;
     border-color: #efeff1;
-    font-family: AvenirNext-Regular;
     color: #444E58;
     font-size: 14px;
     line-height: 1.14286;
@@ -5744,7 +5858,7 @@ table.table-performance {
           content: '';
           position: absolute;
           background-image: url(../images/sprite/sprite.png);
-          background-position: -131px -192px;
+          background-position: -20px -98px;
           width: 16px;
           height: 12px;
           position: absolute;
@@ -5958,9 +6072,9 @@ table.table-performance {
           content: '';
           position: absolute;
           background-image: url(../images/sprite/sprite.png);
-          background-position: -30px -212px;
-          width: 9px;
-          height: 14px;
+          background-position: -15px -115px;
+          width: 8px;
+          height: 15px;
           right: 30px; }
         .page-header .menu-drop li a:hover {
           text-decoration: none;
@@ -6080,7 +6194,7 @@ table.table-performance {
 #toggle-menu {
   position: absolute;
   background-image: url(../images/sprite/sprite.png);
-  background-position: -200px -143px;
+  background-position: -156px -39px;
   width: 20px;
   height: 15px;
   text-indent: -9999px;
@@ -6284,14 +6398,22 @@ table.table-performance {
       transform: translateY(-50%);
       right: 15px;
       background-image: url(../images/sprite/sprite.png);
-      background-position: -144px -177px;
-      width: 12px;
-      height: 8px; }
-    .capacity-section .capacity-slide .capacity-slide-link.collapsed:after {
-      background-image: url(../images/sprite/sprite.png);
-      background-position: -222px -162px;
+      background-position: -200px -39px;
       width: 13px;
       height: 8px; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .capacity-section .capacity-slide .capacity-slide-link:after {
+          background-image: url(../images/sprite/sprite@2x.png);
+          background-size: 214px 130px; } }
+    .capacity-section .capacity-slide .capacity-slide-link.collapsed:after {
+      background-image: url(../images/sprite/sprite.png);
+      background-position: -200px -58px;
+      width: 12px;
+      height: 8px; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .capacity-section .capacity-slide .capacity-slide-link.collapsed:after {
+          background-image: url(../images/sprite/sprite@2x.png);
+          background-size: 214px 130px; } }
     .capacity-section .capacity-slide .capacity-slide-link:hover {
       text-decoration: none; }
   .capacity-section .capacity-slide .toggle-slide {
@@ -6472,17 +6594,25 @@ table.table-performance {
       right: 0; }
       .team-vertical-slider .slick-arrow.slick-prev:before {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -15px -212px;
+        background-position: -199px -72px;
         width: 11px;
         height: 15px; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          .team-vertical-slider .slick-arrow.slick-prev:before {
+            background-image: url(../images/sprite/sprite@2x.png);
+            background-size: 214px 130px; } }
     .team-vertical-slider .slick-arrow.slick-next {
       background-color: #69243C;
       right: -60px; }
       .team-vertical-slider .slick-arrow.slick-next:before {
         background-image: url(../images/sprite/sprite.png);
-        background-position: -224px -143px;
+        background-position: 0px -115px;
         width: 11px;
         height: 15px; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          .team-vertical-slider .slick-arrow.slick-next:before {
+            background-image: url(../images/sprite/sprite@2x.png);
+            background-size: 214px 130px; } }
 
 .history-box {
   background-color: #fff;
@@ -6518,7 +6648,7 @@ table.table-performance {
 .btn.btn-default {
   border: none;
   border-radius: 0;
-  font-family: Avenir-Medium;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 11px;
   color: #444E58;
   letter-spacing: 1.5px;
@@ -6529,7 +6659,7 @@ table.table-performance {
     content: '';
     position: absolute;
     background-image: url(../images/sprite/sprite.png);
-    background-position: -15px -231px;
+    background-position: -15px -115px;
     width: 8px;
     height: 15px;
     right: 20px;
@@ -6539,7 +6669,7 @@ table.table-performance {
 
 .btn.dropdown-toggle {
   background-color: #fff;
-  font-family: AvenirNext-Regular;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #666F78;
   letter-spacing: 0px;

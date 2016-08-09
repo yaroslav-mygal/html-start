@@ -42,26 +42,39 @@ gulp.task('sass', function() {
 				 .pipe(browserSync.stream());
 })
 
-gulp.task('sprite', function () {
-  var spriteData = gulp.src('src/assets/sprite-images/*.png').pipe(spritesmith({
-    imgName: '../images/sprite/sprite.png',
-    cssName: '_sprite.scss',
-    padding: 4
-  }));
-  spriteData.css.pipe(gulp.dest('src/assets/css/components'));
-  spriteData.img.pipe(gulp.dest('src/assets/images'));
-});
-
+// simple sprite generator
 // gulp.task('sprite', function () {
 //   var spriteData = gulp.src('src/assets/sprite-images/*.png').pipe(spritesmith({
-//   	retinaSrcFilter: ['src/assets/sprite-images/*@2x.png'],
 //     imgName: '../images/sprite/sprite.png',
-//     retinaImgName: '../images/sprite/sprite@2x.png',
 //     cssName: '_sprite.scss',
 //     padding: 4
 //   }));
 //   spriteData.css.pipe(gulp.dest('src/assets/css/components'));
-//   spriteData.img.pipe(gulp.dest('src/assets/images'));
+//   spriteData.img.pipe(gulp.dest('dist/assets/images'));
+// });
+
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('src/assets/sprite-images/*.png').pipe(spritesmith({
+  	retinaSrcFilter: ['src/assets/sprite-images/*@2x.png'],
+    imgName: '../images/sprite/sprite.png',
+    retinaImgName: '../images/sprite/sprite@2x.png',
+    cssName: '_sprite.scss',
+    padding: 4
+  }));
+  spriteData.css.pipe(gulp.dest('src/assets/css/components'));
+  spriteData.img.pipe(gulp.dest('dist/assets/images'));
+});
+
+// gulp.task('sprite-retina', function () {
+//   var spriteData = gulp.src('src/assets/sprite-retina/*.png').pipe(spritesmith({
+//   	retinaSrcFilter: ['src/assets/sprite-retina/*@2x.png'],
+//     imgName: '../images/sprite-retina/sprite.png',
+//     retinaImgName: '../images/sprite-retina/sprite@2x.png',
+//     cssName: '_sprite-retina.scss',
+//     padding: 4
+//   }));
+//   spriteData.css.pipe(gulp.dest('src/assets/css/components'));
+//   spriteData.img.pipe(gulp.dest('dist/assets/images'));
 // });
 
 gulp.task('html', function(){
@@ -147,4 +160,4 @@ gulp.task('dist-zip', () => {
 });
 
 gulp.task('default', ['watch'])
-gulp.task('dist', ['clean', 'dist-sass','dist-images', 'html', 'bower', 'font','dist-js', 'favicon'])
+gulp.task('dist', ['clean', 'dist-sass','dist-images', 'sprite', 'html', 'bower', 'font','dist-js', 'favicon'])

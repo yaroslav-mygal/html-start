@@ -15,8 +15,7 @@ jQuery(document).ready(function($) {
 
   $("#mmenu").mmenu(  {
       offCanvas: {
-       position  : "right",
-       zposition : "next"
+       position  : "right"
       }
     },
     {

@@ -6,48 +6,45 @@
 	text-indent:101%;
 	vertical-align: top;
 	&.logo {
-		@include sprite($logo);
+		@include retina-sprite($-logo-group);
 		@include respond-to(s-phones) {
-			@include sprite($logo-sphones);
+			@include retina-sprite($logo-sphones-group);
 		}
 	}
 	&.icon-post {
-		@include sprite($icon-post);
+		@include retina-sprite($icon-post-group);
 		.home-info-box:hover & {
-			@include sprite($icon-post-hover);
+			@include retina-sprite($icon-post-hover-group);
 		}
 	}
 	&.icon-twitter {
-		@include sprite($icon-twitter);
+		@include retina-sprite($icon-twitter-group);
 		.home-info-box:hover & {
-			@include sprite($icon-twitter-hover);
+			@include retina-sprite($icon-twitter-hover-group);
 		}
 	}
 	&.icon-avatara {
-		@include sprite($icon-avatara);
+		@include retina-sprite($icon-avatara-group);
 	}
 	&.icon-twitter-white {
-		@include sprite($icon-twitter-white);
+		@include retina-sprite($icon-twitter-group);
 	}
 	&.icon-linkedin-white {
-		@include sprite($icon-linkedin-white);
-	}
-	&.icon-vertical-splash {
-		@include sprite($icon-vertical-splash);
+		@include retina-sprite($icon-linkedin-white-group);
 	}
 	&.icon-logo-white {
-		@include sprite($icon-logo-white);
+		@include retina-sprite($icon-logo-white-group);
 	}
 	&.icon-twitter-light {
-		@include sprite($icon-twitter-light);
+		@include retina-sprite($icon-twitter-group);
 	}
 	&.icon-slide-divider {
-		@include sprite($icon-slide-divider);
+		@include retina-sprite($icon-slide-divider-group);
 	}
 	&.flag-france {
-		@include sprite($flag-france);
+		@include retina-sprite($flag-france-group);
 	}
 	&.flag-belgique {
-		@include sprite($flag-belgique);
+		@include retina-sprite($flag-belgique-group);
 	}
 }

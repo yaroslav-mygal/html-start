@@ -20,7 +20,7 @@ table.table-performance {
   thead {
     th {
       border-width: 1px;
-      font-family: Avenir-Medium;
+      font-family: $f-font-medium;
       font-size: 13px;
       color: rgba(102,110,120,0.50);
       line-height: 18px;      
@@ -58,7 +58,6 @@ table.table-performance {
       td {
         vertical-align: middle;
         border-color: #efeff1;
-        font-family: AvenirNext-Regular;
         color: #444E58;
         @include font-size(14px, 16px);
         padding: 10px 5px;

@@ -127,11 +127,11 @@
 				position: absolute;
 				@include verticalTransform;
 				right: 15px;
-				@include sprite($bullet-capacity-slide-link);
+				@include retina-sprite($panel-closed-group);
 			}
 			&.collapsed {
 				&:after {
-					@include sprite($collapsedbullet-capacity-slide-link);
+					@include retina-sprite($panel-opened-group);
 				}
 			}
 			&:hover {
@@ -324,14 +324,14 @@
 			background-color: #fff;
 			right: 0;
 			&:before {
-				@include sprite($arrow-up);
+				@include retina-sprite($arrow-up-group);
 			}
 		}
 		&.slick-next {
 			background-color: $c-red;
 			right: -60px;
 			&:before {
-				@include sprite($arrow-down);
+				@include retina-sprite($arrow-down-group);
 			}
 		}
 	}
