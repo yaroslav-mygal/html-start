@@ -137,6 +137,10 @@
           </div>
         </div>
       </div>
+      <ul class="splash-socials">
+        <li><a href="#"><i class="icon icon-twitter-white"></i></a></li>
+        <li><a href="#"><i class="icon icon-linkedin-white"></i></a></li>
+      </ul>
     </div>
     <div class="inner-content">
       <section class="container">
@@ -166,13 +170,19 @@
     </div>    
     <div class="container">
       <div class="cf">
-        <ul class="tabs">
-          <li class="active"><a href="#tab-1"  role="tab" data-toggle="tab">Gestion collective</a></li>
-          <li><a  href="#tab-2" role="tab" data-toggle="tab">Gestion privée</a></li>
-        </ul>
+        <div class="tabs-selector-wrap">
+          <select class="selectpicker selectTabs">
+            <option value="#tab-1">Gestion collective</option>
+            <option value="#tab-2">Gestion privée</option>
+          </select>
+          <ul class="tabs tabs-selector">
+            <li class="active"><a href="#tab-1"  role="tab" data-toggle="tab">Gestion collective</a></li>
+            <li><a  href="#tab-2" role="tab" data-toggle="tab">Gestion privée</a></li>
+          </ul>
+        </div>
       </div>
       <div class="tabs-content tab-content">
-        <div id="tab-1" class="tab-pane active">
+        <div id="tab-1" class="tab-pane active"  role="tabpanel">
           <div class="row row-80">
             <div class="col-sm-6">
               <p class="bigger c-red">Keren Finance est une société de gestion spécialiste des actions et obligations d’entreprises françaises et européennes. </p>
@@ -191,24 +201,8 @@
             </div>
           </div>
         </div>   
-        <div id="tab-2" class="tab-pane">
-          <div class="row">
-            <div class="col-sm-6">
-              <p class="bigger">Keren Finance est une société de gestion spécialiste des actions et obligations d’entreprises françaises et européennes. </p>
-            </div>
-            <div class="col-sm-6">
-              <ul class="list">
-               <li>Un process de gestion appliqué et affiné depuis une quinzaine d’année</li>
-               <li>Une analyse fondamentale et un Investment case systématiques des entreprises avant chaque prise de décision.</li>
-               <li>Rencontres permanentes de dirigeants et/ou visites de sites par an afin de comprendre et maitriser le métier des entreprises dans lesquelles nous investissons.</li>
-               <li>Une équipe de gestion composée de talents individuels au service d’un collectif.</li>
-              <li>Une gamme lisible, composée d’OPCVM proposant différents niveaux de risques (actions, diversifiés, obligataires) : <br>
-                - Fonds actions couvrant les petites, moyennes et grandes capitalisations boursières françaises <br>
-                -  fonds diversifiés, patrimonial (max 35% actions), ou thématique immobilière (max 50% actions) <br>
-                - fonds obligataires, corporate et à échéance</li>
-              </ul>
-            </div>
-          </div>
+        <div id="tab-2" class="tab-pane"  role="tabpanel">
+          Second tab
         </div>     
       </div>
     </div>
@@ -223,11 +217,18 @@
     </div>
     <div class="container">
       <div class="cf">
-        <ul class="tabs">
-          <li><a href="#tab-3" role="tab" data-toggle="tab">Gestion</a></li>
-          <li class="active"><a href="#tab-4"  role="tab" data-toggle="tab">Développement</a></li>
-          <li><a href="#tab-5" role="tab" data-toggle="tab">Contrôle et middle office</a></li>
-        </ul>
+        <div class="tabs-selector-wrap">
+          <select class="selectpicker selectTabs">
+            <option value="#tab-3">Gestion</option>
+            <option value="#tab-4">Développement</option>
+            <option value="#tab-5">Contrôle et middle office</option>
+          </select>
+          <ul class="tabs tabs-selector">
+            <li><a href="#tab-3" role="tab" data-toggle="tab">Gestion</a></li>
+            <li class="active"><a href="#tab-4"  role="tab" data-toggle="tab">Développement</a></li>
+            <li><a href="#tab-5" role="tab" data-toggle="tab">Contrôle et middle office</a></li>
+          </ul>
+        </div>
       </div>    
       <div class="tabs-content tab-content">
         <div id="tab-3" class="tab-pane">
@@ -235,9 +236,9 @@
         </div>   
         <div id="tab-4" class="tab-pane active">
           <div class="row row-30">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6 col-sm-5">
               <ul class="list-team">
-                <li>
+                <li class="active">
                   <a href="#" class="link-team">
                     <figure class="avatara">
                       <img src="assets/images/president.png" alt="" >
@@ -251,7 +252,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="link-team">
+                  <a href="#" class="link-team active">
                     <figure class="avatara">
                       <img src="assets/images/president.png" alt="" >
                     </figure>
@@ -317,7 +318,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-md-6 col-sm-7 hidden-xs">
               <div class="team-vertical-slider" id="slider-company">
                 <div class="item">
                   <p>Président Fondateur de Keren Finance, gère les OPCVM diversifiés et obligataires. Il a construit son expérience de gérant au sein de diverses institutions financières françaises et étrangères (Banques Populaires, Union Bancaire Privée). Titulaire d’un DEA Monnaie, Banque, Finance.</p>

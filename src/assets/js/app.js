@@ -1,5 +1,10 @@
 jQuery(document).ready(function($) {
 
+  $('select.selectTabs').on('change', function(e) {
+    var _tab = $(this).val();
+    $('a[href="'+_tab+'"]').tab('show');
+  });
+
   // company slider
 
   $('#slider-company').slick({

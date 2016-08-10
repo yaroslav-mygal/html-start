@@ -187,9 +187,19 @@ table.table-performance {
   }
 }
 .row-80 {
-  @include make-row(80px);
-  &>div {
-    padding-left: 40px;
-    padding-right: 40px;
+  @include respond-to(tablets) {
+    @include make-row(30px);
+    &>div {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
+  @include respond-to(s-desktops) {
+    @include make-row(80px);
+    &>div {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  
 }

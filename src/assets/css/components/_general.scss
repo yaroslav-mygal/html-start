@@ -84,23 +84,7 @@ a {
   .btn.btn-default {
     padding-right: 65px;
     padding-left: 29px;
-  }
-  .splash-socials {
-    position: absolute;
-    right: 5px;
-    @include verticalTransform;
-    @include clear-list;
-    display: none;
-    @include respond-to(tablets) {
-      display: block;
-    }
-    @include respond-to(s-desktops) {
-      right: 45px;
-    }
-    li {
-      padding: 12px 0;
-    }
-  }
+  }  
   .icon-vertical-splash {
     position: absolute;
     @include verticalTransform;
@@ -294,8 +278,10 @@ a {
 .theme-3 { border-color: #5c5f9d !important; }
 .theme-4 { border-color: #b2b7bb !important; }
 .page-splash {
+  position: relative;
   background: #68243d;
   color: #fff;
+  text-align: center;
   &.page-splash-company {
     background-image: url('../images/layout/bandeau.jpg');
     background-position: 50% 0;
@@ -303,7 +289,10 @@ a {
   }
   .v-table,
   .v-cell {
-    height: 400px;
+    height: 250px;
+    @include respond-to(tablets) {
+      height: 400px;
+    }
   }
   h1 {
     font-family: $f-base-font;
@@ -317,7 +306,16 @@ a {
   }
 }
 .inner-content {
-  padding: 75px 0;
+  overflow: hidden;
+  @include respond-to(phones) {
+    padding: 30px 0;
+  }
+  @include respond-to(tablets) {
+    padding: 55px 0;
+  }
+  @include respond-to(s-desktops) {
+    padding: 75px 0;
+  }
 }
 .history-area {
   position: relative;
@@ -329,6 +327,12 @@ a {
     bottom: 0;
     width: 1px;
     background-color: #d3d3d5;
+    @include respond-to(phones) {
+      left: 90px;
+    }
+    @include respond-to(s-phones) {
+      left: 28px;
+    }
     .moving {
       top: 0;
       background-color: #51303b;
@@ -352,5 +356,26 @@ a {
     &:first-child {
       margin: 0;
     }
+  }
+}
+.splash-socials {
+  position: absolute;
+  right: 5px;  
+  @include clear-list;
+  display: none;
+  @include respond-to(tablets) {
+    display: block;
+  }
+  @include respond-to(s-desktops) {
+    right: 45px;
+  }
+  li {
+    padding: 12px 0;
+  }
+  .home-splash & {
+    @include verticalTransform;
+  }
+  .page-splash & {
+    bottom: 20px;
   }
 }

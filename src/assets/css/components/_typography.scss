@@ -25,17 +25,41 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}	
 }
-h4 {
-	@include font-size(28px, 64px);
+h4 {	
 	color: #444E58;
+	@include font-size(20px, 42px);
+	@include respond-to(tablets) {
+		@include font-size(22px, 40px);
+	}
+	@include respond-to(s-desktops) {
+		@include font-size(26px, 50px);
+	}
+	@include respond-to(desktops) {
+		@include font-size(28px, 64px);
+	}
 }
-h5 {
-	@include font-size(24px, 33px);
+h5 {	
 	color: #444E58;
 	margin: 0 0 30px;
+	@include font-size(18px, 26px);
+	@include respond-to(tablets) {
+		@include font-size(20px, 30px);
+	}
+	@include respond-to(s-desktops) {
+		@include font-size(22px, 31px);
+	}
+	@include respond-to(desktops) {
+		@include font-size(24px, 33px);
+	}
 }
 .bigger {
-	@include font-size(20px, 52px);
+	@include font-size(18px, 43px);
+	@include respond-to(phones) {
+		@include font-size(16px, 40px);
+	}
+	@include respond-to(desktops) {
+		@include font-size(20px, 52px);
+	}
 }
 p {
 	margin: 0 0 15px;

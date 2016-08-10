@@ -183,6 +183,9 @@
 	.v-table,
 	.v-cell {
 		height: 280px;
+		@include respond-to(s-phones) {
+			height: 200px;
+		}
 	}
 	h2 {
 		@include font-size(36px, 42px);
@@ -198,10 +201,38 @@
 		background-image: url('../images/layout/Head-metiers.png');		
 	}
 }
+.tabs-selector-wrap {
+	margin-top: -60px;	
+}
+.bootstrap-select {
+	&.selectTabs {
+		width: 100% !important;
+		@include respond-to(tablets) {
+			display: none !important;
+		}
+		.btn.dropdown-toggle {
+			height: 60px;
+		}
+		.dropdown-menu {
+			padding: 0;
+			li {
+				a {
+					@include font-size(16px);
+					padding: 10px 15px;
+				}
+			}
+		}
+	}
+} 
 .tabs {
 	@include clear-list;
 	overflow: hidden;
 	margin-top: -60px;
+	&.tabs-selector {
+		@include respond-to(phones) {
+			display: none;
+		}
+	}
 	li {
 		float: left;
 		margin-right: 20px;
@@ -210,6 +241,7 @@
 		a {
 			display: block;
 			height: 60px;
+			text-decoration: none;
 			color: #fff;
 			background: rgba(0,0,0,0.20);
 			padding: 20px 28px;
@@ -281,7 +313,7 @@
 			font-weight: normal;
 		}
 	}
-	&:hover {
+	&:hover, &.active {
 		text-decoration: none;
 		box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.10);
 		.avatara {
@@ -293,26 +325,46 @@
 	}
 }
 .tabs-content {
-	padding: 60px 0;
+	padding: 20px 0;
+	@include respond-to(tablets) {
+		padding: 40px 0;
+	}
+	@include respond-to(s-desktops) {
+		padding: 50px 0;
+	}
+	@include respond-to(desktops) {
+		padding: 60px 0;
+	}
 }
 .team-vertical-slider {
 	background-color: #eff0f2;
 	max-width: 635px;
 	position: relative;
-	padding: 60px;
+	padding: 25px;
 	@include font-size(16px, 32px);
+	margin-top: 120px;
+	@include respond-to(s-desktops) {
+		margin-top: 100px;
+		padding: 30px;
+	}
 	@include respond-to(desktops) {
 		margin-top: 180px;
+		padding: 60px;
 	}
 	.slick-arrow {
 		text-indent: -9999px;
 		overflow: hidden;
-		position: absolute;
-		@include verticalTransform;
+		position: absolute;		
 		width: 60px;
 		height: 60px;
 		border: 0;
-		padding: 0;
+		padding: 0;		
+		@include respond-to(tablets) {
+			top: -35px;
+		}
+		@include respond-to(desktops) {
+			@include verticalTransform;
+		}
 		&:before {
 			content: '';
 			@include verticalTransform;
@@ -321,15 +373,27 @@
 			margin-left: -5.5px;
 		}
 		&.slick-prev {
-			background-color: #fff;
-			right: 0;
+			background-color: #fff;			
+			border: 1px solid $c-red;
+				left: 50%;
+				margin-left: -60px;
+			@include respond-to(desktops) {
+				left: auto;
+				border: 0;
+				right: 0;
+				margin: 0;
+			}
 			&:before {
 				@include retina-sprite($arrow-up-group);
 			}
 		}
 		&.slick-next {
 			background-color: $c-red;
-			right: -60px;
+			left: 50%;
+			@include respond-to(desktops) {
+				left: auto;
+				right: -60px;
+			}
 			&:before {
 				@include retina-sprite($arrow-down-group);
 			}
@@ -341,6 +405,10 @@
 	height: 100px;
 	overflow: hidden;
 	color: #B2B7BB;
+	@include respond-to(s-phones) {
+		height: auto;
+		padding: 25px 0 25px 25px;
+	}
 	.years-holder {
 		float: left;
 		width: 125px;
@@ -349,6 +417,15 @@
 		padding-left: 40px;
 		font-family: $f-font-demi;
 		@include flex;
+		@include respond-to(phones) {
+			width: 95px;
+			padding-left: 30px;
+		}
+		@include respond-to(s-phones) {
+			height: auto;
+			display: block;
+			float: none;
+		}
 	}
 	.holder {
 		overflow: hidden;
@@ -356,6 +433,13 @@
 		padding-left: 50px;
 		@include font-size(20px, 27px);
 		@include flex;
+		@include respond-to(phones) {
+			padding-left: 25px;
+		}
+		@include respond-to(s-phones) {
+			height: auto;
+			display: block;
+		}
 		p {
 			margin: 0;
 		}
