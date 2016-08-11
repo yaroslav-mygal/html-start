@@ -47,4 +47,16 @@
 	&.flag-belgique {
 		@include retina-sprite($flag-belgique-group);
 	}
+	&.icon-download {
+		@include retina-sprite($icon-download-group);
+	}
+	&.icon-bfm {
+		@include retina-sprite($icon-bfm-group);
+	}
+	&.icon-linkedin {
+		@include retina-sprite($icon-linkedin-group);
+	}
+	&.icon-play {
+		@include retina-sprite($icon-play-group);
+	}
 }

@@ -258,32 +258,56 @@ a {
 .home-table-area {
   padding: 0 0 100px;
   position: relative;
-  z-index: 20;
-  .table-performance-holder {
-    width: 100%;
-    background-color: #fff;
-    float: left;
-    margin: -100px 0 0;
-    box-shadow: 0px 20px 60px 0px rgba(0,0,0,0.07);
-    .table-action-holder {
-      padding: 10px 0;
-      .btn.btn-default {
-        padding-right: 60px;
-      }
+  z-index: 20;  
+}
+.page-content {
+  position: relative;
+  z-index: 10;
+}
+.table-performance-holder {
+  width: 100%;
+  background-color: #fff;
+  float: left;  
+  box-shadow: 0px 20px 60px 0px rgba(0,0,0,0.07);
+  margin-top: 60px;
+  .table-action-holder {
+    padding: 10px 0;
+    .btn.btn-default {
+      padding-right: 60px;
     }
   }
+  &.margin-minus {
+    margin: -100px 0 0;
+  }
+  &.border-left {
+    border-left: 2px solid #f00;
+  }
+}
+.capacity-block-wrap {
+  margin-bottom: 60px;
 }
 .theme-1 { border-color: #a434c4 !important; }
 .theme-2 { border-color: #359bb5 !important; }
 .theme-3 { border-color: #5c5f9d !important; }
 .theme-4 { border-color: #b2b7bb !important; }
+.theme-5 { border-color: #246928 !important; }
 .page-splash {
   position: relative;
   background: #68243d;
   color: #fff;
   text-align: center;
+  position: relative;
+  z-index: 5;
+  .container {
+    position: relative;
+  }
   &.page-splash-company {
     background-image: url('../images/layout/bandeau.jpg');
+    background-position: 50% 0;
+    @include bg-cover;
+  }
+  &.page-splash-games {
+    background-image: url('../images/layout/head-games.png');
     background-position: 50% 0;
     @include bg-cover;
   }
@@ -304,9 +328,25 @@ a {
       @include font-size(48px, 66px);
     }    
   }
+  .splash-game-info {
+    position: absolute;
+    right: 0;
+    bottom: 180px;
+    color: #fff;
+    text-transform: uppercase;
+    @include font-size(10px, 20px);
+    @include respond-to(phones) {
+      right: 25px;
+    }
+    strong {
+      @include font-size(18px, 20px);
+      font-weight: normal;
+    }
+  }
 }
 .inner-content {
-  overflow: hidden;
+  position: relative;
+  z-index: 10;
   @include respond-to(phones) {
     padding: 30px 0;
   }
@@ -314,7 +354,7 @@ a {
     padding: 55px 0;
   }
   @include respond-to(s-desktops) {
-    padding: 75px 0;
+    padding: 65px 0 0;
   }
 }
 .history-area {
@@ -367,8 +407,14 @@ a {
     display: block;
   }
   @include respond-to(s-desktops) {
-    right: 45px;
+    right: 15px;
   }
+  @include respond-to(desktops) {
+    right: 25px;
+  }
+   @include respond-to(1500px) {
+    right: 45px;
+   }
   li {
     padding: 12px 0;
   }
@@ -378,4 +424,18 @@ a {
   .page-splash & {
     bottom: 20px;
   }
+}
+.section-documents {
+  background-color: #68243b;
+  background: url('../images/layout/bg-section-documents.jpg') no-repeat 50% 0;
+  @include bg-cover;
+  color: #fff;
+  padding: 90px 0 40px;
+}
+.section-presentation {
+  background-color: #eff0f2;
+  padding: 95px 0 70px;
+}
+.inner-section {
+  padding: 90px 0 70px;
 }

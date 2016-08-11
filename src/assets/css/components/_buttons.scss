@@ -1,20 +1,35 @@
 .btn {
+	border: none;
+	@include border-radius(0);
+	font-family: $f-font-medium;
+	font-size: 11px;
+	color: #444E58;
+	letter-spacing: 1.5px;
+	line-height: 18px;
+	padding: 21px 20px 20px;
+	position: relative;
 	&.btn-default {
-		border: none;
-		@include border-radius(0);
-		font-family: $f-font-medium;
-		font-size: 11px;
-		color: #444E58;
-		letter-spacing: 1.5px;
-		line-height: 18px;
+		background: #fff;
 		padding: 21px 40px 20px 19px;
-		position: relative;
 		&:before {
 			content: '';
 			position: absolute;
 			@include sprite($arrow-right-btn);
 			right: 20px;
 			@include verticalTransform;
+		}
+	}
+	&.btn-danger {
+		background-color: #5d1f36;
+		color: #fff;
+		padding-right: 40px;
+		&:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			@include verticalTransform;
+			right: 20px;
+			@include retina-sprite($arrow-right-white-group);
 		}
 	}
 	&.dropdown-toggle {

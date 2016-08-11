@@ -15,6 +15,14 @@
     vertical-align: middle;
   }
 }
+strong {
+  font-weight: normal;
+  font-family: $f-font-demi;
+  font-weight: 600;
+}
+.d-block {
+  display: block;
+}
 table.table-performance {
   margin: 0;
   thead {
@@ -29,11 +37,8 @@ table.table-performance {
       padding: 15px 5px;
       vertical-align: middle;
       @include respond-to(s-desktops) {
-        padding: 32px 10px 31px;
+        padding: 31px 10px;
         font-size: 14px;
-      }
-      &:first-child {
-        padding-left: 20px;
       }
       span {
         display: block;
@@ -94,6 +99,19 @@ table.table-performance {
              -o-transform: rotate(-90deg); /* Opera */
              -ms-transform: rotate(-90deg); /* IE 9 */
           }
+        }
+        .l-action {
+          @include font-size(14px);
+          padding: 6px 0 0;
+          font-family: $f-font-medium;
+        }
+      }
+      &:first-child {
+        border-top: 2px solid #efeff1;
+      }
+      &:last-child {
+        td {
+          border-bottom: 1px solid #efeff1;
         }
       }
     }    
@@ -185,6 +203,22 @@ table.table-performance {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+.row-40 {
+  @include make-row(40px);
+  &>div {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.row-60 {
+  @include respond-to(s-desktops) {
+    @include make-row(60px);
+    &>div {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }  
 }
 .row-80 {
   @include respond-to(tablets) {
