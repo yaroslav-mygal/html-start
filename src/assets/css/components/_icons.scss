@@ -17,11 +17,17 @@
 			@include retina-sprite($icon-post-hover-group);
 		}
 	}
+	&.icon-graph-more {
+		@include retina-sprite($icon-graph-more-group);
+	}
 	&.icon-twitter {
 		@include retina-sprite($icon-twitter-group);
 		.home-info-box:hover & {
 			@include retina-sprite($icon-twitter-hover-group);
 		}
+	}
+	&.icon-twitter-red {
+		@include retina-sprite($twittter-red-group);
 	}
 	&.icon-avatara {
 		@include retina-sprite($icon-avatara-group);

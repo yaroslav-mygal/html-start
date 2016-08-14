@@ -61,15 +61,34 @@ h5 {
 		@include font-size(20px, 52px);
 	}
 }
+.inner-title {
+	font-weight: normal;
+	font-size: 48px;
+	color: #444E58;
+	font-family: $f-base-font;
+	margin: 0 0 10px;
+	@include respond-to(phones) {
+		font-size: 36px;
+	}
+	@include respond-to(tablets) {
+		font-size: 42px;
+	}
+	@include respond-to(s-desktops) {
+		font-size: 44px;
+	}
+	@include respond-to(desktops) {
+		font-size: 48px;
+	}
+}
 p {
 	margin: 0 0 15px;
 }
 .c-gray {
-	color: $c-gray;
+	color: $c-gray !important;
 }
 .c-red {
-	color: $c-red;
+	color: $c-red !important;
 }
 .c-blue {
-	color: $c-blue;
+	color: $c-blue !important;
 }
