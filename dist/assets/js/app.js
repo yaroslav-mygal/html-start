@@ -171,7 +171,7 @@ jQuery(document).ready(function($) {
     $('.history-box').waypoint(function(direction) {
       $(this.element).addClass('active');
     }, {
-      offset: '70%'
+      offset: '80%'
     })
   }
   
@@ -199,8 +199,10 @@ jQuery(document).ready(function($) {
       $('.scroll-section').waypoint(function(direction) {
 
         var navItem = $(this.element).attr('id');
+        var currentMenuText = $('#waypoints-nav a[href="#'+navItem+'"]').text();
         $('#waypoints-nav li').closest('li').removeClass('active');
         $('#waypoints-nav a[href="#'+navItem+'"]').closest('li').addClass('active');
+        $('.top-menu>.current-slide').text(currentMenuText);
 
       }, {
         offset: '20%'

@@ -27,7 +27,7 @@
 	}
 	.footer-box {
 		@include respond-to(phones) {
-			margin: 0 0 30px;
+			margin: 0 10px 45px;
 		}
 	}
 	.foote-nav {
@@ -40,6 +40,9 @@
 	address {
 		font-style: normal;
 		line-height: 2;
+		@include respond-to(phones) {
+			margin-bottom: 10px;
+		}
 	}
 	.detailed-address {
 		font-size: 12px;
