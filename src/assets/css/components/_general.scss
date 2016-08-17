@@ -490,19 +490,20 @@ a {
   }
 }
 body.active-sticky-bar {
-  @include respond-to(phones) {
-    padding-top: 60px;
-  }
-  @include respond-to(tablets) {
-    padding-top: 80px;
-  }
+  // @include respond-to(phones) {
+  //   padding-top: 60px;
+  // }
+  // @include respond-to(tablets) {
+  //   padding-top: 80px;
+  // }
 }
 #sticky-bar {
   .active-sticky-bar & {
     position: fixed;
     z-index: 30;
     right: 0;
-    top: 0;
+    width: 100%;
+    top: 0px !important;
     left: 0;
   }
 }

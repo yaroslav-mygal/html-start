@@ -283,27 +283,34 @@ strong {
   }
 }
 .row-30 {
-  @include make-row(30px);
-  &>div {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-.row-40 {
-  @include make-row(40px);
-  &>div {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-.row-60 {
-  @include respond-to(s-desktops) {
-    @include make-row(60px);
+  @include respond-to(tablets) {
+    @include make-row(30px);
     &>div {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }  
+}
+.row-40 {
+  
+  @include respond-to(tablets) {
+    @include make-row(40px);
+    &>div {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }  
+}
+.row-60 {
+  @include respond-to(tablets) {
+    @include respond-to(s-desktops) {
+      @include make-row(60px);
+      &>div {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  }    
 }
 .row-80 {
   @include respond-to(tablets) {

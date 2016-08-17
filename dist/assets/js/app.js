@@ -195,6 +195,7 @@ jQuery(document).ready(function($) {
       offset: '0'
     })
 
+
    if($('.scroll-section').size()>0) {
       $('.scroll-section').waypoint(function(direction) {
 
