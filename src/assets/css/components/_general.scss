@@ -67,8 +67,15 @@ a {
     height: 680px;
   }
   .home-splash-vertical {
-    left: -108px;
-    bottom: 220px;
+    
+    @include respond-to(tablets) {
+      left: -140px;
+      bottom: 350px;
+    }
+    @include respond-to(s-desktops) {
+      left: -108px;
+      bottom: 220px;
+    }
   }
   .btn.btn-default {
     padding-right: 65px;
@@ -184,6 +191,14 @@ a {
 .home-slider {
   position: relative;
   text-align: center;
+  @include respond-to(tablets) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include respond-to(s-desktops) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .slide {
     .v-table,
     .v-cell {
@@ -301,6 +316,35 @@ a {
     font-size: 20px;
     padding-top: 30px;
     color: rgba(255,255,255,0.50);
+    >.line {
+      padding-right: 18px;
+      padding-left: 33px;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      @include respond-to(phones) {
+        display: block;
+        padding: 0;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        background-color: #ac6d82;
+        width: 12px;
+        left: 0;
+        @include verticalTransform;
+        @include respond-to(phones) {
+          display: none;
+        }
+      }
+      &:first-child {
+        padding-left: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
     strong {
       font-weight: normal;
       color: #fff;
@@ -310,6 +354,7 @@ a {
     background-image: url('../images/layout/bandeau.jpg');
     background-position: 50% 0;
     @include bg-cover;
+    text-align: left;
   }
   &.page-splash-games {
     background-image: url('../images/layout/head-games.png');
@@ -341,6 +386,7 @@ a {
     @include respond-to(phones) {
       right: 25px;      
       margin-left: 5px;
+      bottom: 50px;
     }
     strong {
       color: #fff;
@@ -485,17 +531,12 @@ a {
   margin: -60px auto 0;
   background-color: #fff;
   max-width: 560px;
+  @include respond-to(phones) {
+    margin-top: 0;
+  }
   textarea.form-control {
     height: 180px;
   }
-}
-body.active-sticky-bar {
-  // @include respond-to(phones) {
-  //   padding-top: 60px;
-  // }
-  // @include respond-to(tablets) {
-  //   padding-top: 80px;
-  // }
 }
 #sticky-bar {
   .active-sticky-bar & {

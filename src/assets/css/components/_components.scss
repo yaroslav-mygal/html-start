@@ -262,6 +262,7 @@ a.twitter-info-box:hover {
 		}
 		&.active {
 			a {
+				font-weight: bold;
 				background: #fff;
 				color: #69243C;
 			}
@@ -600,6 +601,10 @@ a.twitter-info-box:hover {
 	background: #fff;
 	box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.10);
 	margin-bottom: 30px;
+	display: block;
+	&:hover {
+		text-decoration: none;
+	}
 	@include respond-to(s-phones) {
 		padding-bottom: 60px;
 	}
@@ -666,6 +671,32 @@ a.twitter-info-box:hover {
 			left: 0;
 			width: 20px;
 		}
+	}
+	
+}
+.new-box-wrap {
+	position: relative;
+	z-index: 5;
+	@include respond-to(tablets) {
+		margin: 0 -15px;
+	}	
+	@include respond-to(s-desktops) {
+		margin: 0 -30px;
+	}
+	
+	>.new-box {		
+		@include respond-to(tablets) {
+			padding: 0 15px;
+			width: 50%;
+			float: left;
+		}
+		@include respond-to(s-desktops) {
+			padding: 0 30px;
+			&:nth-child(2n+1) {
+				margin-top: -60px;
+			}
+		}
+		
 	}
 }
 .box-presentation {
@@ -736,17 +767,7 @@ a.twitter-info-box:hover {
 		line-height: 28px;
 	}
 	.risk-box {
-		position: relative;
-		padding: 30px 0 0;
-		&:before {
-			content: '';
-			position: absolute;
-			height: 20px;
-			width: 1px;
-			top: 0;
-			left: 5px;
-			background-color: #dfdfdf;
-		}
+		position: relative;		
 	}
 	&.box-presentation-bottom {
 		@include respond-to(s-desktops) {
@@ -762,6 +783,10 @@ a.twitter-info-box:hover {
 	overflow: hidden;
 	position: relative;
 	padding-right: 50px;
+	display: block;
+	&:hover {
+		text-decoration: none;
+	}
 	figure {
 		float: left;
 		margin-right: 27px;
@@ -816,6 +841,7 @@ a.twitter-info-box:hover {
 			background: #FFFFFF;
 			border: 1px solid rgba(102,111,120,0.20);
 			font-size: 12px;
+			line-height: 28px;
 			color: #444E58;
 			text-align: center;
 			height: 30px;
@@ -823,9 +849,6 @@ a.twitter-info-box:hover {
 			text-decoration: none;
 			&:hover {
 				text-decoration: none;
-				border-color: #666e79;
-				color: #fff;
-				background-color: #666e79;
 			}
 		}
 		&.active a {
@@ -834,7 +857,31 @@ a.twitter-info-box:hover {
 			background-color: #666e79;
 		}
 	}
+	.box-presentation & {
+		position: relative;
+		float: left;
+		padding-bottom: 30px;
+		&:before {
+			content: '';
+			position: absolute;
+			height: 20px;
+			width: 1px;
+			bottom: 0;
+			left: 14px;
+			background-color: #dfdfdf;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			height: 20px;
+			width: 1px;
+			bottom: 0;
+			right: 14px;
+			background-color: #dfdfdf;
+		}
+	}
 }
+
 .page-splash-navbar {
 	height: 60px;
 	color: #fff;
@@ -1017,6 +1064,9 @@ a.twitter-info-box:hover {
 	box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.13);
 	padding: 35px;
 	margin-bottom: 60px;
+	@include respond-to(phones) {
+		margin-bottom: 20px;
+	}
 	.graph-head {
 		position: relative;
 		margin-bottom: 10px;
@@ -1049,7 +1099,7 @@ a.twitter-info-box:hover {
 	color: #666F78;
 	margin-bottom: 60px;
 	@include respond-to(phones) {
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 	}
 	@include respond-to(s-phones) {
 		margin-bottom: 15px;
@@ -1087,7 +1137,7 @@ a.twitter-info-box:hover {
 		text-indent:101%;
 		width: 25px;
 		height: 25px;
-		top: 60px;
+		top: 0;
 		border: 0;
 		padding: 0;
 		background: #fff;
@@ -1113,7 +1163,7 @@ a.twitter-info-box:hover {
 		}
 	}
 }
-.slide-foundes {
+.founds-slider-wrap {
 	h6 {
 		font-family: $f-font-medium;
 		font-size: 18px;
@@ -1123,6 +1173,8 @@ a.twitter-info-box:hover {
 		text-align: center;
 		margin-bottom: 25px;
 	}
+}
+.slide-foundes {	
 	.period {
 		padding: 0 60px 40px;
 		font-size: 16px;
@@ -1282,7 +1334,7 @@ a.twitter-info-box:hover {
 .news-read-section {
 	background: $c-red;
 	padding: 80px 0;
-	background: url('../images/layout/bg-news-read-section.jpg') no-repeat;
+	background: url('../images/layout/bg-news-read-section.jpg') no-repeat 50% 0;
 	@include bg-cover;
 	.row {
 		position: relative;
@@ -1294,6 +1346,9 @@ a.twitter-info-box:hover {
 		height: 1px;
 		background-color: #874c62;
 		@include verticalTransform;
+		@include respond-to(phones) {
+			display: none;
+		}
 	}
 	.twitter-info-box {
 		max-width: 340px;
@@ -1301,9 +1356,17 @@ a.twitter-info-box:hover {
 	}
 }
 #slick-vertical-slider {
-	padding-bottom: 60px;
+	@include respond-to(phones) {
+		padding-bottom: 60px;
+	}
+	@include respond-to(tablets) {
+		padding-right: 60px;
+	}	
 	@include respond-to(s-desktops) {
 		padding-right: 80px;
+	}
+	.home-info-box {
+		margin: 0;
 	}
 	.slick-arrow {
 		position: absolute;
@@ -1314,10 +1377,12 @@ a.twitter-info-box:hover {
 		background: none;		
 		text-indent: -9999px;
 		border: 1px solid transparent;
-		left: 50%;
-		bottom: 0;
-		@include respond-to(s-desktops) {
-			right: 0;
+		@include respond-to(phones) {
+			bottom: 0;
+			left: 50%;
+		}		
+		@include respond-to(tablets) {
+			right: 10px;
 			top: 50%;
 		}
 		&:hover {
@@ -1333,25 +1398,25 @@ a.twitter-info-box:hover {
 		}
 		&.slick-prev {
 			margin-left: -50px;
-			@include respond-to(s-desktops) {
+			@include respond-to(tablets) {
 				margin-top: -50px;
 			}
 			&:before {
 				@include retina-sprite($arrow-left-group);
-				@include respond-to(s-desktops) {
+				@include respond-to(tablets) {
 					@include retina-sprite($arrow-up-group);
 				}
 			}
 		}
 		&.slick-next {
 			margin-left: 10px;
-			@include respond-to(s-desktops) {
+			@include respond-to(tablets) {
 				margin-top: 10px;
 			}
 			&:before {
 				@include retina-sprite($arrow-right-group);
 				
-				@include respond-to(s-desktops) {
+				@include respond-to(tablets) {
 					@include retina-sprite($arrow-down-group);
 				}
 			}
@@ -1415,7 +1480,31 @@ a.twitter-info-box:hover {
   	 		}
   	 	}  	 	
   	 }
-  	}
-  	
+  	}  	
   }
+}
+.modal-content {
+	border-radius: 0;
+}
+.popup-body {
+	background-color: #fff;
+	font-size: 16px;
+	color: #666F78;
+	line-height: 36px;
+	padding: 50px;
+	@include respond-to(s-phones) {
+		padding: 15px;
+		padding-top: 30px;
+	}
+	p {
+		margin-bottom: 25px;
+	}
+	h3 {
+		text-align: center;
+		margin-bottom: 20px;
+		@include font-size(20px);
+	}
+	.btn-wrap {
+		padding-top: 30px;
+	}
 }

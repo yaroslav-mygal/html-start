@@ -369,3 +369,15 @@ strong {
     margin-top: -60px;
   }  
 }
+.table {
+  tbody {
+    tr {
+      &:hover {
+        cursor: pointer;
+        td {
+          background-color: #f0f1f3;
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,14 @@
 	line-height: 18px;
 	padding: 21px 20px 20px;
 	position: relative;
+	&.btn-info {
+		background: $c-red;
+		color: #fff;
+		font-family: $f-font-medium;
+		font-size: 11px;
+		letter-spacing: 1.5px;
+		line-height: 12px;
+	}
 	&.btn-default {
 		background: #fff;
 		padding: 21px 40px 20px 19px;
@@ -44,5 +52,24 @@
 		&:before {
 			display: none;
 		}
+	}
+}
+.modal-close {
+	z-index: 5000;
+	position: fixed;
+	text-indent: -9999px;
+	overflow: hidden;
+	border-radius: 50%;
+	@include retina-sprite($-close-group);
+	top: 10px;
+	right: 20px;
+	display: none;
+	@include respond-to(phones) {
+		top: 14px;
+		right: 14px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+	}
+	.modal-open & {
+		display: block;
 	}
 }

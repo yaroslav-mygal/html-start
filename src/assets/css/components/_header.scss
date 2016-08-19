@@ -194,7 +194,6 @@
 		right: 0;
 		width: 1070px;
 	}
-	
 	.mega-menu-cta {
 		border-top: 1px solid #eff0f1;
 		@include respond-to(phones) {
@@ -209,7 +208,11 @@
 		}
 	}
 	.row {
-		@include respond-to(tablets) {
+		margin-right: 0;
+		margin-left: 0;
+		@media screen and (max-width : 991px),
+		only screen and (max-device-width : 991px){
+			@include respond-to(tablets) {
 			&>.mega-menu-box:nth-child(1),
 			&>.mega-menu-box:nth-child(2) {
 				min-height: 150px;
@@ -217,7 +220,8 @@
 			&>.mega-menu-box:nth-child(3) {
 				border: 0;
 			}
-		}		
+		}
+			}
 	}
 	.mega-menu-box {
 		padding: 15px 20px 4px;
@@ -243,14 +247,18 @@
 		.menu-drop {
 			border-top: 2px solid #a434c4;
 			width: auto;
-			padding: 25px 0 0;			
+			padding: 25px 0 0;		
 			@include respond-to(phones) {
-					padding: 0;
-				}	
+				padding: 0;
+			}	
 			li {
 				a {
 					@include font-size(14px);
-					padding: 17px 17px 17px 3px;
+					padding: 17px 17px 17px 20px;
+					@include respond-to(tablets) {
+						margin-left: -20px;
+						margin-right: -20px;
+					}					
 					@include respond-to(phones) {
 						color: #444E58;
 						padding: 14px 20px 14px 0;
@@ -258,26 +266,25 @@
 							content: '';
 							position: absolute;
 							content: '';
-  border: 2px solid transparent;
-  display: block;
-  width: 11px;
-  height: 11px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  border-top: none;
-border-left: none;
-right: 23px;
-  border-color:#979696;
+						  border: 2px solid transparent;
+						  display: block;
+						  width: 11px;
+						  height: 11px;
+						  margin: auto;
+						  position: absolute;
+						  top: 0;
+						  bottom: 0;
+						  -webkit-transform: rotate(-45deg);
+						  -ms-transform: rotate(-45deg);
+						  transform: rotate(-45deg);
+						  border-top: none;
+							border-left: none;
+							right: 23px;
+						  border-color:#979696;
 						}
-
 					}
 					&:before {
-						right: 3px;
+						right: 15px;
 					}
 				}
 			}

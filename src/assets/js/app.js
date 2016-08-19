@@ -1,5 +1,9 @@
 jQuery(document).ready(function($) {
 
+  $('#close-modal').on('click', function(){
+    $('#myModal').modal('hide')
+    return false;
+  })
    // company slider
 
   $('#slider-company').slick({
@@ -43,7 +47,7 @@ jQuery(document).ready(function($) {
 
   // found slider
 
-  $('#slide-found').slick({
+  $('.founds-slider').slick({
     draggable: true,
     adaptiveHeight: true,
     dots: false,
@@ -97,19 +101,21 @@ jQuery(document).ready(function($) {
     dots: false,
     mobileFirst: true,
     arrows: false
-  }).on('afterChange', function(event, slick, currentSlide){
-    	var currSlide = currentSlide+1;
+  }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    	var currSlide = ++nextSlide;
     	$('.home-slide-nav .slides-num .current').text(currSlide);
   	});  
 
   $('.home-slide-nav .slide-prev').click(function(){  	
 	  $slick.slick('slickPrev');
 	  startProgressbar();
+    return false;
 	})
 
 	$('.home-slide-nav .slide-next').click(function(){
 		$slick.slick('slickNext');
 		startProgressbar();
+    return false;
 	})
   
   $bar = $('.slider-progress .progress');
@@ -183,17 +189,18 @@ jQuery(document).ready(function($) {
         jQuery("html, body").animate({ scrollTop: _top });
         return false;
     })
-
-   $('#sticky-bar').waypoint(function(direction) {
-    if (direction == 'down') {
-      $('body').addClass('active-sticky-bar');
+    if($('#sticky-bar').size()>0) {
+      var stickyBarOffset = $('#sticky-bar').offset().top;
+     $(window).on('scroll', function(){      
+        if($(window).scrollTop() > stickyBarOffset) {
+          $('body').addClass('active-sticky-bar');
+        }
+        else {
+          $('body').removeClass('active-sticky-bar');
+        }
+      })
     }
-    else {
-      $('body').removeClass('active-sticky-bar');
-    }
-    }, {
-      offset: '0'
-    })
+   
 
 
    if($('.scroll-section').size()>0) {
