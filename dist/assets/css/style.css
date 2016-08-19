@@ -8243,6 +8243,10 @@ a.twitter-info-box:hover {
   background-size: cover; }
   .news-read-section .row {
     position: relative; }
+    @media only screen and (max-width: 767px) {
+      .news-read-section .row {
+        max-width: 340px;
+        margin: 0 auto; } }
   .news-read-section .news-read-divider {
     position: absolute;
     left: 26%;

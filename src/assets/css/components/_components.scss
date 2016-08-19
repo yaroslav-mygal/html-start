@@ -1335,9 +1335,13 @@ a.twitter-info-box:hover {
 	background: $c-red;
 	padding: 80px 0;
 	background: url('../images/layout/bg-news-read-section.jpg') no-repeat 50% 0;
-	@include bg-cover;
+	@include bg-cover;	
 	.row {
 		position: relative;
+		@include respond-to(phones) {
+			max-width: 340px;
+			margin: 0 auto;
+		}
 	}
 	.news-read-divider {
 		position: absolute;
