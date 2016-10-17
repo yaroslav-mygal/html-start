@@ -23,10 +23,6 @@
     "bootstrap-sass": "^3.3.6"
   },
   "devDependencies": {
-    "bower": "*",
-    "install": "^1.0.4",
-    "slick-carousel": "^1.6.0",
-    "bootstrap-select": "^1.10.0",
-    "jQuery.mmenu": "mmenu#^5.6.5"
+    "bower": "*"
   }
 }

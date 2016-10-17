@@ -5,64 +5,7 @@
 	white-space: nowrap;
 	text-indent:101%;
 	vertical-align: top;
-	&.logo {
-		@include retina-sprite($-logo-group);
-		@include respond-to(s-phones) {
-			@include retina-sprite($logo-sphones-group);
-		}
-	}
-	&.icon-post {
-		@include retina-sprite($icon-post-group);
-		.home-info-box:hover & {
-			@include retina-sprite($icon-post-hover-group);
-		}
-	}
-	&.icon-graph-more {
-		@include retina-sprite($icon-graph-more-group);
-	}
-	&.icon-twitter {
-		@include retina-sprite($icon-twitter-group);
-		.home-info-box:hover & {
-			@include retina-sprite($icon-twitter-hover-group);
-		}
-	}
-	&.icon-twitter-red {
-		@include retina-sprite($twittter-red-group);
-	}
-	&.icon-avatara {
-		@include retina-sprite($icon-avatara-group);
-	}
-	&.icon-twitter-white {
-		@include retina-sprite($icon-twitter-group);
-	}
-	&.icon-linkedin-white {
-		@include retina-sprite($icon-linkedin-white-group);
-	}
-	&.icon-logo-white {
-		@include retina-sprite($icon-logo-white-group);
-	}
-	&.icon-twitter-light {
-		@include retina-sprite($icon-twitter-group);
-	}
-	&.icon-slide-divider {
-		@include retina-sprite($icon-slide-divider-group);
-	}
-	&.flag-france {
-		@include retina-sprite($flag-france-group);
-	}
-	&.flag-belgique {
-		@include retina-sprite($flag-belgique-group);
-	}
-	&.icon-download {
-		@include retina-sprite($icon-download-group);
-	}
-	&.icon-bfm {
-		@include retina-sprite($icon-bfm-group);
-	}
-	&.icon-linkedin {
-		@include retina-sprite($icon-linkedin-group);
-	}
-	&.icon-play {
-		@include retina-sprite($icon-play-group);
-	}
+}
+.logo{
+	@extend .icon;
 }

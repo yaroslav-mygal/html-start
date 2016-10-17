@@ -1,29 +1,5 @@
-// text colors
-$c-placeholder: #666;
-$c-text: #878787;
-$c-gray: rgba(102, 111, 120, 0.5);
-$c-blue: rgba(53, 155, 181, 1.0);
-$c-red: #69243C;
-
-
-// bg colors
-$bg-body: #fff;
-
+// fonts
 // font size
 $f-base-size: 14px;
-$f-base-font: 'Open Sans', Arial, Helvetica, sans-serif; //AvenirNext-Regular
-$f-font-medium: 'Open Sans', Arial, Helvetica, sans-serif; //AvenirNext-Medium
-$f-font-medium-simple: 'Open Sans', Arial, Helvetica, sans-serif; //Avenir-Medium
-$f-font-demi: 'Open Sans', Arial, Helvetica, sans-serif; //AvenirNext-DemiBold
+$f-base-font: 'Open Sans', Arial, Helvetica, sans-serif;
 
-
-// grid
-$screen-s-min: 479px;
-$screen-xs-min: 480px;
-$screen-sm-min: 767px;
-$screen-sm-max: 991px;
-$screen-md-min: 992px;
-$screen-lg-min: 1200px;
-
-// mobile help
-$base-mobile-width: 768px;
