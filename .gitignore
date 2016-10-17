@@ -1,7 +1,7 @@
-
-src/assets/css/main-blessed1.css
-src/sass/.sass-cache/*
 .DS_Store
+node_modules
+dist
+dev
 .DS_Store?
 Thumbs.db
 *.log
