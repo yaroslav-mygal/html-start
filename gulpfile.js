@@ -35,7 +35,7 @@ var path = {
 		spriteSource: 'src/assets/sprite-images/*.png',
 		spriteRetinaSource: 'src/assets/sprite-retina',
 		spriteCss: 'src/assets/css/components',
-		spriteImg: 'src/assets/images/sprite'
+		spriteImg: 'dev/assets/images'
 	},
 	dev: {
 		styles: 'dev/assets/css', 	
@@ -44,7 +44,7 @@ var path = {
   	jsLibs: 'dev/assets/js/libs',
   	fonts: 'dev/assets/fonts',
   	img: 'dev/assets/images',
-  	spriteImg: 'dev/assets/images/sprite'
+  	spriteImg: 'dev/assets/images'
 	},
 	dist: {
 		styles: 'dist/assets/css',
@@ -53,14 +53,14 @@ var path = {
 		jsLibs: 'dist/assets/js/libs',
 		fonts: 'dist/assets/fonts',
 		img: 'dist/assets/images',
-		spriteImg: 'dev/assets/images/sprite'
+		spriteImg: 'dist/assets/images'
 	}
   
 };
 
 gulp.task('sprite', function () {
   var spriteData = gulp.src(path.src.spriteSource).pipe(spritesmith({
-    imgName: 'sprite.png',
+    imgName: '../images/sprite/sprite.png',
     cssName: '_sprite.scss',
     padding: 4
   }));
@@ -69,19 +69,19 @@ gulp.task('sprite', function () {
 });
 gulp.task('dist-sprite', function () {
   var spriteData = gulp.src(path.src.spriteSource).pipe(spritesmith({
-    imgName: 'sprite.png',
+    imgName: '../images/sprite/sprite.png',
     cssName: '_sprite.scss',
     padding: 4
   }));
   spriteData.css.pipe(gulp.dest(path.src.spriteCss));
-  spriteData.img.pipe(gulp.dest(path.src.spriteImg));
+  spriteData.img.pipe(gulp.dest(path.dist.spriteImg));
 });
 
 gulp.task('rsprite', function () {
   var spriteData = gulp.src(path.src.spriteRetinaSource+'/*.png').pipe(spritesmith({
   	retinaSrcFilter: [path.src.spriteRetinaSource+'/*@2x.png'],
-    imgName: 'sprite-retina.png',
-    retinaImgName: 'sprite-retina@2x.png',
+    imgName: '../images/sprite/sprite-retina.png',
+    retinaImgName: '../images/sprite/sprite-retina@2x.png',
     cssName: '_sprite-retina.scss',
     padding: 4
   }));
@@ -92,13 +92,13 @@ gulp.task('rsprite', function () {
 gulp.task('dist-rsprite', function () {
   var spriteData = gulp.src(path.src.spriteRetinaSource+'/*.png').pipe(spritesmith({
   	retinaSrcFilter: [path.src.spriteRetinaSource+'/*@2x.png'],
-    imgName: 'sprite-retina.png',
-    retinaImgName: 'sprite-retina@2x.png',
+    imgName: '../images/sprite/sprite-retina.png',
+    retinaImgName: '../images/sprite/sprite-retina@2x.png',
     cssName: '_sprite-retina.scss',
     padding: 4
   }));
   spriteData.css.pipe(gulp.dest(path.src.spriteCss));
-  spriteData.img.pipe(gulp.dest(path.src.spriteImg));
+  spriteData.img.pipe(gulp.dest(path.dist.spriteImg));
 });
 
 gulp.task('images', function(){
