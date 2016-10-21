@@ -1,10 +1,10 @@
 # Gulp Starter
 My starter kit for personal projects.
 
-- BVootstrap 4 grid layout
+- Bootstrap 4 grid layout
 - Compiles and minimizes your Scss
-- Uglifys your JS
-- Compresses your Images
+- Uglify your JS
+- Compress your Images
 - Generate sprites
 - Generates a BrowserSync URL for you to access.
 
