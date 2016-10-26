@@ -67,6 +67,7 @@ gulp.task('sprite', function () {
   spriteData.css.pipe(gulp.dest(path.src.spriteCss));
   spriteData.img.pipe(gulp.dest(path.dev.spriteImg));
 });
+
 gulp.task('dist-sprite', function () {
   var spriteData = gulp.src(path.src.spriteSource).pipe(spritesmith({
     imgName: '../images/sprite/sprite.png',
@@ -106,6 +107,7 @@ gulp.task('images', function(){
 				 .pipe(gulp.dest(path.dev.img))
 				 .pipe(browserSync.stream());
 })
+
 gulp.task('dist-images', function(){
 	return gulp.src(path.src.img)
 		.pipe(imagemin({
@@ -124,54 +126,56 @@ gulp.task('sass', function() {
 				 .pipe(gulp.dest(path.dev.styles))
 				 .pipe(browserSync.stream());
 })
-// gulp.task('dist-sass', function() {
-// 	return gulp.src(path.src.styles)
-// 				 .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-// 				 .pipe(gulp.dest(path.dist.styles));
-// })
 
 gulp.task('dist-sass', function() {
 	return gulp.src(path.src.styles)					
-				 .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-				 .pipe(mmq({ log: true }))
-				 .pipe(cleanCSS({keepSpecialComments:0}))
-				 .pipe(gulp.dest(path.dist.styles));
+	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	.pipe(mmq({ log: true }))
+	.pipe(cleanCSS({keepSpecialComments:0}))
+	.pipe(gulp.dest(path.dist.styles));
 })
 
+// example -> src/bower_components/slick-carousel/slick/slick.min.js
+var bowerList = []
+
+
 gulp.task("bower", function(){
-  gulp.src([
-        ])
-    .pipe(gulp.dest(path.dev.jsLibs));
+  gulp.src(bowerList)
+  .pipe(gulp.dest(path.dev.jsLibs));
 });
+
 gulp.task("dist-bower", function(){
-  gulp.src([
-        ])
-    .pipe(gulp.dest(path.dist.jsLibs));
+  gulp.src(bowerList)
+  .pipe(gulp.dest(path.dist.jsLibs));
 });
 
 gulp.task('html', function(){
 	return gulp.src(path.src.html)
-					.pipe(fileinclude({
-			      prefix: '@@',
-			      basepath: path.src.htmlPartials
-			    }))
-				 .pipe(gulp.dest(path.dev.html))
-				 .pipe(browserSync.stream());
+	.pipe(fileinclude({
+    prefix: '@@',
+    basepath: path.src.htmlPartials
+  }))
+ .pipe(gulp.dest(path.dev.html))
+ .pipe(browserSync.stream());
 })
+
 gulp.task('validate-html', function(){
 	return gulp.src(path.dev.html+'/*.html')
-					.pipe(htmlhint())
-					.pipe(htmlhint.reporter())
+	.pipe(htmlhint())
+	.pipe(htmlhint.reporter())
 })
+
 gulp.task('validate-css', function() {
   gulp.src(path.dev.styles+'/*.css')
     .pipe(csslint())
     .pipe(csslint.formatter());
 });
+
 gulp.task('validate-scss', function() {
   return gulp.src(path.src.root+'/assets/css/**/*.scss')
-    .pipe(scsslint());
+  .pipe(scsslint());
 });
+
 // gulp.task('dist-html', function(){
 // 	return gulp.src(path.src.html)
 // 					.pipe(fileinclude({
@@ -181,6 +185,7 @@ gulp.task('validate-scss', function() {
 // 				 .pipe(gulp.dest(path.dist.html))
 // 				 .pipe(browserSync.stream());
 // })
+
 gulp.task('dist-html', function(){
 	return gulp.src(path.src.html)
 					.pipe(fileinclude({
@@ -216,6 +221,7 @@ gulp.task('favicon', function(){
 	return gulp.src(path.src.root+'favicon.ico')
 				 .pipe(gulp.dest(path.dev.html));
 })
+
 gulp.task('dist-favicon', function(){
 	return gulp.src(path.src.root+'favicon.ico')
 				 .pipe(gulp.dest(path.dist.html));
@@ -257,6 +263,6 @@ gulp.task('watch', function() {
 
 
 gulp.task('default', ['watch'])
-gulp.task('dev', ['sass', 'images', 'sprite', 'html', 'bower', 'fonts', 'js', 'favicon'])
-gulp.task('dist', ['dist-sass', 'dist-sprite', 'dist-images', 'dist-html', 'dist-bower', 'dist-fonts', 'dist-favicon'])
+gulp.task('dev', ['sass', 'images', 'sprite', 'html', 'bower', 'fonts', 'js'])
+gulp.task('dist', ['dist-sass', 'dist-sprite', 'dist-images', 'dist-html', 'dist-bower', 'dist-fonts'])
 
