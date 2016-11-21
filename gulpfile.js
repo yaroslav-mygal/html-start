@@ -32,7 +32,7 @@ var path = {
 		js: 'src/assets/js/*.js',
 		fonts: 'src/assets/fonts/*',
 		img: 'src/assets/images/**/*',
-		spriteSource: 'src/assets/sprite-images/*.png',
+		spriteSource: 'src/assets/sprite-images/',
 		spriteRetinaSource: 'src/assets/sprite-retina',
 		spriteCss: 'src/assets/css/components',
 		spriteImg: 'dev/assets/images'
@@ -243,7 +243,7 @@ gulp.task('watch', function() {
 	    }
 	});
   gulp.watch(path.src.img, ['images']);
-  gulp.watch(path.src.spriteSource, ['sprite']);
+ gulp.watch(path.src.spriteSource+'*', ['sprite']);
   gulp.watch(path.src.fonts, ['font']);
   gulp.watch(path.src.root+'/assets/css/**/*.scss', ['sass']);
   gulp.watch(path.src.html, ['html']);
