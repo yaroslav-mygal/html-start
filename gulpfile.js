@@ -35,7 +35,7 @@ var path = {
 		js: 'src/assets/js/*.js',
 		fonts: 'src/assets/fonts/*',
 		img: 'src/assets/images/**/*',
-		spriteSource: 'src/assets/sprite-images/',
+		spriteSource: 'src/assets/sprite-images/*.png',
 		spriteRetinaSource: 'src/assets/sprite-retina',
 		spriteCss: 'src/assets/css/components',
 		spriteImg: 'dev/assets/images'
@@ -179,16 +179,6 @@ gulp.task('validate-scss', function() {
   .pipe(scsslint());
 });
 
-// gulp.task('dist-html', function(){
-// 	return gulp.src(path.src.html)
-// 					.pipe(fileinclude({
-// 			      prefix: '@@',
-// 			      basepath: path.src.htmlPartials
-// 			    }))
-// 				 .pipe(gulp.dest(path.dist.html))
-// 				 .pipe(browserSync.stream());
-// })
-
 gulp.task('dist-html', function(){
 	return gulp.src(path.src.html)
 					.pipe(fileinclude({
@@ -231,15 +221,21 @@ gulp.task('js', function(){
 				 .pipe(gulp.dest(path.dev.js))
 				 .pipe(browserSync.stream());
 })
-// gulp.task('dist-js', function(){
-// 	return gulp.src(path.src.js)
-// 				 .pipe(gulp.dest(path.dist.js));
-// })
 
 gulp.task('fonts', function(){
 	return gulp.src(path.src.fonts)
 				 .pipe(gulp.dest(path.dev.fonts));
 })
+
+gulp.task('modals', function(){
+	return gulp.src(path.src.root+'/modals/*')
+				 .pipe(gulp.dest(path.dev.html+'/modals'));
+})
+gulp.task('dist-modals', function(){
+	return gulp.src(path.src.root+'/modals/*')
+				 .pipe(gulp.dest(path.dist.html+'/modals'));
+})
+
 gulp.task('dist-fonts', function(){
 	return gulp.src(path.src.fonts)
 				 .pipe(gulp.dest(path.dist.fonts));
@@ -277,7 +273,7 @@ gulp.task('watch', function() {
 	    }
 	});
   gulp.watch(path.src.img, ['images']);
- gulp.watch(path.src.spriteSource+'*', ['sprite']);
+  gulp.watch(path.src.spriteSource, ['sprite']);
   gulp.watch(path.src.fonts, ['font']);
   gulp.watch(path.src.root+'/assets/css/**/*.scss', ['sass']);
   gulp.watch(path.src.html, ['html']);
@@ -293,4 +289,5 @@ gulp.task('watch', function() {
 gulp.task('default', ['watch'])
 gulp.task('dev', ['sass', 'images', 'sprite', 'html', 'bower', 'fonts', 'js'])
 gulp.task('dist', ['dist-sass', 'dist-sprite', 'dist-images', 'dist-html', 'dist-bower', 'dist-fonts'])
+
 
