@@ -215,7 +215,7 @@ gulp.task('penthouse', function () {
     });
 
   });
-
+});
 gulp.task('js', function(){
 	return gulp.src(path.src.js)
 				 .pipe(gulp.dest(path.dev.js))
@@ -282,12 +282,8 @@ gulp.task('watch', function() {
 
 });
 
-
 // production 
 
-
-gulp.task('default', ['watch'])
-gulp.task('dev', ['sass', 'images', 'sprite', 'html', 'bower', 'fonts', 'js'])
-gulp.task('dist', ['dist-sass', 'dist-sprite', 'dist-images', 'dist-html', 'dist-bower', 'dist-fonts'])
-
-
+gulp.task('default', ['watch']);
+gulp.task('dev', ['sass', 'images', 'sprite', 'html', 'bower', 'fonts', 'js']);
+gulp.task('dist', ['dist-sass', 'dist-sprite', 'dist-images', 'dist-html', 'dist-bower', 'dist-fonts']);
