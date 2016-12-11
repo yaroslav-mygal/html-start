@@ -30,6 +30,7 @@
     "gulp-file-include": "^0.13.7",
     "gulp-htmlhint": "^0.3.1",
     "gulp-imagemin": "^2.4.0",
+    "gulp-inject-string": "^1.1.0",
     "gulp-merge-media-queries": "^0.2.1",
     "gulp-sass": "^2.2.0",
     "gulp-scss-lint": "^0.4.0",
@@ -39,7 +40,9 @@
     "gulp-useref": "^3.1.2",
     "gulp-zip": "^3.1.0",
     "gulp.spritesmith": "^6.2.1",
-    "imagemin-pngquant": "^4.2.2"
+    "imagemin-pngquant": "^4.2.2",
+    "penthouse": "^0.10.3",
+    "vinyl-buffer": "^1.0.0"
   },
   "dependencies": {}
 }

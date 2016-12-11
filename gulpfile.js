@@ -19,7 +19,10 @@ var gulp = require('gulp'),
     gulpIf = require('gulp-if'),
     htmlhint = require("gulp-htmlhint"),
     csslint = require('gulp-csslint'),
-    scsslint = require('gulp-scss-lint');
+    scsslint = require('gulp-scss-lint'),
+    penthouse = require('penthouse'),
+    inject = require('gulp-inject-string'),
+    cleanCSS = require('clean-css');
 
 
 var path = {
@@ -32,7 +35,7 @@ var path = {
 		js: 'src/assets/js/*.js',
 		fonts: 'src/assets/fonts/*',
 		img: 'src/assets/images/**/*',
-		spriteSource: 'src/assets/sprite-images/*.png',
+		spriteSource: 'src/assets/sprite-images/',
 		spriteRetinaSource: 'src/assets/sprite-retina',
 		spriteCss: 'src/assets/css/components',
 		spriteImg: 'dev/assets/images'
@@ -197,6 +200,31 @@ gulp.task('dist-html', function(){
 				  .pipe(gulp.dest(path.dist.html));
 })
 
+var pages = [
+  {
+    urlSource: 'dist/index.html',
+    css: 'dist/assets/css/style.css',
+    url: 'dist/index.html'
+  }
+];
+// add <!-- Critical CSS -->
+gulp.task('penthouse', function () {
+
+  pages.forEach( function(element, index) {
+
+    penthouse({
+      url: element.urlSource, // страница вашего сайта
+      css: element.css, // файл со стилями
+      width: 1280,
+      height: 500
+    }, function (err, criticalCss) {
+       var cleanCss = new cleanCSS().minify(criticalCss);
+       gulp.src(element.url)
+      .pipe(inject.after('<!-- Critical CSS -->', '\n<style>\n' + cleanCss.styles + '\n</style>'))
+      .pipe(gulp.dest('dist'))
+    });
+
+  });
 
 gulp.task('js', function(){
 	return gulp.src(path.src.js)
@@ -249,7 +277,7 @@ gulp.task('watch', function() {
 	    }
 	});
   gulp.watch(path.src.img, ['images']);
-  gulp.watch(path.src.spriteSource, ['sprite']);
+ gulp.watch(path.src.spriteSource+'*', ['sprite']);
   gulp.watch(path.src.fonts, ['font']);
   gulp.watch(path.src.root+'/assets/css/**/*.scss', ['sass']);
   gulp.watch(path.src.html, ['html']);
