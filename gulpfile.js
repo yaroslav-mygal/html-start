@@ -22,7 +22,7 @@ var gulp = require('gulp'),
     scsslint = require('gulp-scss-lint'),
     penthouse = require('penthouse'),
     inject = require('gulp-inject-string'),
-    cleanCSS = require('clean-css');
+    cleanCSS = require('gulp-clean-css');
 
 
 var path = {
