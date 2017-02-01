@@ -153,13 +153,16 @@ gulp.task("dist-bower", function(){
 });
 
 gulp.task('html', function(){
-	return gulp.src(path.src.html)
-	.pipe(fileinclude({
-    prefix: '@@',
-    basepath: path.src.htmlPartials
-  }))
- .pipe(gulp.dest(path.dev.html))
- .pipe(browserSync.stream());
+  return gulp.src(path.src.html)
+          .pipe(fileinclude({
+            prefix: '@@',
+            basepath: path.src.htmlPartials
+          }))
+         .pipe(useref({
+          noconcat: true
+         }))
+         .pipe(gulp.dest(path.dev.html))
+         .pipe(browserSync.stream());
 })
 
 gulp.task('validate-html', function(){
@@ -215,6 +218,7 @@ gulp.task('penthouse', function () {
     });
 
   });
+})
 
 gulp.task('js', function(){
 	return gulp.src(path.src.js)
