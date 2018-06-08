@@ -279,7 +279,7 @@ gulp.task('watch', function() {
 	});
   gulp.watch(path.src.img, ['images']);
   gulp.watch(path.src.spriteSource, ['sprite']);
-  gulp.watch(path.src.fonts, ['font']);
+  gulp.watch(path.src.fonts, ['fonts']);
   gulp.watch(path.src.root+'/assets/css/**/*.scss', ['sass']);
   gulp.watch(path.src.html, ['html']);
   gulp.watch(path.src.htmlIncludes, ['html']);
