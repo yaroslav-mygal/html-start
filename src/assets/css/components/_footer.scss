@@ -1,3 +1,120 @@
-.page-footer {
-	
+.footer {
+	background-color: #000;
+	color: #ababab;
+	@include font-size(13px, 22px);
+	a {
+		color: #fff;
+	}
+	p {
+		margin-bottom: 20px;
+	}
+	.footer__title {
+		color: #fff;
+		text-transform: uppercase;
+		@include font-size(13px);
+		display: block;
+		margin-bottom: 15px;
+	}
+	.footer-subtitle {
+		display: block;
+		color: #fff;
+	}
+	.footer__posts {
+		@include clear-list;
+		li {
+			margin-bottom: 16px;
+		}
+		h6 {
+			color: #fff;
+			font-weight: 500;
+			@include font-size(13px);
+			margin-bottom: 0;
+		}
+		.footer__post-date {
+			font-style: normal;
+			color: #ababab;
+			a {
+				color: #ababab;
+			}
+		}
+	}
+	.footer__trust-icons {
+		display: flex;
+		flex-direction: row;
+		@include media-breakpoint-up(768px) {
+			flex-direction: column;
+		}
+		@include media-breakpoint-up(992px) {
+			flex-direction: row;
+		}
+		.icon {
+			margin: 0 20px 0 0;
+			@include media-breakpoint-up(768px) {
+				margin: 0 0 20px;
+			}
+			@include media-breakpoint-up(992px) {
+				margin: 0 35px 0 0;
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+.footer__container {
+	display: flex;
+	padding: 40px 0 10px;
+	justify-content: space-between;
+	flex-direction: column;
+	@include media-breakpoint-up(768px) {
+		flex-direction: row;
+		padding: 40px 0;
+	}
+	@include media-breakpoint-up(992px) {
+		padding: 100px 0 70px;
+	}
+	.footer__column {
+		border-top: 1px solid #fff;
+		padding: 30px 0 15px;
+		&:first-child {
+			border: 0;
+			padding-top: 0;
+		}
+		@include media-breakpoint-up(768px) {
+			padding: 0;
+			border: 0;
+		}
+		address {
+			font-style: normal;
+			margin: 0;
+		}
+		.footer__contact-box {
+			margin-bottom: 15px;
+		}
+	}
+	.footer__column-1 {
+		flex: 0 1 30%;
+	}
+	.footer__column-2 {
+		flex: 0 1 30%;
+	}
+	.footer__column-3 {
+		flex: 0 1 20%;
+	}
+}
+.sub-footer {
+	background-color: #69d3f1;
+	color: #fff;
+	padding: 20px 0;
+	@include font-size(13px);
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+	@include media-breakpoint-up(768px) {
+		padding: 35px 0;
+		@include font-size(11px);
+	}
+	p {
+		margin: 0;
+	}
 }

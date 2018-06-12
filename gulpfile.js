@@ -22,7 +22,8 @@ var gulp = require('gulp'),
     scsslint = require('gulp-scss-lint'),
     penthouse = require('penthouse'),
     inject = require('gulp-inject-string'),
-    cleanCSS = require('gulp-clean-css');
+    cleanCSS = require('gulp-clean-css'),
+    autoprefixer = require('gulp-autoprefixer');
 
 
 var path = {
@@ -125,6 +126,10 @@ gulp.task('sass', function() {
 	return gulp.src(path.src.styles)
 				 .pipe(sourcemaps.init())
 				 .pipe(sass().on('error', sass.logError))
+         .pipe(autoprefixer({
+            browsers: ['last 6 versions'],
+            cascade: false
+          }))
 				 .pipe(sourcemaps.write('../css'))
 				 .pipe(gulp.dest(path.dev.styles))
 				 .pipe(browserSync.stream());

@@ -44,21 +44,6 @@
   transform: translateY(-50%);
 }
 
-@mixin verticalPadding {
-	@each $space in $vertical-space {
-	  @each $breakpoint in map-keys($grid-breakpoints) {
-	    @include media-breakpoint-up($breakpoint) {
-	      .push-#{$breakpoint}-top-#{$space}   { padding-top: #{$space}px; }
-	      .push-#{$breakpoint}-bottom-#{$space}   { padding-bottom: #{$space}px; }
-	    }    
-	  }
-	}
-}
-@mixin flex {
-  display: flex;
-  align-items: center;
-}
-
 @mixin media-breakpoint-up($media) {
   @media only screen and (min-width: $media) {
     @content;

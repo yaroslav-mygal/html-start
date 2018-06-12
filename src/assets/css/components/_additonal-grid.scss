@@ -11,8 +11,6 @@
   }
 }
 
-@include verticalPadding;
-
 &.row-0 {
   @include make-row(0);
   >[class^='col'] {

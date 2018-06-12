@@ -1,0 +1,394 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$abc-name: 'abc';
+$abc-x: 71px;
+$abc-y: 167px;
+$abc-offset-x: -71px;
+$abc-offset-y: -167px;
+$abc-width: 32px;
+$abc-height: 32px;
+$abc-total-width: 357px;
+$abc-total-height: 233px;
+$abc-image: '../images/sprite/sprite-retina.png';
+$abc: (71px, 167px, -71px, -167px, 32px, 32px, 357px, 233px, '../images/sprite/sprite-retina.png', 'abc', );
+$accordion-decor-name: 'accordion-decor';
+$accordion-decor-x: 0px;
+$accordion-decor-y: 0px;
+$accordion-decor-offset-x: 0px;
+$accordion-decor-offset-y: 0px;
+$accordion-decor-width: 161px;
+$accordion-decor-height: 96px;
+$accordion-decor-total-width: 357px;
+$accordion-decor-total-height: 233px;
+$accordion-decor-image: '../images/sprite/sprite-retina.png';
+$accordion-decor: (0px, 0px, 0px, 0px, 161px, 96px, 357px, 233px, '../images/sprite/sprite-retina.png', 'accordion-decor', );
+$bbb-name: 'bbb';
+$bbb-x: 0px;
+$bbb-y: 100px;
+$bbb-offset-x: 0px;
+$bbb-offset-y: -100px;
+$bbb-width: 158px;
+$bbb-height: 63px;
+$bbb-total-width: 357px;
+$bbb-total-height: 233px;
+$bbb-image: '../images/sprite/sprite-retina.png';
+$bbb: (0px, 100px, 0px, -100px, 158px, 63px, 357px, 233px, '../images/sprite/sprite-retina.png', 'bbb', );
+$california-name: 'california';
+$california-x: 0px;
+$california-y: 167px;
+$california-offset-x: 0px;
+$california-offset-y: -167px;
+$california-width: 67px;
+$california-height: 66px;
+$california-total-width: 357px;
+$california-total-height: 233px;
+$california-image: '../images/sprite/sprite-retina.png';
+$california: (0px, 167px, 0px, -167px, 67px, 66px, 357px, 233px, '../images/sprite/sprite-retina.png', 'california', );
+$cnn-name: 'cnn';
+$cnn-x: 165px;
+$cnn-y: 69px;
+$cnn-offset-x: -165px;
+$cnn-offset-y: -69px;
+$cnn-width: 53px;
+$cnn-height: 25px;
+$cnn-total-width: 357px;
+$cnn-total-height: 233px;
+$cnn-image: '../images/sprite/sprite-retina.png';
+$cnn: (165px, 69px, -165px, -69px, 53px, 25px, 357px, 233px, '../images/sprite/sprite-retina.png', 'cnn', );
+$foxnews-name: 'foxnews';
+$foxnews-x: 162px;
+$foxnews-y: 132px;
+$foxnews-offset-x: -162px;
+$foxnews-offset-y: -132px;
+$foxnews-width: 39px;
+$foxnews-height: 31px;
+$foxnews-total-width: 357px;
+$foxnews-total-height: 233px;
+$foxnews-image: '../images/sprite/sprite-retina.png';
+$foxnews: (162px, 132px, -162px, -132px, 39px, 31px, 357px, 233px, '../images/sprite/sprite-retina.png', 'foxnews', );
+$logo-name: 'logo';
+$logo-x: 165px;
+$logo-y: 0px;
+$logo-offset-x: -165px;
+$logo-offset-y: 0px;
+$logo-width: 192px;
+$logo-height: 65px;
+$logo-total-width: 357px;
+$logo-total-height: 233px;
+$logo-image: '../images/sprite/sprite-retina.png';
+$logo: (165px, 0px, -165px, 0px, 192px, 65px, 357px, 233px, '../images/sprite/sprite-retina.png', 'logo', );
+$msnbc-name: 'msnbc';
+$msnbc-x: 222px;
+$msnbc-y: 69px;
+$msnbc-offset-x: -222px;
+$msnbc-offset-y: -69px;
+$msnbc-width: 79px;
+$msnbc-height: 13px;
+$msnbc-total-width: 357px;
+$msnbc-total-height: 233px;
+$msnbc-image: '../images/sprite/sprite-retina.png';
+$msnbc: (222px, 69px, -222px, -69px, 79px, 13px, 357px, 233px, '../images/sprite/sprite-retina.png', 'msnbc', );
+$quote-close-name: 'quote-close';
+$quote-close-x: 235px;
+$quote-close-y: 100px;
+$quote-close-offset-x: -235px;
+$quote-close-offset-y: -100px;
+$quote-close-width: 29px;
+$quote-close-height: 23px;
+$quote-close-total-width: 357px;
+$quote-close-total-height: 233px;
+$quote-close-image: '../images/sprite/sprite-retina.png';
+$quote-close: (235px, 100px, -235px, -100px, 29px, 23px, 357px, 233px, '../images/sprite/sprite-retina.png', 'quote-close', );
+$quote-open-name: 'quote-open';
+$quote-open-x: 268px;
+$quote-open-y: 100px;
+$quote-open-offset-x: -268px;
+$quote-open-offset-y: -100px;
+$quote-open-width: 29px;
+$quote-open-height: 23px;
+$quote-open-total-width: 357px;
+$quote-open-total-height: 233px;
+$quote-open-image: '../images/sprite/sprite-retina.png';
+$quote-open: (268px, 100px, -268px, -100px, 29px, 23px, 357px, 233px, '../images/sprite/sprite-retina.png', 'quote-open', );
+$usatoday-name: 'usatoday';
+$usatoday-x: 162px;
+$usatoday-y: 100px;
+$usatoday-offset-x: -162px;
+$usatoday-offset-y: -100px;
+$usatoday-width: 69px;
+$usatoday-height: 28px;
+$usatoday-total-width: 357px;
+$usatoday-total-height: 233px;
+$usatoday-image: '../images/sprite/sprite-retina.png';
+$usatoday: (162px, 100px, -162px, -100px, 69px, 28px, 357px, 233px, '../images/sprite/sprite-retina.png', 'usatoday', );
+$abc-2x-name: 'abc@2x';
+$abc-2x-x: 142px;
+$abc-2x-y: 334px;
+$abc-2x-offset-x: -142px;
+$abc-2x-offset-y: -334px;
+$abc-2x-width: 64px;
+$abc-2x-height: 64px;
+$abc-2x-total-width: 714px;
+$abc-2x-total-height: 466px;
+$abc-2x-image: '../images/sprite/sprite-retina@2x.png';
+$abc-2x: (142px, 334px, -142px, -334px, 64px, 64px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'abc@2x', );
+$accordion-decor-2x-name: 'accordion-decor@2x';
+$accordion-decor-2x-x: 0px;
+$accordion-decor-2x-y: 0px;
+$accordion-decor-2x-offset-x: 0px;
+$accordion-decor-2x-offset-y: 0px;
+$accordion-decor-2x-width: 322px;
+$accordion-decor-2x-height: 192px;
+$accordion-decor-2x-total-width: 714px;
+$accordion-decor-2x-total-height: 466px;
+$accordion-decor-2x-image: '../images/sprite/sprite-retina@2x.png';
+$accordion-decor-2x: (0px, 0px, 0px, 0px, 322px, 192px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'accordion-decor@2x', );
+$bbb-2x-name: 'bbb@2x';
+$bbb-2x-x: 0px;
+$bbb-2x-y: 200px;
+$bbb-2x-offset-x: 0px;
+$bbb-2x-offset-y: -200px;
+$bbb-2x-width: 316px;
+$bbb-2x-height: 126px;
+$bbb-2x-total-width: 714px;
+$bbb-2x-total-height: 466px;
+$bbb-2x-image: '../images/sprite/sprite-retina@2x.png';
+$bbb-2x: (0px, 200px, 0px, -200px, 316px, 126px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'bbb@2x', );
+$california-2x-name: 'california@2x';
+$california-2x-x: 0px;
+$california-2x-y: 334px;
+$california-2x-offset-x: 0px;
+$california-2x-offset-y: -334px;
+$california-2x-width: 134px;
+$california-2x-height: 132px;
+$california-2x-total-width: 714px;
+$california-2x-total-height: 466px;
+$california-2x-image: '../images/sprite/sprite-retina@2x.png';
+$california-2x: (0px, 334px, 0px, -334px, 134px, 132px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'california@2x', );
+$cnn-2x-name: 'cnn@2x';
+$cnn-2x-x: 330px;
+$cnn-2x-y: 138px;
+$cnn-2x-offset-x: -330px;
+$cnn-2x-offset-y: -138px;
+$cnn-2x-width: 106px;
+$cnn-2x-height: 50px;
+$cnn-2x-total-width: 714px;
+$cnn-2x-total-height: 466px;
+$cnn-2x-image: '../images/sprite/sprite-retina@2x.png';
+$cnn-2x: (330px, 138px, -330px, -138px, 106px, 50px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'cnn@2x', );
+$foxnews-2x-name: 'foxnews@2x';
+$foxnews-2x-x: 324px;
+$foxnews-2x-y: 264px;
+$foxnews-2x-offset-x: -324px;
+$foxnews-2x-offset-y: -264px;
+$foxnews-2x-width: 78px;
+$foxnews-2x-height: 62px;
+$foxnews-2x-total-width: 714px;
+$foxnews-2x-total-height: 466px;
+$foxnews-2x-image: '../images/sprite/sprite-retina@2x.png';
+$foxnews-2x: (324px, 264px, -324px, -264px, 78px, 62px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'foxnews@2x', );
+$logo-2x-name: 'logo@2x';
+$logo-2x-x: 330px;
+$logo-2x-y: 0px;
+$logo-2x-offset-x: -330px;
+$logo-2x-offset-y: 0px;
+$logo-2x-width: 384px;
+$logo-2x-height: 130px;
+$logo-2x-total-width: 714px;
+$logo-2x-total-height: 466px;
+$logo-2x-image: '../images/sprite/sprite-retina@2x.png';
+$logo-2x: (330px, 0px, -330px, 0px, 384px, 130px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'logo@2x', );
+$msnbc-2x-name: 'msnbc@2x';
+$msnbc-2x-x: 444px;
+$msnbc-2x-y: 138px;
+$msnbc-2x-offset-x: -444px;
+$msnbc-2x-offset-y: -138px;
+$msnbc-2x-width: 158px;
+$msnbc-2x-height: 26px;
+$msnbc-2x-total-width: 714px;
+$msnbc-2x-total-height: 466px;
+$msnbc-2x-image: '../images/sprite/sprite-retina@2x.png';
+$msnbc-2x: (444px, 138px, -444px, -138px, 158px, 26px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'msnbc@2x', );
+$quote-close-2x-name: 'quote-close@2x';
+$quote-close-2x-x: 470px;
+$quote-close-2x-y: 200px;
+$quote-close-2x-offset-x: -470px;
+$quote-close-2x-offset-y: -200px;
+$quote-close-2x-width: 58px;
+$quote-close-2x-height: 46px;
+$quote-close-2x-total-width: 714px;
+$quote-close-2x-total-height: 466px;
+$quote-close-2x-image: '../images/sprite/sprite-retina@2x.png';
+$quote-close-2x: (470px, 200px, -470px, -200px, 58px, 46px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'quote-close@2x', );
+$quote-open-2x-name: 'quote-open@2x';
+$quote-open-2x-x: 536px;
+$quote-open-2x-y: 200px;
+$quote-open-2x-offset-x: -536px;
+$quote-open-2x-offset-y: -200px;
+$quote-open-2x-width: 58px;
+$quote-open-2x-height: 46px;
+$quote-open-2x-total-width: 714px;
+$quote-open-2x-total-height: 466px;
+$quote-open-2x-image: '../images/sprite/sprite-retina@2x.png';
+$quote-open-2x: (536px, 200px, -536px, -200px, 58px, 46px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'quote-open@2x', );
+$usatoday-2x-name: 'usatoday@2x';
+$usatoday-2x-x: 324px;
+$usatoday-2x-y: 200px;
+$usatoday-2x-offset-x: -324px;
+$usatoday-2x-offset-y: -200px;
+$usatoday-2x-width: 138px;
+$usatoday-2x-height: 56px;
+$usatoday-2x-total-width: 714px;
+$usatoday-2x-total-height: 466px;
+$usatoday-2x-image: '../images/sprite/sprite-retina@2x.png';
+$usatoday-2x: (324px, 200px, -324px, -200px, 138px, 56px, 714px, 466px, '../images/sprite/sprite-retina@2x.png', 'usatoday@2x', );
+$spritesheet-width: 357px;
+$spritesheet-height: 233px;
+$spritesheet-image: '../images/sprite/sprite-retina.png';
+$spritesheet-sprites: ($abc, $accordion-decor, $bbb, $california, $cnn, $foxnews, $logo, $msnbc, $quote-close, $quote-open, $usatoday, );
+$spritesheet: (357px, 233px, '../images/sprite/sprite-retina.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 714px;
+$retina-spritesheet-height: 466px;
+$retina-spritesheet-image: '../images/sprite/sprite-retina@2x.png';
+$retina-spritesheet-sprites: ($abc-2x, $accordion-decor-2x, $bbb-2x, $california-2x, $cnn-2x, $foxnews-2x, $logo-2x, $msnbc-2x, $quote-close-2x, $quote-open-2x, $usatoday-2x, );
+$retina-spritesheet: (714px, 466px, '../images/sprite/sprite-retina@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$abc-group-name: 'abc';
+$abc-group: ('abc', $abc, $abc-2x, );
+$accordion-decor-group-name: 'accordion-decor';
+$accordion-decor-group: ('accordion-decor', $accordion-decor, $accordion-decor-2x, );
+$bbb-group-name: 'bbb';
+$bbb-group: ('bbb', $bbb, $bbb-2x, );
+$california-group-name: 'california';
+$california-group: ('california', $california, $california-2x, );
+$cnn-group-name: 'cnn';
+$cnn-group: ('cnn', $cnn, $cnn-2x, );
+$foxnews-group-name: 'foxnews';
+$foxnews-group: ('foxnews', $foxnews, $foxnews-2x, );
+$logo-group-name: 'logo';
+$logo-group: ('logo', $logo, $logo-2x, );
+$msnbc-group-name: 'msnbc';
+$msnbc-group: ('msnbc', $msnbc, $msnbc-2x, );
+$quote-close-group-name: 'quote-close';
+$quote-close-group: ('quote-close', $quote-close, $quote-close-2x, );
+$quote-open-group-name: 'quote-open';
+$quote-open-group: ('quote-open', $quote-open, $quote-open-2x, );
+$usatoday-group-name: 'usatoday';
+$usatoday-group: ('usatoday', $usatoday, $usatoday-2x, );
+$retina-groups: ($abc-group, $accordion-decor-group, $bbb-group, $california-group, $cnn-group, $foxnews-group, $logo-group, $msnbc-group, $quote-close-group, $quote-open-group, $usatoday-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

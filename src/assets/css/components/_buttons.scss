@@ -1,0 +1,22 @@
+.btn {
+	background-color: $btn_bg;
+	color: #fff;
+	text-transform: uppercase;
+	@include inline-block;
+	@include font-size(13px);
+	padding: 14px 10px;
+	text-align: center;
+	@include transition(all 0.7s ease-in-out);
+	@include media-breakpoint-up(992px) {
+		padding: 14px 20px;
+	}
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+		background-color: $btn_bg-hover;
+	}
+	&:focus {
+		color: #fff;
+		text-decoration: none;
+	}
+}

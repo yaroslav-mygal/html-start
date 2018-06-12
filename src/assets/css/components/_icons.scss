@@ -5,7 +5,30 @@
 	white-space: nowrap;
 	text-indent:101%;
 	vertical-align: top;
+	text-indent: -9999px;
 }
 .logo{
 	@extend .icon;
+	@include retina-sprite($logo-group);
+}
+.icon_bbb {
+	@include retina-sprite($bbb-group);
+}
+.icon_california {
+	@include retina-sprite($california-group);
+}
+.icon_msnbc {
+	@include retina-sprite($msnbc-group);
+}
+.icon_cnn {
+	@include retina-sprite($cnn-group);
+}
+.icon_abc {
+	@include retina-sprite($abc-group);
+}
+.icon_usatoday {
+	@include retina-sprite($usatoday-group);
+}
+.icon_foxnews {
+	@include retina-sprite($foxnews-group);
 }
